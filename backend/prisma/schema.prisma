@@ -1,0 +1,301 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum LoggingMethod {
+  REPS_WEIGHT
+  DONE_ONLY
+}
+
+enum PlanStatus {
+  ACTIVE
+  ARCHIVED
+}
+
+enum Experience {
+  BEGINNER
+  INTERMEDIATE
+}
+
+enum Location {
+  GYM
+  HOME
+}
+
+enum Goal {
+  BUILD_MUSCLE
+  GENERAL_FITNESS
+}
+
+model User {
+  id              String                 @id @default(uuid()) @db.Uuid
+  phone           String                 @unique @db.VarChar(16)
+  name            String
+  email           String?
+  isActive        Boolean                @default(true)
+  securityStamp   String                 @default(uuid()) @db.Uuid
+  passwordHash    String
+  phoneVerifiedAt DateTime?              @db.Timestamptz(3)
+  createdAt       DateTime               @default(now()) @db.Timestamptz(3)
+  profile         Profile?
+  refreshTokens   RefreshToken[]
+  plans           Plan[]
+  progressions    UserExerciseProgress[]
+  workouts        Workout[]
+  freezes         StreakFreeze[]
+}
+
+model Profile {
+  userId          String     @id @db.Uuid
+  user            User       @relation(fields: [userId], references: [id], onDelete: Restrict)
+  heightCm        Decimal    @db.Decimal(5, 2)
+  weightKg        Decimal    @db.Decimal(6, 2)
+  age             Int
+  gender          String
+  goal            Goal
+  experience      Experience
+  location        Location
+  trainingDays    Int
+  deskJob         Boolean?
+  painAreas       String[]   @default([])
+  postureConcerns String[]   @default([])
+  timeZone        String
+  reminderEnabled Boolean    @default(false)
+  reminderTime    String?    @db.VarChar(5)
+  updatedAt       DateTime   @updatedAt @db.Timestamptz(3)
+}
+
+// Access JWTs are not stored. Refresh tokens are stored only as hashes.
+model RefreshToken {
+  id            String    @id @default(uuid()) @db.Uuid
+  userId        String    @db.Uuid
+  user          User      @relation(fields: [userId], references: [id], onDelete: Restrict)
+  tokenHash     String    @unique
+  // Stamp at issuance; refresh must reject tokens from an older auth state.
+  securityStamp String    @db.Uuid
+  createdAt     DateTime  @default(now()) @db.Timestamptz(3)
+  lastSeenAt    DateTime  @default(now()) @db.Timestamptz(3)
+  expiresAt     DateTime  @db.Timestamptz(3)
+  revokedAt     DateTime? @db.Timestamptz(3)
+  isUsed        Boolean   @default(false)
+
+  @@index([userId])
+}
+
+model Exercise {
+  id               String                 @id @default(uuid()) @db.Uuid
+  slug             String                 @unique
+  name             String
+  loggingMethod    LoggingMethod
+  muscles          String[]
+  experience       Experience
+  locations        Location[]
+  instructions     String[]
+  commonMistakes   String[]
+  mediaUrl         String?
+  mediaType        String?
+  progressionChain Json?
+  recommendedSets  Int?
+  recommendedReps  Int?
+  isActive         Boolean                @default(true)
+  planExercises    PlanExercise[]
+  progressions     UserExerciseProgress[]
+  workoutExercises WorkoutExercise[]
+}
+
+// Versioned template content is validated seed data: ordered days/sections/exercise IDs.
+model PlanTemplate {
+  id           String     @id @default(uuid()) @db.Uuid
+  key          String
+  version      Int
+  experience   Experience
+  location     Location
+  trainingDays Int
+  content      Json
+  plans        Plan[]
+
+  @@unique([key, version])
+}
+
+model Plan {
+  id         String             @id @default(uuid()) @db.Uuid
+  userId     String             @db.Uuid
+  user       User               @relation(fields: [userId], references: [id], onDelete: Restrict)
+  templateId String             @db.Uuid
+  template   PlanTemplate       @relation(fields: [templateId], references: [id], onDelete: Restrict)
+  status     PlanStatus         @default(ACTIVE)
+  version    Int                @default(1)
+  createdAt  DateTime           @default(now()) @db.Timestamptz(3)
+  archivedAt DateTime?          @db.Timestamptz(3)
+  days       PlanDay[]
+  workouts   Workout[]
+  schedules  ScheduleRevision[]
+
+  @@index([userId, status])
+}
+
+model PlanDay {
+  id       String        @id @default(uuid()) @db.Uuid
+  planId   String        @db.Uuid
+  plan     Plan          @relation(fields: [planId], references: [id], onDelete: Restrict)
+  // Stable day identity; weekday assignments live in dated ScheduleRevision snapshots.
+  position Int
+  focus    String
+  sections PlanSection[]
+  workouts Workout[]
+
+  @@unique([planId, position])
+}
+
+model PlanSection {
+  id        String         @id @default(uuid()) @db.Uuid
+  dayId     String         @db.Uuid
+  day       PlanDay        @relation(fields: [dayId], references: [id], onDelete: Restrict)
+  name      String
+  position  Int
+  exercises PlanExercise[]
+
+  @@unique([dayId, position])
+}
+
+model PlanExercise {
+  id         String      @id @default(uuid()) @db.Uuid
+  sectionId  String      @db.Uuid
+  section    PlanSection @relation(fields: [sectionId], references: [id], onDelete: Restrict)
+  exerciseId String      @db.Uuid
+  exercise   Exercise    @relation(fields: [exerciseId], references: [id], onDelete: Restrict)
+  position   Int
+
+  @@unique([sectionId, position])
+}
+
+// Immutable full schedule snapshot; operation ID makes offline retries duplicate-safe.
+model ScheduleRevision {
+  id            String   @id @db.Uuid
+  planId        String   @db.Uuid
+  plan          Plan     @relation(fields: [planId], references: [id], onDelete: Restrict)
+  version       Int
+  effectiveDate DateTime @db.Date
+  timeZone      String
+  assignments   Json
+  createdAt     DateTime @db.Timestamptz(3)
+  receivedAt    DateTime @default(now()) @db.Timestamptz(3)
+
+  @@unique([planId, version])
+  @@index([planId, effectiveDate])
+}
+
+model UserExerciseProgress {
+  id                   String                  @id @default(uuid()) @db.Uuid
+  userId               String                  @db.Uuid
+  user                 User                    @relation(fields: [userId], references: [id], onDelete: Restrict)
+  exerciseId           String                  @db.Uuid
+  exercise             Exercise                @relation(fields: [exerciseId], references: [id], onDelete: Restrict)
+  currentStagePosition Int                     @default(0)
+  version              Int                     @default(1)
+  stages               ExerciseStage[]
+  credits              ExerciseSessionCredit[]
+  updatedAt            DateTime                @updatedAt @db.Timestamptz(3)
+
+  @@unique([userId, exerciseId])
+}
+
+model ExerciseStage {
+  id             String               @id @default(uuid()) @db.Uuid
+  progressId     String               @db.Uuid
+  progress       UserExerciseProgress @relation(fields: [progressId], references: [id], onDelete: Restrict)
+  position       Int
+  targetSets     Int
+  targetReps     Int
+  // Null means starting weight not entered; zero means explicitly no added weight.
+  targetWeightKg Decimal?             @db.Decimal(7, 2)
+  sessionsToStay Int
+
+  @@unique([progressId, position])
+}
+
+// Only finalized sessions are uploaded; active drafts remain in IndexedDB.
+model Workout {
+  id              String                  @id @db.Uuid
+  userId          String                  @db.Uuid
+  user            User                    @relation(fields: [userId], references: [id], onDelete: Restrict)
+  planId          String                  @db.Uuid
+  plan            Plan                    @relation(fields: [planId], references: [id], onDelete: Restrict)
+  sourceDayId     String                  @db.Uuid
+  sourceDay       PlanDay                 @relation(fields: [sourceDayId], references: [id], onDelete: Restrict)
+  startedAt       DateTime                @db.Timestamptz(3)
+  endedAt         DateTime                @db.Timestamptz(3)
+  durationSeconds Int
+  timeZone        String
+  autoClosed      Boolean                 @default(false)
+  // Canonical payload digest: same ID + changed payload is rejected, not overwritten.
+  payloadHash     String
+  receivedAt      DateTime                @default(now()) @db.Timestamptz(3)
+  exercises       WorkoutExercise[]
+  credits         ExerciseSessionCredit[]
+
+  @@index([userId, startedAt])
+}
+
+model WorkoutExercise {
+  id              String        @id @db.Uuid
+  workoutId       String        @db.Uuid
+  workout         Workout       @relation(fields: [workoutId], references: [id], onDelete: Restrict)
+  exerciseId      String        @db.Uuid
+  exercise        Exercise      @relation(fields: [exerciseId], references: [id], onDelete: Restrict)
+  nameSnapshot    String
+  muscleSnapshot  String[]
+  sectionName     String
+  sectionPosition Int
+  position        Int
+  loggingMethod   LoggingMethod
+  // Includes stage identity and initial targets; sets retain targets applicable when logged.
+  targetSnapshot  Json
+  doneAt          DateTime?     @db.Timestamptz(3)
+  activityDate    DateTime?     @db.Date
+  sets            WorkoutSet[]
+
+  @@unique([workoutId, sectionPosition, position])
+}
+
+model WorkoutSet {
+  id                String          @id @db.Uuid
+  workoutExerciseId String          @db.Uuid
+  workoutExercise   WorkoutExercise @relation(fields: [workoutExerciseId], references: [id], onDelete: Restrict)
+  position          Int
+  targetReps        Int?
+  targetWeightKg    Decimal?        @db.Decimal(7, 2)
+  actualReps        Int?
+  actualWeightKg    Decimal?        @db.Decimal(7, 2)
+  doneAt            DateTime?       @db.Timestamptz(3)
+  activityDate      DateTime?       @db.Date
+
+  @@unique([workoutExerciseId, position])
+}
+
+// Award once in the same transaction as workout ingestion, not on each upload retry.
+model ExerciseSessionCredit {
+  workoutId     String               @db.Uuid
+  workout       Workout              @relation(fields: [workoutId], references: [id], onDelete: Restrict)
+  progressId    String               @db.Uuid
+  progress      UserExerciseProgress @relation(fields: [progressId], references: [id], onDelete: Restrict)
+  stagePosition Int
+  creditedAt    DateTime             @db.Timestamptz(3)
+
+  @@id([workoutId, progressId])
+}
+
+model StreakFreeze {
+  userId     String   @db.Uuid
+  user       User     @relation(fields: [userId], references: [id], onDelete: Restrict)
+  weekStart  DateTime @db.Date
+  missedDate DateTime @db.Date
+  timeZone   String
+
+  @@id([userId, weekStart])
+}

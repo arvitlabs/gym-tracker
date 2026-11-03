@@ -1,0 +1,562 @@
+# APP-BUILD-TEMPLATE: Idea to First Production Deploy
+2
+ 
+3
+A fixed, reusable initiative structure for building any application, from the first idea to the first live deploy in production. Clone it into a real initiative every time you start a new app, fill in the tasks, and refine the template after each use.
+4
+ 
+5
+**Hierarchy:** Initiative -> Epics -> Stories -> Tasks
+6
+- **Initiative:** one per app (cloned from this template)
+7
+- **Epics:** fixed, always the same six (below)
+8
+- **Stories:** fixed checklist per epic (below)
+9
+- **Tasks:** the only part you write fresh for each app
+10
+11
+**Track:** LAB. This template is never sprinted itself. It is refined after each real app built with it.
+12
+ 
+13
+---
+14
+ 
+15
+## Guiding Principles
+16
+ 
+17
+1. **Everything must be runnable, clickable, or testable.** If a deliverable is something you only read, it fails the test. Mockups you click through, schemas you run, acceptance criteria that become tests.
+18
+2. **Mockups replace user stories and flow documents.** The screens are the requirements. User stories are generated later by AI from approved mockups, at sprint planning, instead of written upfront.
+19
+3. **Schema will change, so version it from day one.** Every database change is a migration file in git. Nobody edits a database by hand in any environment.
+20
+4. **AI does the enumeration, you do the judgment.** AI is better than humans at listing edge cases and generating story breakdowns. You review, triage, and decide.
+21
+5. **Don't over-design upfront.** Model and plan only what the first release needs.
+22
+6. **Refine the template after every real use.** Version it (v1, v2, ...) and note what worked and what didn't.
+23
+24
+---
+25
+ 
+26
+## Overview
+27
+ 
+28
+| Epic | Purpose | Main output |
+29
+|---|---|---|
+30
+| 1. Discovery | Decide what to build and what not to | One-page spec |
+31
+| 2. Design | Make the requirements visible | Approved mockups + design tokens |
+32
+| 3. Data & Architecture | Derive the technical shape from the mockups | Schema v1 as a migration, risk list, stack decisions |
+33
+| 4. Sprint Planning | Turn approved artifacts into work | Loaded first sprint |
+34
+| 5. Build | Implement in sprint cycles | Working app in staging |
+35
+| 6. Deploy | First production release | Live app, verified |
+36
+ 
+37
+Flow: `Discovery -> Design -> Data & Architecture -> Sprint Planning -> Build -> Deploy`
+38
+ 
+39
+Each epic has a **gate**: you don't start the next epic until the "Done when" condition of the current one is met.
+40
+ 
+41
+---
+42
+ 
+43
+## Epic 1: Discovery
+44
+ 
+45
+**Goal:** Decide what we are building and, just as important, what we are not.
+46
+ 
+47
+**Inputs:** An idea.
+48
+**Outputs:** A one-page spec.
+49
+ 
+50
+### Stories
+51
+ 
+52
+**1.1 Problem and user**
+53
+- [ ] Write one paragraph: who is this for, and what pain does it solve?
+54
+- [ ] Name the primary user type (and secondary, if any)
+55
+- [ ] Describe how they solve this problem today, and why that is not good enough
+56
+57
+**1.2 Scope**
+58
+- [ ] List the core capabilities (target 5-8, no more for v1)
+59
+- [ ] List explicit non-goals (what v1 will NOT do)
+60
+- [ ] Define success criteria: how will you know the app works and is worth having? Make them concrete.
+61
+62
+**1.3 Constraints and context**
+63
+- [ ] Note hard constraints: deadline, budget, team size, required integrations, compliance needs
+64
+- [ ] Note anything the app depends on that already exists (APIs, systems, data)
+65
+66
+**1.4 One-page spec**
+67
+- [ ] Combine 1.1 to 1.3 into a single page
+68
+- [ ] Test: can you explain the app in two sentences?
+69
+70
+**Done when:** the one-page spec exists, the core capabilities and non-goals are written down, and you can explain the app in two sentences.
+71
+ 
+72
+**AI usage:** Brainstorm with Claude to challenge scope ("what is the smallest version that still solves the problem?") and to surface missing constraints.
+73
+ 
+74
+---
+75
+ 
+76
+## Epic 2: Design
+77
+ 
+78
+**Goal:** Make the requirements visible. The screens are the requirements.
+79
+ 
+80
+**Inputs:** One-page spec.
+81
+**Outputs:** Approved mockups covering the happy path, plus design tokens.
+82
+ 
+83
+**Why this replaces Requirements:** a mockup shows what the user sees, what data is involved, and where each action leads. The user flow is already inside it. Walking through the screens exposes problems much sooner than reviewing a flow document does.
+84
+ 
+85
+### Stories
+86
+ 
+87
+**2.1 Mockups of key screens**
+88
+- [ ] Identify the key screens needed for the core capabilities (not every screen)
+89
+- [ ] Build mockups in Claude Design
+90
+- [ ] Cover the main happy path from start to finish for each core capability
+91
+- [ ] Include the empty states for screens that list or display data
+92
+93
+**2.2 Flow walkthrough**
+94
+- [ ] Click through the full flow screen by screen as the primary user
+95
+- [ ] Note every place where a step feels wrong, missing, or confusing
+96
+- [ ] Fix the mockups and walk through again
+97
+- [ ] Repeat until no broken steps remain
+98
+99
+**2.3 Design tokens**
+100
+- [ ] Define colors, typography, spacing, and basic component styles
+101
+- [ ] Record them in one place so the build stays visually consistent
+102
+103
+**2.4 Capture hidden rules**
+104
+Mockups show the visible path but hide some things. While reviewing the screens, write down (briefly) any rules that have no screen:
+105
+- [ ] Permissions (who can see or do what)
+106
+- [ ] Validations (what input is allowed)
+107
+- [ ] Background jobs or scheduled work
+108
+- [ ] Integrations with other systems
+109
+- [ ] What happens on failure (errors, timeouts, offline)
+110
+111
+**Done when:** you have walked the full flow in the mockups without finding a broken step, and the hidden rules are listed.
+112
+ 
+113
+**AI usage:** Generate mockup variations quickly and react to real screens instead of descriptions. Ask Claude to review the mockups for missing screens or unclear steps.
+114
+ 
+115
+---
+116
+ 
+117
+## Epic 3: Data & Architecture
+118
+ 
+119
+**Goal:** Derive the technical shape from the approved mockups.
+120
+ 
+121
+**Inputs:** Approved mockups, hidden rules list, one-page spec.
+122
+**Outputs:** Schema v1 as the first migration, seed data, CI migration step, risk list, stack and infra decisions.
+123
+ 
+124
+### Stories
+125
+ 
+126
+**3.1 Schema v1**
+127
+- [ ] Derive the entities and fields from the data shown on the mockup screens
+128
+- [ ] Model only what the first release needs. Do not design for imagined future features.
+129
+- [ ] Define relationships and constraints (keys, required fields, uniqueness)
+130
+- [ ] Validate by running it: write the 10-15 queries the app will actually need. If a query is awkward, the model is wrong, so fix it.
+131
+132
+**3.2 Migration setup**
+133
+- [ ] Choose the migration tool that matches the stack (for example EF Core migrations, Prisma, Alembic, Flyway)
+134
+- [ ] Create schema v1 as the **first migration**
+135
+- [ ] Add seed data, also versioned, so any environment can be rebuilt from scratch
+136
+- [ ] Add a CI step that applies migrations automatically
+137
+- [ ] Generate the data model diagram from the schema (ERD tool or ORM output) so it cannot go stale
+138
+139
+**3.3 Risk review**
+140
+- [ ] Give Claude the mockups, the hidden rules, and the schema
+141
+- [ ] Ask it to act as a skeptical reviewer and list: failure modes, concurrency issues, permission gaps, empty/huge/invalid inputs, and what happens when related data is deleted
+142
+- [ ] Triage every item into one of three buckets: **handle now**, **handle later**, **ignore**
+143
+- [ ] Turn "handle now" items into stories for sprint planning
+144
+145
+**3.4 Stack and infra decisions**
+146
+- [ ] Language and framework (backend and frontend)
+147
+- [ ] Database
+148
+- [ ] Authentication approach
+149
+- [ ] Hosting and environments (local, staging, prod)
+150
+- [ ] Any third-party services
+151
+- [ ] Draw a simple architecture diagram (boxes and arrows, one page)
+152
+- [ ] Record each decision with a one-line reason
+153
+154
+**Done when:** the schema runs from scratch on an empty database through migrations, the risk review is triaged, and the stack is decided.
+155
+ 
+156
+### Schema change rules (apply from here onward)
+157
+ 
+158
+1. Every change is a migration file, committed in the same PR as the code that needs it.
+159
+2. No manual database edits in any environment.
+160
+3. Migrations run through CI/CD, so local, staging, and prod stay in sync.
+161
+4. Once in prod, use **expand/contract** for risky changes: add the new column as nullable, backfill it, switch the code over, and drop the old column in a later release. Each step stays backward compatible.
+162
+5. Take a backup before any destructive migration.
+163
+164
+(Rules 4 and 5 only matter after the first prod deploy. Until then, rules 1 to 3 are enough.)
+165
+ 
+166
+---
+167
+ 
+168
+## Epic 4: Sprint Planning
+169
+ 
+170
+**Goal:** Turn the approved artifacts into work.
+171
+ 
+172
+**Inputs:** Approved mockups, schema v1, risk list, stack decisions.
+173
+**Outputs:** The first sprint, loaded and ready.
+174
+ 
+175
+### Stories
+176
+ 
+177
+**4.1 AI-generated stories**
+178
+- [ ] Give Claude the mockups, schema, and "handle now" risk items
+179
+- [ ] Have it generate user stories with acceptance criteria written as Given/When/Then
+180
+- [ ] Review and edit them. Remove anything outside the one-page spec's scope.
+181
+182
+**4.2 Task breakdown**
+183
+- [ ] Break each story into tasks
+184
+- [ ] Make sure the setup work is included: repo, CI pipeline, environments, migration tooling
+185
+186
+**4.3 Sprint sizing and loading**
+187
+- [ ] Estimate using your existing sprint system
+188
+- [ ] Order the work so the thinnest end-to-end slice is built first
+189
+- [ ] Load the first sprint
+190
+191
+**4.4 Traceability check**
+192
+- [ ] Confirm every story traces back to a screen, a schema change, or a risk item
+193
+- [ ] Anything that traces to nothing is scope creep, so remove it
+194
+195
+**Done when:** the first sprint is loaded and every story traces back to a screen or a schema change.
+196
+ 
+197
+**AI usage:** This is the stage where user stories are generated, not written by hand, and they become the build tasks directly.
+198
+ 
+199
+---
+200
+ 
+201
+## Epic 5: Build
+202
+ 
+203
+**Goal:** Implement the app in sprint cycles.
+204
+ 
+205
+**Inputs:** Loaded sprint, mockups, schema, design tokens.
+206
+**Outputs:** Core capabilities working end to end in staging.
+207
+ 
+208
+### Stories
+209
+ 
+210
+**5.1 Project foundation**
+211
+- [ ] Repo structure, linting, formatting, branch strategy
+212
+- [ ] CI pipeline running build and tests on every PR
+213
+- [ ] Staging environment available
+214
+215
+**5.2 Sprint cycles (repeat per sprint)**
+216
+- [ ] Implement stories in priority order
+217
+- [ ] Write tests as you go
+218
+- [ ] Demo working software at the end of each sprint
+219
+- [ ] Adjust the next sprint based on what the demo showed
+220
+221
+**5.3 Quality gates**
+222
+- [ ] Acceptance criteria from sprint planning become real automated tests
+223
+- [ ] "Handle now" risk items are covered by tests where possible
+224
+225
+### Standing rules for Build
+226
+ 
+227
+1. **A model change without a migration in the same PR does not merge.**
+228
+2. Acceptance criteria are tests, so a story is done only when its tests pass.
+229
+3. The mockups are the reference for UI. If the implementation needs to differ, update the mockup in the same PR.
+230
+231
+**Done when:** the core capabilities from the Discovery spec work end to end in staging.
+232
+ 
+233
+**AI usage:** Use Claude for implementation, test writing, and code review within each sprint.
+234
+ 
+235
+---
+236
+ 
+237
+## Epic 6: Deploy
+238
+ 
+239
+**Goal:** First production release.
+240
+ 
+241
+**Inputs:** App working in staging.
+242
+**Outputs:** Live app in production, verified.
+243
+ 
+244
+### Stories
+245
+ 
+246
+**6.1 CI/CD pipeline**
+247
+- [ ] Automated build, test, and deploy
+248
+- [ ] Migrations run automatically as part of deploy
+249
+- [ ] Deploys to staging first, then prod
+250
+251
+**6.2 Production environment**
+252
+- [ ] Environment configuration and secrets management (no secrets in git)
+253
+- [ ] Production database created through migrations
+254
+- [ ] Backups enabled and a restore tested at least once
+255
+- [ ] Domain, HTTPS, and any required DNS
+256
+257
+**6.3 First deploy and smoke test**
+258
+- [ ] Deploy to prod
+259
+- [ ] Run through the critical flows manually in prod (the core capabilities from the spec)
+260
+- [ ] Confirm the data is being written correctly
+261
+262
+**6.4 Post-launch checklist**
+263
+- [ ] Monitoring and error alerts in place
+264
+- [ ] Logs accessible
+265
+- [ ] Rollback plan written and understood (how to revert the code and what happens to migrations)
+266
+- [ ] Note known issues and "handle later" risk items as the backlog for the next iteration
+267
+268
+**Done when:** the app is live in prod and you have confirmed the core flow works there.
+269
+ 
+270
+---
+271
+ 
+272
+## Cloning This Template for a New App
+273
+ 
+274
+1. Create a new initiative, named after the app.
+275
+2. Copy the six epics and their story checklists into it.
+276
+3. Replace the generic items with app-specific tasks as each epic begins. Do not pre-write tasks for later epics.
+277
+4. Work through the epics in order, respecting each gate ("Done when").
+278
+5. When the app is live, run the retrospective below.
+279
+280
+## Retrospective (after each app)
+281
+ 
+282
+Spend 20 minutes answering these, then update this template:
+283
+ 
+284
+- Which stories did we skip or never use? Remove or shrink them.
+285
+- What problem appeared late that an earlier story should have caught? Add a check.
+286
+- Where did AI save the most time? Where did it mislead us?
+287
+- Did the mockups actually catch the flow problems, or did we find them in Build?
+288
+- Was the schema stable, or did migrations pile up early? What did that tell us?
+289
+290
+Record the answer and bump the version below.
+291
+ 
+292
+## Version History
+293
+ 
+294
+| Version | Date | Notes |
+295
+|---|---|---|
+296
+| v1 | 2026-10-12 | Initial structure: six epics, mockup-first design, migration-first data |

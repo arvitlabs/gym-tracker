@@ -1,0 +1,906 @@
+> Superseded as a canonical naming source: MuscleWiki is now the sole reference for approved Phase 1 exercise names. This file remains a discovery inventory only.
+
+# Exercise names — reference inventory
+
+876 source entries, collected November 1, 2026. Not an exhaustive list and not an approved Phase 1 library.
+
+Source: https://github.com/yuhonas/free-exercise-db · Unlicense. Source naming retained; ambiguous names and duplicates need review.
+
+Canonical slugs are deliberately unassigned. See exercise-slug-design.md for the naming proposal.
+
+## Cardio (14)
+
+- Bicycling — equipment: other
+- Bicycling, Stationary — equipment: machine
+- Elliptical Trainer — equipment: machine
+- Jogging, Treadmill — equipment: machine
+- Prowler Sprint — equipment: other
+- Recumbent Bike — equipment: machine
+- Rope Jumping — equipment: other
+- Rowing, Stationary — equipment: machine
+- Running, Treadmill — equipment: machine
+- Skating — equipment: other
+- Stairmaster — equipment: machine
+- Step Mill — equipment: machine
+- Trail Running/Walking — equipment: unspecified
+- Walking, Treadmill — equipment: machine
+
+## Olympic Weightlifting (35)
+
+- Clean — equipment: barbell
+- Clean and Jerk — equipment: barbell
+- Clean Deadlift — equipment: barbell
+- Clean from Blocks — equipment: barbell
+- Clean Pull — equipment: barbell
+- Clean Shrug — equipment: barbell
+- Frankenstein Squat — equipment: barbell
+- Hang Clean — equipment: barbell
+- Hang Clean - Below the Knees — equipment: barbell
+- Hang Snatch — equipment: barbell
+- Hang Snatch - Below Knees — equipment: barbell
+- Heaving Snatch Balance — equipment: barbell
+- Jerk Balance — equipment: barbell
+- Jerk Dip Squat — equipment: barbell
+- Kneeling Jump Squat — equipment: barbell
+- Muscle Snatch — equipment: barbell
+- Olympic Squat — equipment: barbell
+- Overhead Squat — equipment: barbell
+- Power Clean from Blocks — equipment: barbell
+- Power Jerk — equipment: barbell
+- Power Snatch — equipment: barbell
+- Power Snatch from Blocks — equipment: barbell
+- Push Press — equipment: barbell
+- Push Press - Behind the Neck — equipment: barbell
+- Rack Delivery — equipment: barbell
+- Romanian Deadlift from Deficit — equipment: barbell
+- Snatch — equipment: barbell
+- Snatch Balance — equipment: barbell
+- Snatch Deadlift — equipment: barbell
+- Snatch from Blocks — equipment: barbell
+- Snatch Shrug — equipment: barbell
+- Split Clean — equipment: barbell
+- Split Jerk — equipment: barbell
+- Split Snatch — equipment: barbell
+- Wide Stance Stiff Legs — equipment: barbell
+
+## Plyometrics (61)
+
+- Alternate Leg Diagonal Bound — equipment: unspecified
+- Backward Medicine Ball Throw — equipment: medicine ball
+- Bench Jump — equipment: body only
+- Bench Sprint — equipment: other
+- Box Jump (Multiple Response) — equipment: other
+- Box Skip — equipment: other
+- Carioca Quick Step — equipment: unspecified
+- Catch and Overhead Throw — equipment: medicine ball
+- Chest Push (multiple response) — equipment: medicine ball
+- Chest Push (single response) — equipment: medicine ball
+- Chest Push from 3 point stance — equipment: medicine ball
+- Chest Push with Run Release — equipment: medicine ball
+- Depth Jump Leap — equipment: other
+- Double Leg Butt Kick — equipment: body only
+- Drop Push — equipment: other
+- Dumbbell Seated Box Jump — equipment: dumbbell
+- Fast Skipping — equipment: body only
+- Front Box Jump — equipment: other
+- Front Cone Hops (or hurdle hops) — equipment: other
+- Heavy Bag Thrust — equipment: other
+- Hurdle Hops — equipment: other
+- Incline Push-Up Depth Jump — equipment: other
+- Isometric Chest Squeezes — equipment: body only
+- Knee Tuck Jump — equipment: body only
+- Kneeling Arm Drill — equipment: unspecified
+- Lateral Bound — equipment: body only
+- Lateral Box Jump — equipment: other
+- Lateral Cone Hops — equipment: other
+- Linear 3-Part Start Technique — equipment: unspecified
+- Linear Acceleration Wall Drill — equipment: unspecified
+- Linear Depth Jump — equipment: other
+- Medicine Ball Chest Pass — equipment: medicine ball
+- Medicine Ball Full Twist — equipment: medicine ball
+- Medicine Ball Scoop Throw — equipment: medicine ball
+- Mountain Climbers — equipment: unspecified
+- Moving Claw Series — equipment: unspecified
+- Overhead Slam — equipment: medicine ball
+- Plyo Push-up — equipment: body only
+- Quick Leap — equipment: other
+- Return Push from Stance — equipment: medicine ball
+- Rocket Jump — equipment: body only
+- Scissors Jump — equipment: body only
+- Side Hop-Sprint — equipment: other
+- Side Standing Long Jump — equipment: unspecified
+- Side to Side Box Shuffle — equipment: other
+- Single Leg Butt Kick — equipment: body only
+- Single Leg Push-off — equipment: other
+- Single-Cone Sprint Drill — equipment: other
+- Single-Leg Hop Progression — equipment: other
+- Single-Leg Lateral Hop — equipment: other
+- Single-Leg Stride Jump — equipment: other
+- Sledgehammer Swings — equipment: other
+- Split Jump — equipment: body only
+- Standing Long Jump — equipment: body only
+- Standing Two-Arm Overhead Throw — equipment: medicine ball
+- Star Jump — equipment: body only
+- Stride Jump Crossover — equipment: other
+- Supine Chest Throw — equipment: medicine ball
+- Supine One-Arm Overhead Throw — equipment: medicine ball
+- Supine Two-Arm Overhead Throw — equipment: medicine ball
+- Vertical Swing — equipment: dumbbell
+
+## Powerlifting (38)
+
+- Band Good Morning — equipment: bands
+- Band Good Morning (Pull Through) — equipment: bands
+- Barbell Glute Bridge — equipment: barbell
+- Barbell Hip Thrust — equipment: barbell
+- Bench Press - Powerlifting — equipment: barbell
+- Bench Press with Chains — equipment: barbell
+- Board Press — equipment: barbell
+- Box Squat — equipment: barbell
+- Box Squat with Bands — equipment: barbell
+- Chain Handle Extension — equipment: other
+- Chain Press — equipment: other
+- Deadlift with Bands — equipment: barbell
+- Deadlift with Chains — equipment: barbell
+- Deficit Deadlift — equipment: barbell
+- Dumbbell Floor Press — equipment: dumbbell
+- Floor Press — equipment: barbell
+- Floor Press with Chains — equipment: barbell
+- Glute Ham Raise — equipment: machine
+- Good Morning — equipment: barbell
+- Good Morning off Pins — equipment: barbell
+- Hanging Bar Good Morning — equipment: barbell
+- Hip Lift with Band — equipment: bands
+- Kneeling Squat — equipment: barbell
+- Pin Presses — equipment: barbell
+- Rack Pull with Bands — equipment: barbell
+- Rack Pulls — equipment: barbell
+- Reverse Band Bench Press — equipment: barbell
+- Reverse Band Box Squat — equipment: barbell
+- Reverse Band Deadlift — equipment: barbell
+- Reverse Band Power Squat — equipment: barbell
+- Reverse Band Sumo Deadlift — equipment: barbell
+- Seated Good Mornings — equipment: barbell
+- Speed Box Squat — equipment: barbell
+- Squat with Bands — equipment: barbell
+- Squat with Chains — equipment: barbell
+- Sumo Deadlift — equipment: barbell
+- Sumo Deadlift with Bands — equipment: barbell
+- Sumo Deadlift with Chains — equipment: barbell
+
+## Strength (584)
+
+- 3/4 Sit-Up — equipment: body only
+- Ab Crunch Machine — equipment: machine
+- Ab Roller — equipment: other
+- Advanced Kettlebell Windmill — equipment: kettlebells
+- Air Bike — equipment: body only
+- Alternate Hammer Curl — equipment: dumbbell
+- Alternate Heel Touchers — equipment: body only
+- Alternate Incline Dumbbell Curl — equipment: dumbbell
+- Alternating Cable Shoulder Press — equipment: cable
+- Alternating Deltoid Raise — equipment: dumbbell
+- Alternating Floor Press — equipment: kettlebells
+- Alternating Hang Clean — equipment: kettlebells
+- Alternating Kettlebell Press — equipment: kettlebells
+- Alternating Kettlebell Row — equipment: kettlebells
+- Alternating Renegade Row — equipment: kettlebells
+- Anti-Gravity Press — equipment: barbell
+- Arnold Dumbbell Press — equipment: dumbbell
+- Around The Worlds — equipment: dumbbell
+- Back Flyes - With Bands — equipment: bands
+- Balance Board — equipment: other
+- Ball Leg Curl — equipment: exercise ball
+- Band Assisted Pull-Up — equipment: other
+- Band Hip Adductions — equipment: bands
+- Band Pull Apart — equipment: bands
+- Band Skull Crusher — equipment: bands
+- Barbell Ab Rollout — equipment: barbell
+- Barbell Ab Rollout - On Knees — equipment: barbell
+- Barbell Bench Press - Medium Grip — equipment: barbell
+- Barbell Curl — equipment: barbell
+- Barbell Curls Lying Against An Incline — equipment: barbell
+- Barbell Deadlift — equipment: barbell
+- Barbell Full Squat — equipment: barbell
+- Barbell Guillotine Bench Press — equipment: barbell
+- Barbell Hack Squat — equipment: barbell
+- Barbell Incline Bench Press - Medium Grip — equipment: barbell
+- Barbell Incline Shoulder Raise — equipment: barbell
+- Barbell Lunge — equipment: barbell
+- Barbell Rear Delt Row — equipment: barbell
+- Barbell Rollout from Bench — equipment: barbell
+- Barbell Seated Calf Raise — equipment: barbell
+- Barbell Shoulder Press — equipment: barbell
+- Barbell Shrug — equipment: barbell
+- Barbell Shrug Behind The Back — equipment: barbell
+- Barbell Side Bend — equipment: barbell
+- Barbell Side Split Squat — equipment: barbell
+- Barbell Squat — equipment: barbell
+- Barbell Squat To A Bench — equipment: barbell
+- Barbell Step Ups — equipment: barbell
+- Barbell Walking Lunge — equipment: barbell
+- Battling Ropes — equipment: other
+- Bench Dips — equipment: body only
+- Bench Press - With Bands — equipment: bands
+- Bent Over Barbell Row — equipment: barbell
+- Bent Over Dumbbell Rear Delt Raise With Head On Bench — equipment: dumbbell
+- Bent Over Low-Pulley Side Lateral — equipment: cable
+- Bent Over One-Arm Long Bar Row — equipment: barbell
+- Bent Over Two-Arm Long Bar Row — equipment: barbell
+- Bent Over Two-Dumbbell Row — equipment: dumbbell
+- Bent Over Two-Dumbbell Row With Palms In — equipment: dumbbell
+- Bent Press — equipment: kettlebells
+- Bent-Arm Barbell Pullover — equipment: barbell
+- Bent-Arm Dumbbell Pullover — equipment: dumbbell
+- Bent-Knee Hip Raise — equipment: body only
+- Body Tricep Press — equipment: body only
+- Body-Up — equipment: body only
+- Bodyweight Flyes — equipment: e-z curl bar
+- Bodyweight Mid Row — equipment: other
+- Bodyweight Squat — equipment: body only
+- Bodyweight Walking Lunge — equipment: unspecified
+- Bosu Ball Cable Crunch With Side Bends — equipment: cable
+- Bottoms Up — equipment: body only
+- Bottoms-Up Clean From The Hang Position — equipment: kettlebells
+- Box Squat with Chains — equipment: barbell
+- Bradford/Rocky Presses — equipment: barbell
+- Butt Lift (Bridge) — equipment: body only
+- Butt-Ups — equipment: body only
+- Butterfly — equipment: machine
+- Cable Chest Press — equipment: cable
+- Cable Crossover — equipment: cable
+- Cable Crunch — equipment: cable
+- Cable Deadlifts — equipment: cable
+- Cable Hammer Curls - Rope Attachment — equipment: cable
+- Cable Hip Adduction — equipment: cable
+- Cable Incline Pushdown — equipment: cable
+- Cable Incline Triceps Extension — equipment: cable
+- Cable Internal Rotation — equipment: cable
+- Cable Iron Cross — equipment: cable
+- Cable Judo Flip — equipment: cable
+- Cable Lying Triceps Extension — equipment: cable
+- Cable One Arm Tricep Extension — equipment: cable
+- Cable Preacher Curl — equipment: cable
+- Cable Rear Delt Fly — equipment: cable
+- Cable Reverse Crunch — equipment: cable
+- Cable Rope Overhead Triceps Extension — equipment: cable
+- Cable Rope Rear-Delt Rows — equipment: cable
+- Cable Russian Twists — equipment: cable
+- Cable Seated Crunch — equipment: cable
+- Cable Seated Lateral Raise — equipment: cable
+- Cable Shoulder Press — equipment: cable
+- Cable Shrugs — equipment: cable
+- Cable Wrist Curl — equipment: cable
+- Calf Press — equipment: machine
+- Calf Press On The Leg Press Machine — equipment: machine
+- Calf Raise On A Dumbbell — equipment: dumbbell
+- Calf Raises - With Bands — equipment: bands
+- Calf-Machine Shoulder Shrug — equipment: machine
+- Car Drivers — equipment: barbell
+- Chair Squat — equipment: machine
+- Chin-Up — equipment: body only
+- Clean and Press — equipment: barbell
+- Clock Push-Up — equipment: body only
+- Close-Grip Barbell Bench Press — equipment: barbell
+- Close-Grip Dumbbell Press — equipment: dumbbell
+- Close-Grip EZ Bar Curl — equipment: barbell
+- Close-Grip EZ-Bar Curl with Band — equipment: e-z curl bar
+- Close-Grip EZ-Bar Press — equipment: e-z curl bar
+- Close-Grip Front Lat Pulldown — equipment: cable
+- Close-Grip Push-Up off of a Dumbbell — equipment: body only
+- Close-Grip Standing Barbell Curl — equipment: barbell
+- Cocoons — equipment: body only
+- Concentration Curls — equipment: dumbbell
+- Cross Body Hammer Curl — equipment: dumbbell
+- Cross Over - With Bands — equipment: bands
+- Cross-Body Crunch — equipment: body only
+- Crunch - Hands Overhead — equipment: body only
+- Crunch - Legs On Exercise Ball — equipment: body only
+- Crunches — equipment: body only
+- Cuban Press — equipment: dumbbell
+- Dead Bug — equipment: body only
+- Decline Barbell Bench Press — equipment: barbell
+- Decline Close-Grip Bench To Skull Crusher — equipment: barbell
+- Decline Crunch — equipment: body only
+- Decline Dumbbell Bench Press — equipment: dumbbell
+- Decline Dumbbell Flyes — equipment: dumbbell
+- Decline Dumbbell Triceps Extension — equipment: dumbbell
+- Decline EZ Bar Triceps Extension — equipment: barbell
+- Decline Oblique Crunch — equipment: body only
+- Decline Push-Up — equipment: unspecified
+- Decline Reverse Crunch — equipment: body only
+- Decline Smith Press — equipment: machine
+- Dip Machine — equipment: machine
+- Dips - Chest Version — equipment: other
+- Dips - Triceps Version — equipment: body only
+- Donkey Calf Raises — equipment: other
+- Double Kettlebell Alternating Hang Clean — equipment: kettlebells
+- Double Kettlebell Jerk — equipment: kettlebells
+- Double Kettlebell Push Press — equipment: kettlebells
+- Double Kettlebell Snatch — equipment: kettlebells
+- Double Kettlebell Windmill — equipment: kettlebells
+- Downward Facing Balance — equipment: exercise ball
+- Drag Curl — equipment: barbell
+- Dumbbell Alternate Bicep Curl — equipment: dumbbell
+- Dumbbell Bench Press — equipment: dumbbell
+- Dumbbell Bench Press with Neutral Grip — equipment: dumbbell
+- Dumbbell Bicep Curl — equipment: dumbbell
+- Dumbbell Clean — equipment: dumbbell
+- Dumbbell Flyes — equipment: dumbbell
+- Dumbbell Incline Row — equipment: dumbbell
+- Dumbbell Incline Shoulder Raise — equipment: dumbbell
+- Dumbbell Lunges — equipment: dumbbell
+- Dumbbell Lying One-Arm Rear Lateral Raise — equipment: dumbbell
+- Dumbbell Lying Pronation — equipment: dumbbell
+- Dumbbell Lying Rear Lateral Raise — equipment: dumbbell
+- Dumbbell Lying Supination — equipment: dumbbell
+- Dumbbell One-Arm Shoulder Press — equipment: dumbbell
+- Dumbbell One-Arm Triceps Extension — equipment: dumbbell
+- Dumbbell One-Arm Upright Row — equipment: dumbbell
+- Dumbbell Prone Incline Curl — equipment: dumbbell
+- Dumbbell Raise — equipment: dumbbell
+- Dumbbell Rear Lunge — equipment: dumbbell
+- Dumbbell Scaption — equipment: dumbbell
+- Dumbbell Seated One-Leg Calf Raise — equipment: dumbbell
+- Dumbbell Shoulder Press — equipment: dumbbell
+- Dumbbell Shrug — equipment: dumbbell
+- Dumbbell Side Bend — equipment: dumbbell
+- Dumbbell Squat — equipment: dumbbell
+- Dumbbell Squat To A Bench — equipment: dumbbell
+- Dumbbell Step Ups — equipment: dumbbell
+- Dumbbell Tricep Extension -Pronated Grip — equipment: dumbbell
+- Elbow to Knee — equipment: body only
+- Elevated Back Lunge — equipment: barbell
+- Elevated Cable Rows — equipment: cable
+- Exercise Ball Crunch — equipment: exercise ball
+- Exercise Ball Pull-In — equipment: exercise ball
+- Extended Range One-Arm Kettlebell Floor Press — equipment: kettlebells
+- External Rotation — equipment: dumbbell
+- External Rotation with Band — equipment: bands
+- External Rotation with Cable — equipment: cable
+- EZ-Bar Curl — equipment: e-z curl bar
+- EZ-Bar Skullcrusher — equipment: e-z curl bar
+- Face Pull — equipment: cable
+- Finger Curls — equipment: barbell
+- Flat Bench Cable Flyes — equipment: cable
+- Flat Bench Leg Pull-In — equipment: body only
+- Flat Bench Lying Leg Raise — equipment: body only
+- Flexor Incline Dumbbell Curls — equipment: dumbbell
+- Floor Glute-Ham Raise — equipment: unspecified
+- Flutter Kicks — equipment: body only
+- Freehand Jump Squat — equipment: body only
+- Frog Sit-Ups — equipment: body only
+- Front Barbell Squat — equipment: barbell
+- Front Barbell Squat To A Bench — equipment: barbell
+- Front Cable Raise — equipment: cable
+- Front Dumbbell Raise — equipment: dumbbell
+- Front Incline Dumbbell Raise — equipment: dumbbell
+- Front Plate Raise — equipment: other
+- Front Raise And Pullover — equipment: barbell
+- Front Squat (Clean Grip) — equipment: barbell
+- Front Squats With Two Kettlebells — equipment: kettlebells
+- Front Two-Dumbbell Raise — equipment: dumbbell
+- Full Range-Of-Motion Lat Pulldown — equipment: cable
+- Gironda Sternum Chins — equipment: other
+- Glute Kickback — equipment: body only
+- Goblet Squat — equipment: kettlebells
+- Gorilla Chin/Crunch — equipment: body only
+- Hack Squat — equipment: machine
+- Hammer Curls — equipment: dumbbell
+- Hammer Grip Incline DB Bench Press — equipment: dumbbell
+- Handstand Push-Ups — equipment: body only
+- Hanging Leg Raise — equipment: body only
+- Hanging Pike — equipment: body only
+- High Cable Curls — equipment: cable
+- Hip Extension with Bands — equipment: bands
+- Hip Flexion with Band — equipment: bands
+- Hyperextensions (Back Extensions) — equipment: other
+- Hyperextensions With No Hyperextension Bench — equipment: body only
+- Incline Barbell Triceps Extension — equipment: barbell
+- Incline Bench Pull — equipment: barbell
+- Incline Cable Chest Press — equipment: cable
+- Incline Cable Flye — equipment: cable
+- Incline Dumbbell Bench With Palms Facing In — equipment: dumbbell
+- Incline Dumbbell Curl — equipment: dumbbell
+- Incline Dumbbell Flyes — equipment: dumbbell
+- Incline Dumbbell Flyes - With A Twist — equipment: dumbbell
+- Incline Dumbbell Press — equipment: dumbbell
+- Incline Hammer Curls — equipment: dumbbell
+- Incline Inner Biceps Curl — equipment: dumbbell
+- Incline Push-Up — equipment: body only
+- Incline Push-Up Close-Grip — equipment: body only
+- Incline Push-Up Medium — equipment: body only
+- Incline Push-Up Reverse Grip — equipment: body only
+- Incline Push-Up Wide — equipment: body only
+- Internal Rotation with Band — equipment: bands
+- Inverted Row — equipment: unspecified
+- Inverted Row with Straps — equipment: other
+- Iron Cross — equipment: dumbbell
+- Isometric Neck Exercise - Front And Back — equipment: body only
+- Isometric Neck Exercise - Sides — equipment: body only
+- Isometric Wipers — equipment: body only
+- Jackknife Sit-Up — equipment: body only
+- Janda Sit-Up — equipment: body only
+- Jefferson Squats — equipment: barbell
+- JM Press — equipment: barbell
+- Kettlebell Arnold Press — equipment: kettlebells
+- Kettlebell Dead Clean — equipment: kettlebells
+- Kettlebell Figure 8 — equipment: kettlebells
+- Kettlebell Halo — equipment: kettlebells
+- Kettlebell Halo with Overhead Extension — equipment: kettlebells
+- Kettlebell Hang Clean — equipment: kettlebells
+- Kettlebell One-Legged Deadlift — equipment: kettlebells
+- Kettlebell Overhead Triceps Extension — equipment: kettlebells
+- Kettlebell Pass Between The Legs — equipment: kettlebells
+- Kettlebell Pirate Ships — equipment: kettlebells
+- Kettlebell Pistol Squat — equipment: kettlebells
+- Kettlebell Seated Press — equipment: kettlebells
+- Kettlebell Seesaw Press — equipment: kettlebells
+- Kettlebell Sumo High Pull — equipment: kettlebells
+- Kettlebell Thruster — equipment: kettlebells
+- Kettlebell Turkish Get-Up (Lunge style) — equipment: kettlebells
+- Kettlebell Turkish Get-Up (Squat style) — equipment: kettlebells
+- Kettlebell Windmill — equipment: kettlebells
+- Kipping Muscle Up — equipment: other
+- Knee/Hip Raise On Parallel Bars — equipment: other
+- Kneeling Cable Crunch With Alternating Oblique Twists — equipment: cable
+- Kneeling Cable Triceps Extension — equipment: cable
+- Kneeling High Pulley Row — equipment: cable
+- Kneeling Single-Arm High Pulley Row — equipment: cable
+- Landmine 180's — equipment: barbell
+- Landmine Linear Jammer — equipment: barbell
+- Lateral Raise - With Bands — equipment: bands
+- Leg Extensions — equipment: machine
+- Leg Lift — equipment: body only
+- Leg Press — equipment: machine
+- Leg Pull-In — equipment: body only
+- Leg-Over Floor Press — equipment: kettlebells
+- Leverage Chest Press — equipment: machine
+- Leverage Deadlift — equipment: machine
+- Leverage Decline Chest Press — equipment: machine
+- Leverage High Row — equipment: machine
+- Leverage Incline Chest Press — equipment: machine
+- Leverage Iso Row — equipment: machine
+- Leverage Shoulder Press — equipment: machine
+- Leverage Shrug — equipment: machine
+- London Bridges — equipment: other
+- Low Cable Crossover — equipment: cable
+- Low Cable Triceps Extension — equipment: cable
+- Low Pulley Row To Neck — equipment: cable
+- Lunge Pass Through — equipment: kettlebells
+- Lunge Sprint — equipment: machine
+- Lying Cable Curl — equipment: cable
+- Lying Cambered Barbell Row — equipment: barbell
+- Lying Close-Grip Bar Curl On High Pulley — equipment: cable
+- Lying Close-Grip Barbell Triceps Extension Behind The Head — equipment: barbell
+- Lying Close-Grip Barbell Triceps Press To Chin — equipment: e-z curl bar
+- Lying Dumbbell Tricep Extension — equipment: dumbbell
+- Lying Face Down Plate Neck Resistance — equipment: other
+- Lying Face Up Plate Neck Resistance — equipment: other
+- Lying High Bench Barbell Curl — equipment: barbell
+- Lying Leg Curls — equipment: machine
+- Lying Machine Squat — equipment: machine
+- Lying One-Arm Lateral Raise — equipment: dumbbell
+- Lying Rear Delt Raise — equipment: dumbbell
+- Lying Supine Dumbbell Curl — equipment: dumbbell
+- Lying T-Bar Row — equipment: machine
+- Lying Triceps Press — equipment: e-z curl bar
+- Machine Bench Press — equipment: machine
+- Machine Bicep Curl — equipment: machine
+- Machine Preacher Curls — equipment: machine
+- Machine Shoulder (Military) Press — equipment: machine
+- Machine Triceps Extension — equipment: machine
+- Middle Back Shrug — equipment: dumbbell
+- Mixed Grip Chin — equipment: other
+- Monster Walk — equipment: bands
+- Muscle Up — equipment: other
+- Narrow Stance Hack Squats — equipment: machine
+- Narrow Stance Leg Press — equipment: machine
+- Narrow Stance Squats — equipment: barbell
+- Natural Glute Ham Raise — equipment: body only
+- Neck Press — equipment: barbell
+- Oblique Crunches — equipment: body only
+- Oblique Crunches - On The Floor — equipment: body only
+- One Arm Chin-Up — equipment: other
+- One Arm Dumbbell Bench Press — equipment: dumbbell
+- One Arm Dumbbell Preacher Curl — equipment: dumbbell
+- One Arm Floor Press — equipment: barbell
+- One Arm Lat Pulldown — equipment: cable
+- One Arm Pronated Dumbbell Triceps Extension — equipment: dumbbell
+- One Arm Supinated Dumbbell Triceps Extension — equipment: dumbbell
+- One Leg Barbell Squat — equipment: barbell
+- One-Arm Dumbbell Row — equipment: dumbbell
+- One-Arm Flat Bench Dumbbell Flye — equipment: dumbbell
+- One-Arm High-Pulley Cable Side Bends — equipment: cable
+- One-Arm Incline Lateral Raise — equipment: dumbbell
+- One-Arm Kettlebell Clean — equipment: kettlebells
+- One-Arm Kettlebell Clean and Jerk — equipment: kettlebells
+- One-Arm Kettlebell Floor Press — equipment: kettlebells
+- One-Arm Kettlebell Jerk — equipment: kettlebells
+- One-Arm Kettlebell Military Press To The Side — equipment: kettlebells
+- One-Arm Kettlebell Para Press — equipment: kettlebells
+- One-Arm Kettlebell Push Press — equipment: kettlebells
+- One-Arm Kettlebell Row — equipment: kettlebells
+- One-Arm Kettlebell Snatch — equipment: kettlebells
+- One-Arm Kettlebell Split Jerk — equipment: kettlebells
+- One-Arm Kettlebell Split Snatch — equipment: kettlebells
+- One-Arm Kettlebell Swings — equipment: kettlebells
+- One-Arm Long Bar Row — equipment: barbell
+- One-Arm Medicine Ball Slam — equipment: medicine ball
+- One-Arm Open Palm Kettlebell Clean — equipment: kettlebells
+- One-Arm Overhead Kettlebell Squats — equipment: kettlebells
+- One-Arm Side Deadlift — equipment: barbell
+- One-Arm Side Laterals — equipment: dumbbell
+- One-Legged Cable Kickback — equipment: cable
+- Open Palm Kettlebell Clean — equipment: kettlebells
+- Otis-Up — equipment: other
+- Overhead Cable Curl — equipment: cable
+- Pallof Press — equipment: cable
+- Pallof Press With Rotation — equipment: cable
+- Palms-Down Dumbbell Wrist Curl Over A Bench — equipment: dumbbell
+- Palms-Down Wrist Curl Over A Bench — equipment: barbell
+- Palms-Up Barbell Wrist Curl Over A Bench — equipment: barbell
+- Palms-Up Dumbbell Wrist Curl Over A Bench — equipment: dumbbell
+- Parallel Bar Dip — equipment: other
+- Physioball Hip Bridge — equipment: exercise ball
+- Plank — equipment: body only
+- Plate Pinch — equipment: other
+- Plate Twist — equipment: other
+- Platform Hamstring Slides — equipment: other
+- Plie Dumbbell Squat — equipment: dumbbell
+- Plyo Kettlebell Pushups — equipment: kettlebells
+- Power Clean — equipment: barbell
+- Power Partials — equipment: dumbbell
+- Preacher Curl — equipment: barbell
+- Preacher Hammer Dumbbell Curl — equipment: dumbbell
+- Press Sit-Up — equipment: barbell
+- Prone Manual Hamstring — equipment: unspecified
+- Pull Through — equipment: cable
+- Pullups — equipment: body only
+- Push Up to Side Plank — equipment: body only
+- Push-Up Wide — equipment: body only
+- Push-Ups - Close Triceps Position — equipment: body only
+- Push-Ups With Feet Elevated — equipment: body only
+- Push-Ups With Feet On An Exercise Ball — equipment: exercise ball
+- Pushups — equipment: body only
+- Pushups (Close and Wide Hand Positions) — equipment: body only
+- Reverse Barbell Curl — equipment: barbell
+- Reverse Barbell Preacher Curls — equipment: e-z curl bar
+- Reverse Cable Curl — equipment: cable
+- Reverse Crunch — equipment: body only
+- Reverse Flyes — equipment: dumbbell
+- Reverse Flyes With External Rotation — equipment: dumbbell
+- Reverse Grip Bent-Over Rows — equipment: barbell
+- Reverse Grip Triceps Pushdown — equipment: cable
+- Reverse Hyperextension — equipment: machine
+- Reverse Machine Flyes — equipment: machine
+- Reverse Plate Curls — equipment: other
+- Reverse Triceps Bench Press — equipment: barbell
+- Ring Dips — equipment: other
+- Rocking Standing Calf Raise — equipment: barbell
+- Rocky Pull-Ups/Pulldowns — equipment: other
+- Romanian Deadlift — equipment: barbell
+- Rope Climb — equipment: other
+- Rope Crunch — equipment: cable
+- Rope Straight-Arm Pulldown — equipment: cable
+- Russian Twist — equipment: body only
+- Scapular Pull-Up — equipment: unspecified
+- Seated Band Hamstring Curl — equipment: other
+- Seated Barbell Military Press — equipment: barbell
+- Seated Barbell Twist — equipment: barbell
+- Seated Bent-Over One-Arm Dumbbell Triceps Extension — equipment: dumbbell
+- Seated Bent-Over Rear Delt Raise — equipment: dumbbell
+- Seated Bent-Over Two-Arm Dumbbell Triceps Extension — equipment: dumbbell
+- Seated Cable Rows — equipment: cable
+- Seated Cable Shoulder Press — equipment: cable
+- Seated Calf Raise — equipment: machine
+- Seated Close-Grip Concentration Barbell Curl — equipment: barbell
+- Seated Dumbbell Curl — equipment: dumbbell
+- Seated Dumbbell Inner Biceps Curl — equipment: dumbbell
+- Seated Dumbbell Palms-Down Wrist Curl — equipment: dumbbell
+- Seated Dumbbell Palms-Up Wrist Curl — equipment: dumbbell
+- Seated Dumbbell Press — equipment: dumbbell
+- Seated Flat Bench Leg Pull-In — equipment: body only
+- Seated Head Harness Neck Resistance — equipment: other
+- Seated Leg Curl — equipment: machine
+- Seated Leg Tucks — equipment: body only
+- Seated One-arm Cable Pulley Rows — equipment: cable
+- Seated One-Arm Dumbbell Palms-Down Wrist Curl — equipment: dumbbell
+- Seated One-Arm Dumbbell Palms-Up Wrist Curl — equipment: dumbbell
+- Seated Palm-Up Barbell Wrist Curl — equipment: barbell
+- Seated Palms-Down Barbell Wrist Curl — equipment: barbell
+- Seated Side Lateral Raise — equipment: dumbbell
+- Seated Triceps Press — equipment: dumbbell
+- Seated Two-Arm Palms-Up Low-Pulley Wrist Curl — equipment: cable
+- See-Saw Press (Alternating Side Press) — equipment: dumbbell
+- Shotgun Row — equipment: cable
+- Shoulder Press - With Bands — equipment: bands
+- Side Bridge — equipment: body only
+- Side Jackknife — equipment: body only
+- Side Lateral Raise — equipment: dumbbell
+- Side Laterals to Front Raise — equipment: dumbbell
+- Side To Side Chins — equipment: other
+- Single Dumbbell Raise — equipment: dumbbell
+- Single Leg Glute Bridge — equipment: body only
+- Single-Arm Cable Crossover — equipment: cable
+- Single-Arm Linear Jammer — equipment: barbell
+- Single-Arm Push-Up — equipment: body only
+- Single-Leg High Box Squat — equipment: other
+- Single-Leg Leg Extension — equipment: machine
+- Sit-Up — equipment: body only
+- Sled Overhead Backward Walk — equipment: other
+- Sled Overhead Triceps Extension — equipment: other
+- Sled Reverse Flye — equipment: other
+- Sled Row — equipment: other
+- Smith Incline Shoulder Raise — equipment: barbell
+- Smith Machine Behind the Back Shrug — equipment: machine
+- Smith Machine Bench Press — equipment: machine
+- Smith Machine Bent Over Row — equipment: machine
+- Smith Machine Calf Raise — equipment: machine
+- Smith Machine Close-Grip Bench Press — equipment: machine
+- Smith Machine Decline Press — equipment: machine
+- Smith Machine Hang Power Clean — equipment: machine
+- Smith Machine Hip Raise — equipment: machine
+- Smith Machine Incline Bench Press — equipment: machine
+- Smith Machine Leg Press — equipment: machine
+- Smith Machine One-Arm Upright Row — equipment: machine
+- Smith Machine Overhead Shoulder Press — equipment: machine
+- Smith Machine Pistol Squat — equipment: machine
+- Smith Machine Reverse Calf Raises — equipment: machine
+- Smith Machine Squat — equipment: machine
+- Smith Machine Stiff-Legged Deadlift — equipment: machine
+- Smith Machine Upright Row — equipment: machine
+- Smith Single-Leg Split Squat — equipment: machine
+- Snatch Pull — equipment: barbell
+- Speed Band Overhead Triceps — equipment: bands
+- Speed Squats — equipment: barbell
+- Spell Caster — equipment: dumbbell
+- Spider Crawl — equipment: body only
+- Spider Curl — equipment: e-z curl bar
+- Split Squat with Dumbbells — equipment: dumbbell
+- Squat Jerk — equipment: barbell
+- Squat with Plate Movers — equipment: barbell
+- Squats - With Bands — equipment: bands
+- Standing Alternating Dumbbell Press — equipment: dumbbell
+- Standing Barbell Calf Raise — equipment: barbell
+- Standing Barbell Press Behind Neck — equipment: barbell
+- Standing Bent-Over One-Arm Dumbbell Triceps Extension — equipment: dumbbell
+- Standing Bent-Over Two-Arm Dumbbell Triceps Extension — equipment: dumbbell
+- Standing Biceps Cable Curl — equipment: cable
+- Standing Bradford Press — equipment: barbell
+- Standing Cable Chest Press — equipment: cable
+- Standing Cable Lift — equipment: cable
+- Standing Cable Wood Chop — equipment: cable
+- Standing Calf Raises — equipment: machine
+- Standing Concentration Curl — equipment: dumbbell
+- Standing Dumbbell Calf Raise — equipment: dumbbell
+- Standing Dumbbell Press — equipment: dumbbell
+- Standing Dumbbell Reverse Curl — equipment: dumbbell
+- Standing Dumbbell Straight-Arm Front Delt Raise Above Head — equipment: dumbbell
+- Standing Dumbbell Triceps Extension — equipment: dumbbell
+- Standing Dumbbell Upright Row — equipment: dumbbell
+- Standing Front Barbell Raise Over Head — equipment: barbell
+- Standing Inner-Biceps Curl — equipment: dumbbell
+- Standing Leg Curl — equipment: machine
+- Standing Low-Pulley Deltoid Raise — equipment: cable
+- Standing Low-Pulley One-Arm Triceps Extension — equipment: cable
+- Standing Military Press — equipment: barbell
+- Standing Olympic Plate Hand Squeeze — equipment: other
+- Standing One-Arm Cable Curl — equipment: cable
+- Standing One-Arm Dumbbell Curl Over Incline Bench — equipment: dumbbell
+- Standing One-Arm Dumbbell Triceps Extension — equipment: dumbbell
+- Standing Overhead Barbell Triceps Extension — equipment: barbell
+- Standing Palm-In One-Arm Dumbbell Press — equipment: dumbbell
+- Standing Palms-In Dumbbell Press — equipment: dumbbell
+- Standing Palms-Up Barbell Behind The Back Wrist Curl — equipment: barbell
+- Standing Rope Crunch — equipment: cable
+- Standing Towel Triceps Extension — equipment: body only
+- Step-up with Knee Raise — equipment: body only
+- Stiff Leg Barbell Good Morning — equipment: barbell
+- Stiff-Legged Barbell Deadlift — equipment: barbell
+- Stiff-Legged Dumbbell Deadlift — equipment: dumbbell
+- Straight Bar Bench Mid Rows — equipment: barbell
+- Straight Raises on Incline Bench — equipment: barbell
+- Straight-Arm Dumbbell Pullover — equipment: dumbbell
+- Straight-Arm Pulldown — equipment: cable
+- Suspended Fallout — equipment: other
+- Suspended Push-Up — equipment: other
+- Suspended Reverse Crunch — equipment: other
+- Suspended Row — equipment: other
+- Suspended Split Squat — equipment: other
+- Svend Press — equipment: other
+- T-Bar Row with Handle — equipment: barbell
+- Tate Press — equipment: dumbbell
+- Thigh Abductor — equipment: machine
+- Thigh Adductor — equipment: machine
+- Trap Bar Deadlift — equipment: other
+- Tricep Dumbbell Kickback — equipment: dumbbell
+- Triceps Overhead Extension with Rope — equipment: cable
+- Triceps Pushdown — equipment: cable
+- Triceps Pushdown - Rope Attachment — equipment: cable
+- Triceps Pushdown - V-Bar Attachment — equipment: cable
+- Tuck Crunch — equipment: body only
+- Two-Arm Dumbbell Preacher Curl — equipment: dumbbell
+- Two-Arm Kettlebell Clean — equipment: kettlebells
+- Two-Arm Kettlebell Jerk — equipment: kettlebells
+- Two-Arm Kettlebell Military Press — equipment: kettlebells
+- Two-Arm Kettlebell Row — equipment: kettlebells
+- Underhand Cable Pulldowns — equipment: cable
+- Upright Barbell Row — equipment: barbell
+- Upright Cable Row — equipment: cable
+- Upright Row - With Bands — equipment: bands
+- V-Bar Pulldown — equipment: cable
+- V-Bar Pullup — equipment: body only
+- Weighted Ball Hyperextension — equipment: exercise ball
+- Weighted Ball Side Bend — equipment: exercise ball
+- Weighted Bench Dip — equipment: other
+- Weighted Crunches — equipment: medicine ball
+- Weighted Jump Squat — equipment: barbell
+- Weighted Pull Ups — equipment: other
+- Weighted Sissy Squat — equipment: barbell
+- Weighted Sit-Ups - With Bands — equipment: other
+- Weighted Squat — equipment: other
+- Wide Stance Barbell Squat — equipment: barbell
+- Wide-Grip Barbell Bench Press — equipment: barbell
+- Wide-Grip Decline Barbell Bench Press — equipment: barbell
+- Wide-Grip Decline Barbell Pullover — equipment: barbell
+- Wide-Grip Lat Pulldown — equipment: cable
+- Wide-Grip Pulldown Behind The Neck — equipment: cable
+- Wide-Grip Rear Pull-Up — equipment: body only
+- Wide-Grip Standing Barbell Curl — equipment: barbell
+- Wind Sprints — equipment: body only
+- Wrist Roller — equipment: other
+- Wrist Rotations with Straight Bar — equipment: barbell
+- Zercher Squats — equipment: barbell
+- Zottman Curl — equipment: dumbbell
+- Zottman Preacher Curl — equipment: dumbbell
+
+## Stretching (123)
+
+- 90/90 Hamstring — equipment: body only
+- Adductor — equipment: foam roll
+- Adductor/Groin — equipment: unspecified
+- All Fours Quad Stretch — equipment: body only
+- Ankle Circles — equipment: unspecified
+- Ankle On The Knee — equipment: unspecified
+- Anterior Tibialis-SMR — equipment: other
+- Arm Circles — equipment: unspecified
+- Behind Head Chest Stretch — equipment: other
+- Brachialis-SMR — equipment: foam roll
+- Calf Stretch Elbows Against Wall — equipment: unspecified
+- Calf Stretch Hands Against Wall — equipment: unspecified
+- Calves-SMR — equipment: foam roll
+- Cat Stretch — equipment: unspecified
+- Chair Leg Extended Stretch — equipment: other
+- Chair Lower Back Stretch — equipment: unspecified
+- Chair Upper Body Stretch — equipment: other
+- Chest And Front Of Shoulder Stretch — equipment: other
+- Chest Stretch on Stability Ball — equipment: exercise ball
+- Child's Pose — equipment: unspecified
+- Chin To Chest Stretch — equipment: unspecified
+- Crossover Reverse Lunge — equipment: unspecified
+- Dancer's Stretch — equipment: unspecified
+- Dynamic Back Stretch — equipment: unspecified
+- Dynamic Chest Stretch — equipment: unspecified
+- Elbow Circles — equipment: unspecified
+- Elbows Back — equipment: unspecified
+- Foot-SMR — equipment: other
+- Frog Hops — equipment: unspecified
+- Front Leg Raises — equipment: body only
+- Groin and Back Stretch — equipment: unspecified
+- Groiners — equipment: body only
+- Hamstring Stretch — equipment: unspecified
+- Hamstring-SMR — equipment: foam roll
+- Hip Circles (prone) — equipment: body only
+- Hug A Ball — equipment: exercise ball
+- Hug Knees To Chest — equipment: unspecified
+- Iliotibial Tract-SMR — equipment: foam roll
+- Inchworm — equipment: body only
+- Intermediate Groin Stretch — equipment: other
+- Intermediate Hip Flexor and Quad Stretch — equipment: other
+- Iron Crosses (stretch) — equipment: unspecified
+- IT Band and Glute Stretch — equipment: other
+- Knee Across The Body — equipment: unspecified
+- Knee Circles — equipment: body only
+- Kneeling Forearm Stretch — equipment: unspecified
+- Kneeling Hip Flexor — equipment: unspecified
+- Latissimus Dorsi-SMR — equipment: foam roll
+- Leg-Up Hamstring Stretch — equipment: unspecified
+- Looking At Ceiling — equipment: unspecified
+- Lower Back Curl — equipment: body only
+- Lower Back-SMR — equipment: foam roll
+- Lying Bent Leg Groin — equipment: other
+- Lying Crossover — equipment: body only
+- Lying Glute — equipment: body only
+- Lying Hamstring — equipment: other
+- Lying Prone Quadriceps — equipment: body only
+- Middle Back Stretch — equipment: unspecified
+- Neck-SMR — equipment: other
+- On Your Side Quad Stretch — equipment: unspecified
+- On-Your-Back Quad Stretch — equipment: other
+- One Arm Against Wall — equipment: unspecified
+- One Half Locust — equipment: unspecified
+- One Handed Hang — equipment: other
+- One Knee To Chest — equipment: unspecified
+- Overhead Lat — equipment: other
+- Overhead Stretch — equipment: unspecified
+- Overhead Triceps — equipment: body only
+- Pelvic Tilt Into Bridge — equipment: unspecified
+- Peroneals Stretch — equipment: other
+- Peroneals-SMR — equipment: foam roll
+- Piriformis-SMR — equipment: foam roll
+- Posterior Tibialis Stretch — equipment: other
+- Pyramid — equipment: exercise ball
+- Quad Stretch — equipment: other
+- Quadriceps-SMR — equipment: foam roll
+- Rear Leg Raises — equipment: body only
+- Rhomboids-SMR — equipment: foam roll
+- Round The World Shoulder Stretch — equipment: other
+- Runner's Stretch — equipment: unspecified
+- Scissor Kick — equipment: body only
+- Seated Biceps — equipment: body only
+- Seated Calf Stretch — equipment: unspecified
+- Seated Floor Hamstring Stretch — equipment: unspecified
+- Seated Front Deltoid — equipment: body only
+- Seated Glute — equipment: body only
+- Seated Hamstring — equipment: unspecified
+- Seated Hamstring and Calf Stretch — equipment: other
+- Seated Overhead Stretch — equipment: unspecified
+- Shoulder Circles — equipment: unspecified
+- Shoulder Raise — equipment: unspecified
+- Shoulder Stretch — equipment: unspecified
+- Side Leg Raises — equipment: body only
+- Side Lying Groin Stretch — equipment: unspecified
+- Side Neck Stretch — equipment: unspecified
+- Side Wrist Pull — equipment: unspecified
+- Side-Lying Floor Stretch — equipment: unspecified
+- Sit Squats — equipment: unspecified
+- Spinal Stretch — equipment: unspecified
+- Split Squats — equipment: unspecified
+- Standing Biceps Stretch — equipment: other
+- Standing Elevated Quad Stretch — equipment: other
+- Standing Gastrocnemius Calf Stretch — equipment: unspecified
+- Standing Hamstring and Calf Stretch — equipment: other
+- Standing Hip Circles — equipment: body only
+- Standing Hip Flexors — equipment: unspecified
+- Standing Lateral Stretch — equipment: unspecified
+- Standing Pelvic Tilt — equipment: unspecified
+- Standing Soleus And Achilles Stretch — equipment: unspecified
+- Standing Toe Touches — equipment: unspecified
+- Stomach Vacuum — equipment: body only
+- Superman — equipment: body only
+- The Straddle — equipment: unspecified
+- Toe Touchers — equipment: body only
+- Torso Rotation — equipment: exercise ball
+- Tricep Side Stretch — equipment: unspecified
+- Triceps Stretch — equipment: unspecified
+- Upper Back Stretch — equipment: unspecified
+- Upper Back-Leg Grab — equipment: unspecified
+- Upward Stretch — equipment: unspecified
+- Windmills — equipment: unspecified
+- World's Greatest Stretch — equipment: unspecified
+- Wrist Circles — equipment: body only
+
+## Strongman (21)
+
+- Atlas Stone Trainer — equipment: other
+- Atlas Stones — equipment: other
+- Axle Deadlift — equipment: other
+- Backward Drag — equipment: other
+- Bear Crawl Sled Drags — equipment: other
+- Car Deadlift — equipment: other
+- Circus Bell — equipment: other
+- Conan's Wheel — equipment: other
+- Crucifix — equipment: other
+- Farmer's Walk — equipment: other
+- Forward Drag with Press — equipment: other
+- Keg Load — equipment: other
+- Log Lift — equipment: other
+- Power Stairs — equipment: other
+- Rickshaw Carry — equipment: other
+- Rickshaw Deadlift — equipment: other
+- Sandbag Load — equipment: other
+- Sled Drag - Harness — equipment: other
+- Sled Push — equipment: other
+- Tire Flip — equipment: other
+- Yoke Walk — equipment: other

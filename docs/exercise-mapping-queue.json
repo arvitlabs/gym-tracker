@@ -1,0 +1,1130 @@
+{
+  "sourceFile": "exercise-library-final-v1.md",
+  "namingSource": "MuscleWiki",
+  "batches": [
+    {
+      "id": "01",
+      "title": "Gym \u2014 Chest (beginner + intermediate)",
+      "status": "MAPPING_COMPLETE_INSTRUCTIONS_DRAFT"
+    },
+    {
+      "id": "02",
+      "title": "Gym \u2014 Back (beginner + intermediate)",
+      "status": "MAPPING_COMPLETE_WITH_FLAG"
+    },
+    {
+      "id": "03",
+      "title": "Gym \u2014 Legs (beginner + intermediate)",
+      "status": "RELATED_SOURCE_REVIEW_PLUS_FLAG"
+    },
+    {
+      "id": "04",
+      "title": "Gym \u2014 Shoulders (beginner + intermediate)",
+      "status": "MAPPING_COMPLETE_INSTRUCTIONS_DRAFT"
+    },
+    {
+      "id": "05",
+      "title": "Gym \u2014 Arms (beginner + intermediate)",
+      "status": "MATCHED"
+    },
+    {
+      "id": "06",
+      "title": "Gym \u2014 Abs (beginner + intermediate)",
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "07",
+      "title": "Bodyweight \u2014 push and pull ladders",
+      "status": "PENDING"
+    },
+    {
+      "id": "08",
+      "title": "Bodyweight \u2014 squat, glute bridge and calf variants",
+      "status": "PENDING"
+    },
+    {
+      "id": "09",
+      "title": "Bodyweight \u2014 plank and core support",
+      "status": "PENDING"
+    },
+    {
+      "id": "10",
+      "title": "Optional later exercises and coverage reconciliation",
+      "status": "PENDING"
+    }
+  ],
+  "tasks": [
+    {
+      "batchId": "01",
+      "sourcePart": "B1",
+      "sourceSection": "Chest",
+      "sourceLine": 207,
+      "originalName": "Machine chest press",
+      "status": "MATCHED",
+      "note": "Exact movement match; library does not prescribe a different grip.",
+      "taskRef": "01-01",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-chest-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "01",
+      "sourcePart": "B1",
+      "sourceSection": "Chest",
+      "sourceLine": 208,
+      "originalName": "Flat dumbbell press",
+      "status": "MATCHED",
+      "note": "Flat bench confirmed by source description; our slug makes flat explicit.",
+      "taskRef": "01-02",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-bench-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "01",
+      "sourcePart": "B1",
+      "sourceSection": "Chest",
+      "sourceLine": 209,
+      "originalName": "Pec deck / machine fly",
+      "status": "MATCHED",
+      "note": "Selected handle-grip variant matches the document cues. Elbow-pad Machine Bent Arm Pec Fly is a separate variant, not an alias.",
+      "taskRef": "01-03",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-pec-fly"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B1",
+      "sourceSection": "Back",
+      "sourceLine": 228,
+      "originalName": "Lat pulldown, wide grip",
+      "status": "MATCHED",
+      "note": "Source detailed explanation explicitly identifies the demonstrated variant as a wide overhand pulldown. Proposed slug uses cable resistance even though MuscleWiki calls it Machine Pulldown.",
+      "taskRef": "02-01",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-pulldown"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B1",
+      "sourceSection": "Back",
+      "sourceLine": 229,
+      "originalName": "Seated cable row",
+      "status": "MATCHED",
+      "note": "Same seated cable-row movement; attachment is unspecified in the library and not frozen in the proposed slug.",
+      "taskRef": "02-02",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-seated-cable-row"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B1",
+      "sourceSection": "Back",
+      "sourceLine": 230,
+      "originalName": "Lat pulldown, close / neutral grip",
+      "status": "MATCHED",
+      "note": "User selected straight-bar narrow grip. The neutral alternative in the original label is not used; intermediate Neutral Pulldown stays separate.",
+      "taskRef": "02-03",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/narrow-pulldown"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B1",
+      "sourceSection": "Legs",
+      "sourceLine": 246,
+      "originalName": "Leg press (or goblet squat)",
+      "status": "MATCHED",
+      "note": "First of two explicit alternatives in the library; mapped separately rather than treating leg press and goblet squat as aliases. | Second explicit alternative. Original cues specify a dumbbell at the chest.",
+      "taskRef": "03-01",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-leg-press",
+        "https://musclewiki.com/exercise/dumbbell-goblet-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B1",
+      "sourceSection": "Legs",
+      "sourceLine": 247,
+      "originalName": "Leg curl",
+      "status": "MATCHED",
+      "note": "User confirmed seated. Reuses the same source movement as intermediate Seated Leg Curl; assign one exercise UUID at seeding, not one per level.",
+      "taskRef": "03-02",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/seated-leg-curl"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B1",
+      "sourceSection": "Legs",
+      "sourceLine": 248,
+      "originalName": "Light dumbbell Romanian deadlift",
+      "status": "MATCHED",
+      "note": "Light is a load prescription, not a separate exercise identity.",
+      "taskRef": "03-03",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-romanian-deadlift"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B1",
+      "sourceSection": "Legs",
+      "sourceLine": 249,
+      "originalName": "Hip thrust",
+      "status": "MATCHED",
+      "note": "User confirmed dumbbell hip thrust for beginner entry. Exact source name/page previously verified; instruction collection pending resume.",
+      "taskRef": "03-04",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-hip-thrust"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B1",
+      "sourceSection": "Legs",
+      "sourceLine": 250,
+      "originalName": "Calf raise machine",
+      "status": "MATCHED",
+      "note": "Matches the user-confirmed elevated platform setup without a machine. Both original placements reference the same movement; no separate seed identities. Additional loading was not requested; base source is bodyweight.",
+      "taskRef": "03-05",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/calf-raises"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "04",
+      "sourcePart": "B1",
+      "sourceSection": "Shoulders",
+      "sourceLine": 280,
+      "originalName": "Machine shoulder press",
+      "status": "MATCHED",
+      "note": "Corresponding machine shoulder press. Overhand grip is the proposed source variant; original library does not prescribe grip. Neutral-grip machine would be a different match.",
+      "taskRef": "04-01",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-overhand-overhead-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "04",
+      "sourcePart": "B1",
+      "sourceSection": "Shoulders",
+      "sourceLine": 281,
+      "originalName": "Dumbbell lateral raise",
+      "status": "MATCHED",
+      "note": "Standing dumbbell setup and sideward raise match the original description.",
+      "taskRef": "04-02",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-lateral-raise"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "04",
+      "sourcePart": "B1",
+      "sourceSection": "Shoulders",
+      "sourceLine": 282,
+      "originalName": "Reverse pec deck",
+      "status": "MATCHED",
+      "note": "Machine, chest support and rear-shoulder movement match. Instruction cue conflict retained for review.",
+      "taskRef": "04-03",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-reverse-fly"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B1",
+      "sourceSection": "Arms",
+      "sourceLine": 299,
+      "originalName": "Dumbbell curl",
+      "status": "MATCHED",
+      "note": "Original cues explicitly turn palms upward during the curl, so the rotating variant matches better than a fixed-grip curl.",
+      "taskRef": "05-01",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-twisting-curl"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B1",
+      "sourceSection": "Arms",
+      "sourceLine": 300,
+      "originalName": "Cable pushdown",
+      "status": "MATCHED",
+      "note": "User selected straight-bar pushdown. Source specifies a bar attachment and overhand grip; straight bar retained as the chosen setup.",
+      "taskRef": "05-02",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/cable-bar-pushdown"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B1",
+      "sourceSection": "Arms",
+      "sourceLine": 301,
+      "originalName": "Hammer curl",
+      "status": "MATCHED",
+      "note": "Neutral-grip dumbbell curl matches the library cue.",
+      "taskRef": "05-03",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-hammer-curl"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B1",
+      "sourceSection": "Arms",
+      "sourceLine": 302,
+      "originalName": "Overhead dumbbell extension",
+      "status": "MATCHED",
+      "note": "Library explicitly uses one dumbbell held with both hands. Source describes a single dumbbell overhead extension; retain the two-hand setup as our library note.",
+      "taskRef": "05-04",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-overhead-tricep-extension"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "06",
+      "sourcePart": "B1",
+      "sourceSection": "Abs",
+      "sourceLine": 320,
+      "originalName": "Crunch",
+      "status": "MATCHED",
+      "note": "Floor bodyweight crunch matches the library. Original ribcage-to-pelvis cue and avoiding neck pulling remain library coaching notes.",
+      "taskRef": "06-01",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/crunches"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "06",
+      "sourcePart": "B1",
+      "sourceSection": "Abs",
+      "sourceLine": 321,
+      "originalName": "Reverse crunch (knees tucked)",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "Library specifies a lying hip-curl reverse crunch. MuscleWiki Reverse Crunch instead describes sitting in a V position, drawing torso and legs together, then extending. Name overlap is insufficient; no exact match established. Reverse Crunch Kick Up adds a bench/kick-up sequence, and Laying Leg Raises does not explicitly establish the hip curl, so neither is substituted. Preserve tucked knees as the beginner setup. User approved retaining the original variation and leaving the source match flagged on November 3, 2026.",
+      "taskRef": "06-02",
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "candidateSourceUrls": [
+        "https://musclewiki.com/exercise/reverse-crunch"
+      ]
+    },
+    {
+      "batchId": "01",
+      "sourcePart": "B2",
+      "sourceSection": "Chest",
+      "sourceLine": 342,
+      "originalName": "Incline dumbbell press",
+      "status": "MATCHED",
+      "note": "Source page confirms the corresponding bench-press variant; naming only.",
+      "taskRef": "01-04",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-incline-bench-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "01",
+      "sourcePart": "B2",
+      "sourceSection": "Chest",
+      "sourceLine": 343,
+      "originalName": "Barbell bench press",
+      "status": "MATCHED",
+      "note": "Source page confirms the corresponding bench-press variant; naming only.",
+      "taskRef": "01-05",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/barbell-bench-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "01",
+      "sourcePart": "B2",
+      "sourceSection": "Chest",
+      "sourceLine": 344,
+      "originalName": "Seated cable fly",
+      "status": "MATCHED",
+      "note": "User confirmed this candidate matches the intended seated supported fly. Page confirms bench/cable setup; seated equivalence accepted from user review.",
+      "taskRef": "01-06",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/cable-bench-chest-fly"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B2",
+      "sourceSection": "Back",
+      "sourceLine": 349,
+      "originalName": "Neutral-grip pulldown, leaning back",
+      "status": "MATCHED",
+      "note": "Neutral-grip movement matches. Original 10\u201315 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
+      "taskRef": "02-04",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/neutral-pulldown"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B2",
+      "sourceSection": "Back",
+      "sourceLine": 350,
+      "originalName": "One-arm dumbbell row",
+      "status": "MATCHED",
+      "note": "Movement and support match; source describes pulling toward chest, while library cues toward hip. Preserve the distinction for instruction review rather than altering the source name.",
+      "taskRef": "02-05",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-single-arm-row"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B2",
+      "sourceSection": "Back",
+      "sourceLine": 351,
+      "originalName": "Chest-supported row, bench about 30\u00b0",
+      "status": "MATCHED",
+      "note": "User confirmed dumbbells. MuscleWiki specifies an incline of 30\u201345 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
+      "taskRef": "02-06",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-laying-incline-row"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "02",
+      "sourcePart": "B2",
+      "sourceSection": "Back",
+      "sourceLine": 352,
+      "originalName": "Chest-supported row, bench about 60\u00b0",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "User confirmed dumbbells and chose to keep this entry flagged. No verified exact source match for the 60-degree flared-elbow/shrug execution. Do not replace or merge it with the 30-degree row. Name, slug and instructions remain unassigned.",
+      "taskRef": "02-07",
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "candidateSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-laying-row"
+      ]
+    },
+    {
+      "batchId": "04",
+      "sourcePart": "B2",
+      "sourceSection": "Shoulders",
+      "sourceLine": 357,
+      "originalName": "Seated dumbbell shoulder press",
+      "status": "MATCHED",
+      "note": "Source name matches seated dumbbell overhead pressing. Original bench-angle nuance remains a library setup note.",
+      "taskRef": "04-04",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-seated-overhead-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "04",
+      "sourcePart": "B2",
+      "sourceSection": "Shoulders",
+      "sourceLine": 358,
+      "originalName": "Cable lateral raise",
+      "status": "MATCHED",
+      "note": "User accepted the general low-cable single-arm lateral raise. Behind-the-body start stays a separate original-library setup note, not a claim made by the source.",
+      "taskRef": "04-05",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/cable-low-single-arm-lateral-raise"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "04",
+      "sourcePart": "B2",
+      "sourceSection": "Shoulders",
+      "sourceLine": 359,
+      "originalName": "Reverse cable fly",
+      "status": "MATCHED",
+      "note": "High opposing-side cable setup matches the library\u2019s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
+      "taskRef": "04-06",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/cable-high-reverse-fly"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B2",
+      "sourceSection": "Arms",
+      "sourceLine": 364,
+      "originalName": "Lying incline dumbbell curl",
+      "status": "MATCHED",
+      "note": "Library cues arms hanging behind body against incline support; matches the reclined seated incline curl, not a chest-supported spider curl.",
+      "taskRef": "05-05",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-incline-curl"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B2",
+      "sourceSection": "Arms",
+      "sourceLine": 365,
+      "originalName": "Reverse preacher curl or behind-the-body cable curl",
+      "status": "MATCHED",
+      "note": "User clarified a pronated curl on the sloped preacher pad, typically EZ-bar or barbell. Matched the EZ-bar version; straight barbell remains an equipment alternative, not a second verified source match. | Mapped behind-the-body alternative to low-cable, facing-away underhand curl. Single-arm source variation retained explicitly; not the same exercise as a reverse-grip preacher curl.",
+      "taskRef": "05-06",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/ez-bar-reverse-preacher-curl",
+        "https://musclewiki.com/exercise/cable-single-arm-bayesian-curl"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "05",
+      "sourcePart": "B2",
+      "sourceSection": "Arms",
+      "sourceLine": 366,
+      "originalName": "Overhead cable or rope extension",
+      "status": "MATCHED",
+      "note": "Rope variant selected in response to the attachment question. Source name specifies rope; its written directions also permit other attachments.",
+      "taskRef": "05-07",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/cable-rope-overhead-tricep-extension"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 371,
+      "originalName": "Barbell squat",
+      "status": "MATCHED",
+      "note": "High-bar match inferred from the library\u2019s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
+      "taskRef": "03-06",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/barbell-high-bar-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 372,
+      "originalName": "Romanian deadlift",
+      "status": "MATCHED",
+      "note": "Intermediate cues explicitly mention the bar, distinguishing it from the beginner dumbbell version.",
+      "taskRef": "03-07",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/barbell-romanian-deadlift"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 373,
+      "originalName": "Walking lunge",
+      "status": "RELATED_SOURCE_ACCEPTED",
+      "note": "User selected Dumbbell Forward Lunge as the reference. It is a related movement, not an exact traveling-walking match. Do not silently rename/replace the library exercise; final walking-versus-returning execution and slug remain open.",
+      "taskRef": "03-08",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dumbbell-forward-lunge"
+      ],
+      "instructionStatus": "SOURCE_VARIANT_REVIEW_REQUIRED"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 374,
+      "originalName": "Leg extension",
+      "status": "MATCHED",
+      "note": "Machine version agrees with the library\u2019s setup.",
+      "taskRef": "03-09",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/machine-leg-extension"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 375,
+      "originalName": "Seated leg curl",
+      "status": "MATCHED",
+      "note": "Explicit seated-machine variant. Source also has Machine Seated Leg Curl; keep one accepted source identity rather than duplicating a synonym.",
+      "taskRef": "03-10",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/seated-leg-curl"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 376,
+      "originalName": "Barbell hip thrust",
+      "status": "MATCHED",
+      "note": "Explicit barbell and bench setup; same name as verified source.",
+      "taskRef": "03-11",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/barbell-hip-thrust"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 377,
+      "originalName": "Glute-dominant step-down",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "User explicitly chose to keep the glute-dominant step-down flagged. No substitution or final name/slug/instructions.",
+      "taskRef": "03-12",
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "candidateSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-curtsy-step-down"
+      ]
+    },
+    {
+      "batchId": "03",
+      "sourcePart": "B2",
+      "sourceSection": "Legs",
+      "sourceLine": 378,
+      "originalName": "Standing calf raise",
+      "status": "MATCHED",
+      "note": "Matches the user-confirmed elevated platform setup without a machine. Both original placements reference the same movement; no separate seed identities. Additional loading was not requested; base source is bodyweight.",
+      "taskRef": "03-13",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/calf-raises"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
+    },
+    {
+      "batchId": "06",
+      "sourcePart": "B2",
+      "sourceSection": "Abs",
+      "sourceLine": 383,
+      "originalName": "Reverse crunch, legs straighter",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "Library specifies a lying hip-curl reverse crunch. MuscleWiki Reverse Crunch instead describes sitting in a V position, drawing torso and legs together, then extending. Name overlap is insufficient; no exact match established. Reverse Crunch Kick Up adds a bench/kick-up sequence, and Laying Leg Raises does not explicitly establish the hip curl, so neither is substituted. Preserve straighter legs as the intermediate setup; do not merge with beginner variation before reconciliation. User approved retaining the original variation and leaving the source match flagged on November 3, 2026.",
+      "taskRef": "06-03",
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "candidateSourceUrls": [
+        "https://musclewiki.com/exercise/reverse-crunch"
+      ]
+    },
+    {
+      "batchId": "06",
+      "sourcePart": "B2",
+      "sourceSection": "Abs",
+      "sourceLine": 384,
+      "originalName": "Rope cable crunch",
+      "status": "MATCHED",
+      "note": "User confirmed kneeling rope cable crunch. Naming/setup match accepted; source hip-motion cue differs from original fixed-hip cue, so instructions require editorial review.",
+      "taskRef": "06-04",
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/cable-rope-kneeling-crunch"
+      ],
+      "instructionStatus": "SOURCE_CUE_REVIEW_REQUIRED"
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Wall push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-01",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Incline push-up \u2014 hands at chest height",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-02",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Incline push-up \u2014 hands at hip height",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-03",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Negative push-up \u2014 return on knees",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-04",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Full push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-05",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Decline push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-06",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Diamond push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-07",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Archer push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-08",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Push-up",
+      "sourceLine": 87,
+      "originalName": "Knee push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "07-09",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Pull-up",
+      "sourceLine": 114,
+      "originalName": "Pull-up",
+      "status": "PENDING",
+      "note": "Compare movement and setup; repeated prescriptions do not create extra exercises.",
+      "taskRef": "07-10",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Pull-up",
+      "sourceLine": 114,
+      "originalName": "Dead hang",
+      "status": "PENDING",
+      "note": "Compare movement and setup; repeated prescriptions do not create extra exercises.",
+      "taskRef": "07-11",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Pull-up",
+      "sourceLine": 114,
+      "originalName": "Scapular pulls",
+      "status": "PENDING",
+      "note": "Compare movement and setup; repeated prescriptions do not create extra exercises.",
+      "taskRef": "07-12",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Pull-up",
+      "sourceLine": 114,
+      "originalName": "Inverted row \u2014 steep",
+      "status": "PENDING",
+      "note": "Compare movement and setup; repeated prescriptions do not create extra exercises.",
+      "taskRef": "07-13",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Pull-up",
+      "sourceLine": 114,
+      "originalName": "Inverted row \u2014 horizontal",
+      "status": "PENDING",
+      "note": "Compare movement and setup; repeated prescriptions do not create extra exercises.",
+      "taskRef": "07-14",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "07",
+      "sourcePart": "A",
+      "sourceSection": "## Pull-up",
+      "sourceLine": 114,
+      "originalName": "Negative pull-up",
+      "status": "PENDING",
+      "note": "Compare movement and setup; repeated prescriptions do not create extra exercises.",
+      "taskRef": "07-15",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Chair squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-01",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Bodyweight squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-02",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Pause squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-03",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Split squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-04",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Bulgarian split squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-05",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Box pistol squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-06",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Squat",
+      "sourceLine": 140,
+      "originalName": "Pistol squat",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "08-07",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Glute bridge",
+      "status": "PENDING",
+      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "taskRef": "08-08",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Glute bridge \u2014 pause at top",
+      "status": "PENDING",
+      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "taskRef": "08-09",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Single-leg glute bridge",
+      "status": "PENDING",
+      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "taskRef": "08-10",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Calf raise \u2014 both legs",
+      "status": "PENDING",
+      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "taskRef": "08-11",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Calf raise \u2014 single leg",
+      "status": "PENDING",
+      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "taskRef": "08-12",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "08",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Calf raise \u2014 step edge",
+      "status": "PENDING",
+      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "taskRef": "08-13",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Plank",
+      "sourceLine": 164,
+      "originalName": "Knee plank",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "09-01",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Plank",
+      "sourceLine": 164,
+      "originalName": "Full forearm plank",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "09-02",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Plank",
+      "sourceLine": 164,
+      "originalName": "Long-lever plank",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "09-03",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Plank",
+      "sourceLine": 164,
+      "originalName": "Rocking plank",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "09-04",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Side plank \u2014 knees",
+      "status": "PENDING",
+      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "taskRef": "09-05",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Side plank \u2014 full",
+      "status": "PENDING",
+      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "taskRef": "09-06",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Side plank \u2014 top-leg lift",
+      "status": "PENDING",
+      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "taskRef": "09-07",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Superman \u2014 hold",
+      "status": "PENDING",
+      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "taskRef": "09-08",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Superman \u2014 repetitions",
+      "status": "PENDING",
+      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "taskRef": "09-09",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "09",
+      "sourcePart": "A",
+      "sourceSection": "## Support exercises",
+      "sourceLine": 175,
+      "originalName": "Superman \u2014 alternating arm/leg",
+      "status": "PENDING",
+      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "taskRef": "09-10",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "10",
+      "sourcePart": "A",
+      "sourceSection": "## The list",
+      "sourceLine": 45,
+      "originalName": "Pike push-up",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "10-01",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "10",
+      "sourcePart": "A",
+      "sourceSection": "## The list",
+      "sourceLine": 45,
+      "originalName": "Single-leg glute bridge (optional-list reference)",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "10-02",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "10",
+      "sourcePart": "A",
+      "sourceSection": "## The list",
+      "sourceLine": 45,
+      "originalName": "Dead bug",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "10-03",
+      "matchedSourceUrls": []
+    },
+    {
+      "batchId": "10",
+      "sourcePart": "A",
+      "sourceSection": "## The list",
+      "sourceLine": 45,
+      "originalName": "Hollow hold",
+      "status": "PENDING",
+      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "taskRef": "10-04",
+      "matchedSourceUrls": []
+    }
+  ],
+  "workflowStatus": "PAUSED_BY_USER",
+  "currentWork": "Paused by user after Batch 06 on November 3, 2026. Abs: 2 names matched; 2 reverse-crunch variants retained and flagged by agreement. Cable crunch source cue needs editorial review. Resume at Batch 07 bodyweight push/pull only when requested."
+}
