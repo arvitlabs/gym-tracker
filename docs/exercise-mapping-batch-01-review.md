@@ -624,3 +624,234 @@ Source summary: attach the rope to the highest pulley, move away and kneel; sour
 - User approved retaining both original lying reverse-crunch variations, flagged without an exact MuscleWiki match. No forced substitution or final source name/slug.
 - Kneeling rope cable crunch confirmed. Abs: two names matched, two variations retained and flagged; source cue review remains.
 - Mapping paused at user request. Resume with Batch 07 — bodyweight push/pull ladders when requested. No UUIDs generated.
+
+## Batch 07 - Bodyweight push and pull ladders - November 3, 2026
+
+Disposition: 15 source tasks researched; 9 matched to 8 proposed canonical entries (incline heights share one); 1 user-selected wall source pending page verification; 1 user-accepted related ring source; 1 negative push-up deferred by user; 2 NO_EXACT_MATCH; 1 NEEDS_CLARIFICATION. Batch remains REVIEW_REQUIRED. Original library unchanged; no UUIDs or seeds.
+
+Verification used individual English exercise pages and their written execution/equipment. Video playback was not inspected, so exact visual angles are not claimed. Search failure does not prove absence from the entire provider catalog. Instructions are concise draft paraphrases; app reuse permission remains unresolved.
+
+### Wall push-up
+
+- Task: 07-01
+- Status: USER_SELECTED_SOURCE_PENDING_VERIFICATION
+- MuscleWiki name: Bodyweight Wall Pushup (provisional from URL)
+- Proposed slug: bodyweight-wall-push-up (provisional)
+- User-selected source: https://musclewiki.com/exercise/bodyweight-wall-pushup
+
+The user supplied this URL. Its page could not be retrieved through the web reader, so the title, execution and instructions are not independently verified. Keep instructions empty pending page verification.
+
+No exact wall-supported push-up page established after wall push-up/wall pushup searches. Incline Push Up uses an elevated platform, not a vertical wall; do not substitute.
+
+Related/rejected exact reference: [Incline Push Up](https://musclewiki.com/exercise/incline-push-up). No exact wall-supported push-up page established after wall push-up/wall pushup searches. Incline Push Up uses an elevated platform, not a vertical wall; do not substitute.
+
+
+### Incline push-up — hands at chest height
+
+- Task: 07-02
+- Status: MATCHED
+- MuscleWiki name: Incline Push Up
+- Proposed slug: bodyweight-incline-push-up
+- Source: https://musclewiki.com/exercise/incline-push-up
+
+Elevated-hand push-up matches. Chest-height and hip-height supports are library setup prescriptions, not heights specified by the source. Share one proposed canonical identity.
+
+1. Face a stable raised support and set your hands slightly outside shoulder width.
+2. Bend your arms to bring your chest near the support.
+3. Press away until your arms straighten.
+
+Library setup/review note: Keep chest-height counter and hip-height desk setups as separate ladder prescriptions. Verify support stability. Do not attribute either exact height to MuscleWiki.
+
+### Incline push-up — hands at hip height
+
+- Task: 07-03
+- Status: MATCHED
+- MuscleWiki name: Incline Push Up
+- Proposed slug: bodyweight-incline-push-up
+- Source: https://musclewiki.com/exercise/incline-push-up
+
+Elevated-hand push-up matches. Chest-height and hip-height supports are library setup prescriptions, not heights specified by the source. Share one proposed canonical identity.
+
+1. Face a stable raised support and set your hands slightly outside shoulder width.
+2. Bend your arms to bring your chest near the support.
+3. Press away until your arms straighten.
+
+Library setup/review note: Keep chest-height counter and hip-height desk setups as separate ladder prescriptions. Verify support stability. Do not attribute either exact height to MuscleWiki.
+
+### Negative push-up — return on knees
+
+- Task: 07-04
+- Status: DEFERRED_BY_USER
+- MuscleWiki name: unassigned
+- Proposed slug: unassigned
+
+User requested leaving negative push-up for now. Retain the original movement without a source substitution or drafted instructions. Library lowers from toes then returns on knees; knee push-ups support both phases on knees.
+
+Related/rejected exact reference: [Bodyweight Knee Push Ups](https://musclewiki.com/exercise/bodyweight-knee-push-ups). No exact negative push-up page established after negative/eccentric push-up searches. Library lowers from toes then returns on knees; knee push-ups support both phases on knees.
+
+
+### Full push-up
+
+- Task: 07-05
+- Status: MATCHED
+- MuscleWiki name: Push Up
+- Proposed slug: bodyweight-push-up
+- Source: https://musclewiki.com/exercise/push-up
+
+Standard floor push-up. Source places hands directly below shoulders; library says slightly wider and specifies approximately 45-degree elbows. Preserve these as separate coaching notes for review.
+
+1. Set your palms beneath your shoulders and keep your trunk aligned.
+2. Lower with your elbows near your sides and shoulder blades drawn back and down.
+3. Breathe out as you press to the start.
+
+Library setup/review note: Original library: slightly wider hands, elbows about 45 degrees, chest just above floor. Review source shoulder-blade cue before app publication.
+
+### Decline push-up
+
+- Task: 07-06
+- Status: MATCHED
+- MuscleWiki name: Decline Push Up
+- Proposed slug: bodyweight-decline-push-up
+- Source: https://musclewiki.com/exercise/decline-push-up
+
+Feet elevated on a bench with hands on the floor matches the decline variation.
+
+1. Rest your feet on a bench and place your hands outside shoulder width.
+2. Lower your chest close to the floor.
+3. Press upward, stopping short of fully locking the elbows.
+
+Library setup/review note: Source endpoint is almost locked elbows; original general push-up cue says straight arms. Retain difference for review.
+
+### Diamond push-up
+
+- Task: 07-07
+- Status: MATCHED
+- MuscleWiki name: Diamond Push Ups
+- Proposed slug: bodyweight-diamond-push-up
+- Source: https://musclewiki.com/exercise/diamond-push-ups
+
+Floor push-up with touching thumbs and index fingers matches the named diamond variation.
+
+1. Arrange your thumbs and index fingers into a diamond beneath your chest.
+2. Use a regular push-up body position and lower with elbows near your sides.
+3. Before your chest reaches the floor, press back up.
+
+### Archer push-up
+
+- Task: 07-08
+- Status: USER_ACCEPTED_RELATED_SOURCE
+- MuscleWiki name: Ring Standing Archer Pushup
+- Proposed slug: suspension-trainer-ring-standing-archer-push-up
+- Source: https://musclewiki.com/exercise/ring-standing-archer-pushup
+
+User accepted the ring variation for now. This is a related source, not an exact floor archer match: rings change equipment and support.
+
+1. Hold rings set approximately shoulder width and extend your legs behind you.
+2. Lower toward the rings, bending one elbow while reaching the opposite arm sideways; press back.
+3. Switch the working arm and repeat.
+
+Library setup/review note: Rings required. Do not present as a verified floor archer demonstration.
+
+### Knee push-up
+
+- Task: 07-09
+- Status: MATCHED
+- MuscleWiki name: Bodyweight Knee Push Ups
+- Proposed slug: bodyweight-knee-push-up
+- Source: https://musclewiki.com/exercise/bodyweight-knee-push-ups
+
+Both lowering and pressing use knee support. This is the optional knee push-up, not the full-body negative with a knee-assisted return.
+
+1. Take a push-up stance supported on your knees.
+2. Bend at shoulders and elbows to lower, keeping elbows near your body.
+3. Press back to your initial position.
+
+Library setup/review note: Optional side step in original library; not a replacement for negative push-ups.
+
+### Pull-up
+
+- Task: 07-10
+- Status: MATCHED
+- MuscleWiki name: Pull Ups
+- Proposed slug: bodyweight-pull-up
+- Source: https://musclewiki.com/exercise/pull-ups
+
+Overhand bar pull-up from extended arms to chin above bar matches the original execution.
+
+1. Hang from the bar using an overhand grip with arms extended.
+2. Pull until your chin clears the bar.
+3. Lower back to the hanging position.
+
+Library setup/review note: Library uses hands just wider than shoulders. Monthly retests, sets, and rep targets remain prescriptions.
+
+### Dead hang
+
+- Task: 07-11
+- Status: MATCHED
+- MuscleWiki name: Dead Hang
+- Proposed slug: bodyweight-dead-hang
+- Source: https://musclewiki.com/exercise/dead-hang
+
+Overhand straight-arm timed hang matches the preparatory hold.
+
+1. Hold the bar with palms facing forward.
+2. Suspend your body with straight arms.
+3. Maintain abdominal tension for the prescribed hold.
+
+Library setup/review note: Original 30-60 second target is a prescription, not identity.
+
+### Scapular pulls
+
+- Task: 07-12
+- Status: NO_EXACT_MATCH
+- MuscleWiki name: unassigned
+- Proposed slug: unassigned
+
+Scapular pull searches did not establish a hanging straight-arm scapular-pull page. Scapular Retraction describes standing/seated shoulder movement and is not a hanging pull.
+
+Related/rejected exact reference: [Scapular Retraction](https://musclewiki.com/exercise/scapular-retraction). Scapular pull searches did not establish a hanging straight-arm scapular-pull page. Scapular Retraction describes standing/seated shoulder movement and is not a hanging pull.
+
+
+### Inverted row — steep
+
+- Task: 07-13
+- Status: NEEDS_CLARIFICATION
+- MuscleWiki name: unassigned
+- Proposed slug: unassigned
+
+Generic Inverted Row supports bar rowing but does not establish the steep setup. Standing Inverted Row uses a door frame/rack with neutral grip; do not substitute it for a steeper bar row. Keep bar height/body angle as a proposed setup variation pending review.
+
+Related/rejected exact reference: [Inverted Row](https://musclewiki.com/exercise/inverted-row). Generic Inverted Row supports bar rowing but does not establish the steep setup. Standing Inverted Row uses a door frame/rack with neutral grip; do not substitute it for a steeper bar row. Keep bar height/body angle as a proposed setup variation pending review.
+
+
+### Inverted row — horizontal
+
+- Task: 07-14
+- Status: MATCHED
+- MuscleWiki name: Inverted Row
+- Proposed slug: bodyweight-inverted-row
+- Source: https://musclewiki.com/exercise/inverted-row
+
+Fixed horizontal bar and overhand rowing match the horizontal row pattern. Page text does not quantify torso angle; horizontal setup comes from the library.
+
+1. Position yourself beneath a secured horizontal bar and take a wide overhand grip.
+2. Row your body toward the bar.
+3. Lower until the arms straighten again.
+
+Library setup/review note: Preserve horizontal body-angle prescription. Source grip metadata includes underhand, but selected written execution is overhand.
+
+### Negative pull-up
+
+- Task: 07-15
+- Status: NO_EXACT_MATCH
+- MuscleWiki name: unassigned
+- Proposed slug: unassigned
+
+Negative/eccentric pull-up searches did not establish an exact page. Pull Ups includes a concentric pull and does not verify the jump-to-top, five-second hold and five-second descent sequence.
+
+Related/rejected exact reference: [Pull Ups](https://musclewiki.com/exercise/pull-ups). Negative/eccentric pull-up searches did not establish an exact page. Pull Ups includes a concentric pull and does not verify the jump-to-top, five-second hold and five-second descent sequence.
+
+
+Search audit: MuscleWiki-only searches for wall push-up/wall pushup; negative/eccentric push-up; archer push-up/archer pushup; scapular pulls; negative/eccentric pull-up. Opened related pages above to compare equipment and execution. The incorrect guessed plural push-ups URL did not open; discovered and verified the actual singular push-up URL from the chest/bodyweight directory. No guessed URLs are accepted as sources.
+
+User follow-up: wall page selected pending verification; ring archer accepted as a related source for now; negative push-up deferred. The remaining Batch 07 exceptions stay open for review and final reconciliation. Next batch: 08.

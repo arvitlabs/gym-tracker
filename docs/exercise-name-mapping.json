@@ -320,7 +320,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Back"
       },
-      "matchNote": "Neutral-grip movement matches. Original 10\u201315 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
+      "matchNote": "Neutral-grip movement matches. Original 10–15 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
       "proposedSlug": "cable-lat-pulldown-neutral-grip",
       "instructions": [
         "Fit a V-shaped handle and sit with your thighs secured by the pads.",
@@ -369,7 +369,7 @@
       }
     },
     {
-      "originalName": "Chest-supported row, bench about 30\u00b0",
+      "originalName": "Chest-supported row, bench about 30°",
       "name": "Dumbbell Laying Incline Row",
       "source": "MuscleWiki",
       "sourceUrl": "https://musclewiki.com/exercise/dumbbell-laying-incline-row",
@@ -382,10 +382,10 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Back"
       },
-      "matchNote": "User confirmed dumbbells. MuscleWiki specifies an incline of 30\u201345 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
+      "matchNote": "User confirmed dumbbells. MuscleWiki specifies an incline of 30–45 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
       "proposedSlug": "dumbbell-incline-chest-supported-row",
       "instructions": [
-        "Support your chest on an inclined bench set within the source\u2019s 30\u201345 degree range.",
+        "Support your chest on an inclined bench set within the source’s 30–45 degree range.",
         "Begin with the weights hanging below you, then draw your elbows backward and upward."
       ],
       "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
@@ -400,7 +400,7 @@
       }
     },
     {
-      "originalName": "Chest-supported row, bench about 60\u00b0",
+      "originalName": "Chest-supported row, bench about 60°",
       "name": null,
       "source": "MuscleWiki",
       "sourceUrl": null,
@@ -635,7 +635,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Legs"
       },
-      "matchNote": "High-bar match inferred from the library\u2019s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
+      "matchNote": "High-bar match inferred from the library’s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
       "proposedSlug": "barbell-high-bar-back-squat",
       "instructions": [
         "Position the bar across the upper trapezius and brace your trunk.",
@@ -733,7 +733,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Legs"
       },
-      "matchNote": "Machine version agrees with the library\u2019s setup.",
+      "matchNote": "Machine version agrees with the library’s setup.",
       "proposedSlug": "machine-leg-extension",
       "instructions": [
         "Sit with your back supported and adjust the station so your knees begin bent approximately to a right angle.",
@@ -1051,7 +1051,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Shoulders"
       },
-      "matchNote": "High opposing-side cable setup matches the library\u2019s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
+      "matchNote": "High opposing-side cable setup matches the library’s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
       "proposedSlug": "cable-high-reverse-fly",
       "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
       "instructions": [
@@ -1441,6 +1441,501 @@
       ],
       "instructionReviewNotes": [
         "Resolve source hip movement versus original fixed-hip coaching before publishing instructions."
+      ]
+    },
+    {
+      "originalName": "Wall push-up",
+      "name": "Bodyweight Wall Pushup",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-wall-pushup",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "USER_SELECTED_SOURCE_PENDING_VERIFICATION",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-wall-push-up",
+      "matchNote": "User supplied and selected this wall push-up URL on November 3, 2026. Page retrieval failed via web reader and local DNS; exact page title and instructions remain unverified. Name is provisional from user URL, not independently source-verified.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_SOURCE_VERIFICATION",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [],
+      "sourceTaskRefs": [
+        "07-01"
+      ],
+      "candidates": [
+        {
+          "name": "Incline Push Up",
+          "sourceUrl": "https://musclewiki.com/exercise/incline-push-up",
+          "reason": "No exact wall-supported push-up page established after wall push-up/wall pushup searches. Incline Push Up uses an elevated platform, not a vertical wall; do not substitute.",
+          "status": "NOT_ACCEPTED_AS_EXACT_MATCH"
+        }
+      ],
+      "matchConfirmedBy": "USER",
+      "attribution": {
+        "url": "https://musclewiki.com/exercise/bodyweight-wall-pushup",
+        "name": "MuscleWiki"
+      }
+    },
+    {
+      "originalName": "Incline push-up — hands at chest height",
+      "name": "Incline Push Up",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/incline-push-up",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-incline-push-up",
+      "matchNote": "Elevated-hand push-up matches. Chest-height and hip-height supports are library setup prescriptions, not heights specified by the source. Share one proposed canonical identity.",
+      "instructions": [
+        "Face a stable raised support and set your hands slightly outside shoulder width.",
+        "Bend your arms to bring your chest near the support.",
+        "Press away until your arms straighten."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/incline-push-up",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Keep chest-height counter and hip-height desk setups as separate ladder prescriptions. Verify support stability. Do not attribute either exact height to MuscleWiki."
+      ],
+      "sourceTaskRefs": [
+        "07-02",
+        "07-03"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/incline-push-up"
+      },
+      "originalNames": [
+        "Incline push-up - hands at chest height",
+        "Incline push-up - hands at hip height"
+      ]
+    },
+    {
+      "originalName": "Negative push-up — return on knees",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "DEFERRED_BY_USER",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": null,
+      "matchNote": "User requested leaving negative push-up for now on November 3, 2026. Retain original library movement; no source substitution or instructions. Deferred, not removed from the original library.",
+      "instructions": [],
+      "instructionStatus": "DEFERRED_BY_USER",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [],
+      "sourceTaskRefs": [
+        "07-04"
+      ],
+      "candidates": [
+        {
+          "name": "Bodyweight Knee Push Ups",
+          "sourceUrl": "https://musclewiki.com/exercise/bodyweight-knee-push-ups",
+          "reason": "No exact negative push-up page established after negative/eccentric push-up searches. Library lowers from toes then returns on knees; knee push-ups support both phases on knees.",
+          "status": "NOT_ACCEPTED_AS_EXACT_MATCH"
+        }
+      ],
+      "matchConfirmedBy": "USER"
+    },
+    {
+      "originalName": "Full push-up",
+      "name": "Push Up",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/push-up",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-push-up",
+      "matchNote": "Standard floor push-up. Source places hands directly below shoulders; library says slightly wider and specifies approximately 45-degree elbows. Preserve these as separate coaching notes for review.",
+      "instructions": [
+        "Set your palms beneath your shoulders and keep your trunk aligned.",
+        "Lower with your elbows near your sides and shoulder blades drawn back and down.",
+        "Breathe out as you press to the start."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/push-up",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Original library: slightly wider hands, elbows about 45 degrees, chest just above floor. Review source shoulder-blade cue before app publication."
+      ],
+      "sourceTaskRefs": [
+        "07-05"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/push-up"
+      }
+    },
+    {
+      "originalName": "Decline push-up",
+      "name": "Decline Push Up",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/decline-push-up",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-decline-push-up",
+      "matchNote": "Feet elevated on a bench with hands on the floor matches the decline variation.",
+      "instructions": [
+        "Rest your feet on a bench and place your hands outside shoulder width.",
+        "Lower your chest close to the floor.",
+        "Press upward, stopping short of fully locking the elbows."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/decline-push-up",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Source endpoint is almost locked elbows; original general push-up cue says straight arms. Retain difference for review."
+      ],
+      "sourceTaskRefs": [
+        "07-06"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/decline-push-up"
+      }
+    },
+    {
+      "originalName": "Diamond push-up",
+      "name": "Diamond Push Ups",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/diamond-push-ups",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-diamond-push-up",
+      "matchNote": "Floor push-up with touching thumbs and index fingers matches the named diamond variation.",
+      "instructions": [
+        "Arrange your thumbs and index fingers into a diamond beneath your chest.",
+        "Use a regular push-up body position and lower with elbows near your sides.",
+        "Before your chest reaches the floor, press back up."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/diamond-push-ups",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [],
+      "sourceTaskRefs": [
+        "07-07"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/diamond-push-ups"
+      }
+    },
+    {
+      "originalName": "Archer push-up",
+      "name": "Ring Standing Archer Pushup",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/ring-standing-archer-pushup",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "USER_ACCEPTED_RELATED_SOURCE",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "suspension-trainer-ring-standing-archer-push-up",
+      "matchNote": "User accepted Ring Standing Archer Pushup for archer for now on November 3, 2026. Verified English page uses rings, bends one elbow while extending the other arm sideways, then alternates. This is a temporary related-source selection, not an exact floor archer match.",
+      "instructions": [
+        "Hold rings set approximately shoulder width and extend your legs behind you.",
+        "Lower toward the rings, bending one elbow while reaching the opposite arm sideways; press back.",
+        "Switch the working arm and repeat."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/ring-standing-archer-pushup",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Rings required. Do not present as a verified floor archer demonstration."
+      ],
+      "sourceTaskRefs": [
+        "07-08"
+      ],
+      "candidates": [],
+      "matchConfirmedBy": "USER",
+      "attribution": {
+        "url": "https://musclewiki.com/exercise/ring-standing-archer-pushup",
+        "name": "MuscleWiki"
+      },
+      "instructionCheckedOn": "2026-11-03",
+      "instructionFormat": "Concise paraphrase of verified English source page; draft."
+    },
+    {
+      "originalName": "Knee push-up",
+      "name": "Bodyweight Knee Push Ups",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-knee-push-ups",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Push",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-knee-push-up",
+      "matchNote": "Both lowering and pressing use knee support. This is the optional knee push-up, not the full-body negative with a knee-assisted return.",
+      "instructions": [
+        "Take a push-up stance supported on your knees.",
+        "Bend at shoulders and elbows to lower, keeping elbows near your body.",
+        "Press back to your initial position."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bodyweight-knee-push-ups",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Optional side step in original library; not a replacement for negative push-ups."
+      ],
+      "sourceTaskRefs": [
+        "07-09"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bodyweight-knee-push-ups"
+      }
+    },
+    {
+      "originalName": "Pull-up",
+      "name": "Pull Ups",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/pull-ups",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Pull",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-pull-up",
+      "matchNote": "Overhand bar pull-up from extended arms to chin above bar matches the original execution.",
+      "instructions": [
+        "Hang from the bar using an overhand grip with arms extended.",
+        "Pull until your chin clears the bar.",
+        "Lower back to the hanging position."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/pull-ups",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Library uses hands just wider than shoulders. Monthly retests, sets, and rep targets remain prescriptions."
+      ],
+      "sourceTaskRefs": [
+        "07-10"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/pull-ups"
+      }
+    },
+    {
+      "originalName": "Dead hang",
+      "name": "Dead Hang",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/dead-hang",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Pull",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-dead-hang",
+      "matchNote": "Overhand straight-arm timed hang matches the preparatory hold.",
+      "instructions": [
+        "Hold the bar with palms facing forward.",
+        "Suspend your body with straight arms.",
+        "Maintain abdominal tension for the prescribed hold."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/dead-hang",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Original 30-60 second target is a prescription, not identity."
+      ],
+      "sourceTaskRefs": [
+        "07-11"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/dead-hang"
+      }
+    },
+    {
+      "originalName": "Scapular pulls",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Pull",
+        "part": "A"
+      },
+      "proposedSlug": null,
+      "matchNote": "Scapular pull searches did not establish a hanging straight-arm scapular-pull page. Scapular Retraction describes standing/seated shoulder movement and is not a hanging pull.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [],
+      "sourceTaskRefs": [
+        "07-12"
+      ],
+      "candidates": [
+        {
+          "name": "Scapular Retraction",
+          "sourceUrl": "https://musclewiki.com/exercise/scapular-retraction",
+          "reason": "Scapular pull searches did not establish a hanging straight-arm scapular-pull page. Scapular Retraction describes standing/seated shoulder movement and is not a hanging pull.",
+          "status": "NOT_ACCEPTED_AS_EXACT_MATCH"
+        }
+      ]
+    },
+    {
+      "originalName": "Inverted row — steep",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "NEEDS_CLARIFICATION",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Pull",
+        "part": "A"
+      },
+      "proposedSlug": null,
+      "matchNote": "Generic Inverted Row supports bar rowing but does not establish the steep setup. Standing Inverted Row uses a door frame/rack with neutral grip; do not substitute it for a steeper bar row. Keep bar height/body angle as a proposed setup variation pending review.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [],
+      "sourceTaskRefs": [
+        "07-13"
+      ],
+      "candidates": [
+        {
+          "name": "Inverted Row",
+          "sourceUrl": "https://musclewiki.com/exercise/inverted-row",
+          "reason": "Generic Inverted Row supports bar rowing but does not establish the steep setup. Standing Inverted Row uses a door frame/rack with neutral grip; do not substitute it for a steeper bar row. Keep bar height/body angle as a proposed setup variation pending review.",
+          "status": "NOT_ACCEPTED_AS_EXACT_MATCH"
+        }
+      ]
+    },
+    {
+      "originalName": "Inverted row — horizontal",
+      "name": "Inverted Row",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/inverted-row",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Pull",
+        "part": "A"
+      },
+      "proposedSlug": "bodyweight-inverted-row",
+      "matchNote": "Fixed horizontal bar and overhand rowing match the horizontal row pattern. Page text does not quantify torso angle; horizontal setup comes from the library.",
+      "instructions": [
+        "Position yourself beneath a secured horizontal bar and take a wide overhand grip.",
+        "Row your body toward the bar.",
+        "Lower until the arms straighten again."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/inverted-row",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [
+        "Preserve horizontal body-angle prescription. Source grip metadata includes underhand, but selected written execution is overhand."
+      ],
+      "sourceTaskRefs": [
+        "07-14"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/inverted-row"
+      }
+    },
+    {
+      "originalName": "Negative pull-up",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "muscleGroup": "Pull",
+        "part": "A"
+      },
+      "proposedSlug": null,
+      "matchNote": "Negative/eccentric pull-up searches did not establish an exact page. Pull Ups includes a concentric pull and does not verify the jump-to-top, five-second hold and five-second descent sequence.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "setupNotes": [],
+      "sourceTaskRefs": [
+        "07-15"
+      ],
+      "candidates": [
+        {
+          "name": "Pull Ups",
+          "sourceUrl": "https://musclewiki.com/exercise/pull-ups",
+          "reason": "Negative/eccentric pull-up searches did not establish an exact page. Pull Ups includes a concentric pull and does not verify the jump-to-top, five-second hold and five-second descent sequence.",
+          "status": "NOT_ACCEPTED_AS_EXACT_MATCH"
+        }
       ]
     }
   ]

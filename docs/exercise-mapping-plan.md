@@ -98,22 +98,22 @@ Status: REVIEW_REQUIRED — 2/4 names matched; 2 reverse-crunch variations retai
 
 ### 07. Bodyweight — push and pull ladders — 15 source tasks
 
-Status: PENDING
+Status: REVIEW_REQUIRED - 15 researched; 9 matched (8 canonical proposals), 1 user-selected wall source pending verification, 1 user-accepted related ring source, 1 negative push-up deferred, 2 no exact match, 1 setup clarification. Written page verification where accessible; visual playback not inspected.
 
 - [ ] Wall push-up (A; source line 87)
-- [ ] Incline push-up — hands at chest height (A; source line 87)
-- [ ] Incline push-up — hands at hip height (A; source line 87)
+- [x] Incline push-up — hands at chest height (A; source line 87)
+- [x] Incline push-up — hands at hip height (A; source line 87)
 - [ ] Negative push-up — return on knees (A; source line 87)
-- [ ] Full push-up (A; source line 87)
-- [ ] Decline push-up (A; source line 87)
-- [ ] Diamond push-up (A; source line 87)
+- [x] Full push-up (A; source line 87)
+- [x] Decline push-up (A; source line 87)
+- [x] Diamond push-up (A; source line 87)
 - [ ] Archer push-up (A; source line 87)
-- [ ] Knee push-up (A; source line 87)
-- [ ] Pull-up (A; source line 114)
-- [ ] Dead hang (A; source line 114)
+- [x] Knee push-up (A; source line 87)
+- [x] Pull-up (A; source line 114)
+- [x] Dead hang (A; source line 114)
 - [ ] Scapular pulls (A; source line 114)
 - [ ] Inverted row — steep (A; source line 114)
-- [ ] Inverted row — horizontal (A; source line 114)
+- [x] Inverted row — horizontal (A; source line 114)
 - [ ] Negative pull-up (A; source line 114)
 
 ### 08. Bodyweight — squat, glute bridge and calf variants — 13 source tasks
@@ -189,3 +189,5 @@ User accepted Dumbbell Forward Lunge as related reference for Walking lunge; ret
 Batch 05: do not split cable versus rope into different exercises automatically; rope is a cable attachment. Reverse preacher clarified as pronated curl on sloped pad; EZ-bar source selected. Straight-bar pushdown and rope overhead extension selected.
 
 Mapping paused by user on November 3, 2026 after Batch 06 disposition. Resume at Batch 07 only when requested.
+
+November 3, 2026: resumed Batch 07. All 15 tasks researched; 9 matched, wall source user-selected pending page verification, ring archer accepted as related source, negative push-up deferred by user, 2 no exact match, steep inverted row needs setup clarification. Two incline heights share one canonical proposal with separate library setup notes. Other exceptions remain open. Next research batch: 08. See cumulative review for sources and draft instructions.
