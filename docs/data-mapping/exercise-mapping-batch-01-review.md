@@ -855,3 +855,285 @@ Related/rejected exact reference: [Pull Ups](https://musclewiki.com/exercise/pul
 Search audit: MuscleWiki-only searches for wall push-up/wall pushup; negative/eccentric push-up; archer push-up/archer pushup; scapular pulls; negative/eccentric pull-up. Opened related pages above to compare equipment and execution. The incorrect guessed plural push-ups URL did not open; discovered and verified the actual singular push-up URL from the chest/bodyweight directory. No guessed URLs are accepted as sources.
 
 User follow-up: wall page selected pending verification; ring archer accepted as a related source for now; negative push-up deferred. The remaining Batch 07 exceptions stay open for review and final reconciliation. Next batch: 08.
+
+## Batch 08 — Squat, bridge and calf variants
+
+### 08-01 — Chair squat
+
+- Status: RELATED_SOURCE_REVIEW_REQUIRED
+- Related reference: [Bodyweight Box Squat](https://musclewiki.com/exercise/bodyweight-box-squat)
+
+Related only: source sits onto the box and pauses; library chair squat uses a touch. Keep chair-touch setup.
+
+### 08-02 — Bodyweight squat
+
+- Status: MATCHED
+- MuscleWiki: [Bodyweight Squat](https://musclewiki.com/exercise/bodyweight-squat)
+- Proposed slug: `bodyweight-squat`
+
+Written source matches the library movement.
+
+1. Start with feet about shoulder width apart
+2. Bend at the knees and hips to sit down into the squat
+3. Return to standing
+
+### 08-03 — Pause squat
+
+- Status: MATCHED
+- MuscleWiki: [Bodyweight Squat](https://musclewiki.com/exercise/bodyweight-squat)
+- Proposed slug: `bodyweight-squat`
+
+Library adds a two-second bottom pause to the same squat; the source does not prescribe this pause.
+
+1. Start with feet about shoulder width apart
+2. Bend at the knees and hips to sit down into the squat
+3. Return to standing
+
+### 08-04 — Split squat
+
+- Status: MATCHED
+- MuscleWiki: [Split Squat](https://musclewiki.com/exercise/split-squat)
+- Proposed slug: `bodyweight-split-squat`
+
+Written source matches the library movement.
+
+1. Take a staggered stance and keep your chest upright
+2. Lower the rear knee toward the floor
+3. Push back to the starting stance
+
+### 08-05 — Bulgarian split squat
+
+- Status: MATCHED
+- MuscleWiki: [Bulgarian Split Squat](https://musclewiki.com/exercise/bulgarian-split-squat)
+- Proposed slug: `bodyweight-bulgarian-split-squat`
+
+Library uses a chair as the rear-foot support.
+
+1. Rest the rear foot on a raised support
+2. Bend the front leg until the thigh is around parallel
+3. Stand up and switch legs after the set
+
+### 08-06 — Box pistol squat
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact single-leg box squat verified. Bodyweight Box Squat uses both legs; Bodyweight Single Leg Squat does not use a box.
+
+### 08-07 — Pistol squat
+
+- Status: MATCHED
+- MuscleWiki: [Bodyweight Single Leg Squat](https://musclewiki.com/exercise/bodyweight-single-leg-squat)
+- Proposed slug: `bodyweight-pistol-squat`
+
+Source matches the forward-leg pattern but does not specify full pistol depth; keep depth as a library coaching detail.
+
+1. Stand on one leg with the free leg extended forward
+2. Lower into a squat with your chest upright
+3. Press back to standing
+
+### 08-08 — Glute bridge
+
+- Status: MATCHED
+- MuscleWiki: [Glute Bridge](https://musclewiki.com/exercise/glute-bridge)
+- Proposed slug: `bodyweight-glute-bridge`
+
+Library cues alignment of knees, hips and shoulders.
+
+1. Lie on your back with knees bent and feet planted
+2. Squeeze your glutes and lift your hips while keeping your back aligned
+
+### 08-09 — Glute bridge — pause at top
+
+- Status: MATCHED
+- MuscleWiki: [Glute Bridge](https://musclewiki.com/exercise/glute-bridge)
+- Proposed slug: `bodyweight-glute-bridge`
+
+Library adds a two-second top squeeze per repetition. Use the same movement reference; do not substitute a continuous isometric hold.
+
+1. Lie on your back with knees bent and feet planted
+2. Squeeze your glutes and lift your hips while keeping your back aligned
+
+### 08-10 — Single-leg glute bridge
+
+- Status: MATCHED
+- MuscleWiki: [Single Leg Glute Bridge](https://musclewiki.com/exercise/single-leg-glute-bridge)
+- Proposed slug: `bodyweight-single-leg-glute-bridge`
+
+Library uses one grounded foot. Source title specifies single leg; written steps omit supporting-foot setup, so review that cue before publishing.
+
+1. Squeeze the glutes to lift the hips
+2. Pause at the top and lower gradually
+
+### 08-11 — Calf raise — both legs
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact bilateral flat-floor standing source verified. Calf Raises uses an elevated platform and belongs to the step-edge progression.
+
+### 08-12 — Calf raise — single leg
+
+- Status: MATCHED
+- MuscleWiki: [Bodyweight Single Leg Calf Raise](https://musclewiki.com/exercise/bodyweight-single-leg-calf-raise)
+- Proposed slug: `bodyweight-standing-single-leg-calf-raise`
+
+Written source matches the library movement.
+
+1. Use a support for balance and lift one foot
+2. Raise the standing heel without bending the knee
+3. Pause at the top and lower slowly
+
+### 08-13 — Calf raise — step edge
+
+- Status: MATCHED
+- MuscleWiki: [Calf Raises](https://musclewiki.com/exercise/calf-raises)
+- Proposed slug: `bodyweight-standing-calf-raise-on-step`
+
+Same elevated setup as the two gym calf placements; reuse their proposed identity.
+
+1. Place the fronts of your feet on a stable raised surface and use a wall for balance.
+2. Let your heels descend, pause briefly, then rise onto your toes.
+3. Pause near the top and repeat with a controlled pace.
+
+## Batch 09 — Plank and core support
+
+### 09-01 — Knee plank
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact knee-supported forearm plank verified. Forearm Plank uses the toes for support.
+
+### 09-02 — Full forearm plank
+
+- Status: MATCHED
+- MuscleWiki: [Forearm Plank](https://musclewiki.com/exercise/forearm-plank)
+- Proposed slug: `bodyweight-forearm-plank`
+
+Library hold times are progression targets.
+
+1. Set your elbows under your shoulders with forearms on the floor
+2. Support your lower body on your toes
+3. Lift your trunk into a straight line and hold
+
+### 09-03 — Long-lever plank
+
+- Status: MATCHED
+- MuscleWiki: [Long Lever Forearm Plank](https://musclewiki.com/exercise/long-lever-forearm-plank)
+- Proposed slug: `bodyweight-long-lever-forearm-plank`
+
+Source opening calls it a hand plank but then refers to moving the elbows forward; review starting transition before publishing.
+
+1. Reach your elbows farther forward than in a regular forearm plank
+2. Hold the position with your back flat
+
+### 09-04 — Rocking plank
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact forearm rocking plank verified; static plank and equipment-based knee tucks do not match the movement.
+
+### 09-05 — Side plank — knees
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact knee-supported elbow side plank verified; keep knee support as the original regression.
+
+### 09-06 — Side plank — full
+
+- Status: MATCHED
+- MuscleWiki: [Elbow Side Plank](https://musclewiki.com/exercise/elbow-side-plank)
+- Proposed slug: `bodyweight-elbow-side-plank`
+
+Library uses the full side plank position with the elbow under the shoulder.
+
+1. Press the supporting elbow into the floor
+2. Lift the hips and hold
+3. Keep your chest from rotating in either direction
+
+### 09-07 — Side plank — top-leg lift
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact floor elbow side plank with a top-leg lift verified. The BOSU hand-supported hip-abduction variant changes both support and equipment.
+
+### 09-08 — Superman — hold
+
+- Status: MATCHED
+- MuscleWiki: [Supermans](https://musclewiki.com/exercise/supermans)
+- Proposed slug: `bodyweight-superman`
+
+Source lifts and lowers per repetition; use as base movement reference. Library prescribes a timed hold separately.
+
+1. Lie face down and reach your arms forward
+2. Lift your arms, chest and legs together and hold
+3. Lower under control
+
+### 09-09 — Superman — repetitions
+
+- Status: MATCHED
+- MuscleWiki: [Supermans](https://musclewiki.com/exercise/supermans)
+- Proposed slug: `bodyweight-superman`
+
+Repetition prescription uses the same bilateral movement. Keep rep counting distinct from timed hold.
+
+1. Lie face down and reach your arms forward
+2. Lift your arms, chest and legs together and hold
+3. Lower under control
+
+### 09-10 — Superman — alternating arm/leg
+
+- Status: FLAGGED_NO_EXACT_MATCH
+
+No exact prone opposite-arm-and-leg Superman verified. Bilateral Supermans lifts all limbs together.
+
+## Batch 10 — Optional exercises and reconciliation
+
+### 10-01 — Pike push-up
+
+- Status: MATCHED
+- MuscleWiki: [Bodyweight Pike Press](https://musclewiki.com/exercise/bodyweight-pike-press)
+- Proposed slug: `bodyweight-pike-push-up`
+
+Optional later.
+
+1. From a plank, lift your hips into a pike
+2. Bend your elbows to bring your head toward the floor
+3. Press back to the pike
+
+### 10-02 — Single-leg glute bridge (optional-list reference)
+
+- Status: MATCHED
+- MuscleWiki: [Single Leg Glute Bridge](https://musclewiki.com/exercise/single-leg-glute-bridge)
+- Proposed slug: `bodyweight-single-leg-glute-bridge`
+
+Optional repeat of the same support exercise; reuse its identity.
+
+1. Squeeze the glutes to lift the hips
+2. Pause at the top and lower gradually
+
+### 10-03 — Dead bug
+
+- Status: MATCHED
+- MuscleWiki: [Dead Bug](https://musclewiki.com/exercise/dead-bug)
+- Proposed slug: `bodyweight-dead-bug`
+
+Optional later.
+
+1. Lie on your back with arms up and knees bent above you
+2. Lower the opposite arm and leg while keeping your back against the floor
+3. Return and switch sides
+
+### 10-04 — Hollow hold
+
+- Status: MATCHED
+- MuscleWiki: [Hollow Hold](https://musclewiki.com/exercise/hollow-hold)
+- Proposed slug: `bodyweight-hollow-hold`
+
+Optional later.
+
+1. Lie on your back with your arms overhead
+2. Lift your upper back and legs into a shallow curve
+3. Hold the position
+
+### Coverage checkpoint — November 4, 2026
+
+All 85 source tasks have a disposition: 66 matched; 19 exceptions (including related sources, a user deferral, unverified selections and unresolved variants). No UUIDs. Draft instructions and source reuse remain subject to review. Wall push-up URL was retried but could not be verified; steep inverted row still needs setup review. Prior user decisions remain in effect.

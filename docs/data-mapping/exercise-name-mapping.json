@@ -320,7 +320,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Back"
       },
-      "matchNote": "Neutral-grip movement matches. Original 10–15 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
+      "matchNote": "Neutral-grip movement matches. Original 10\u201315 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
       "proposedSlug": "cable-lat-pulldown-neutral-grip",
       "instructions": [
         "Fit a V-shaped handle and sit with your thighs secured by the pads.",
@@ -369,7 +369,7 @@
       }
     },
     {
-      "originalName": "Chest-supported row, bench about 30°",
+      "originalName": "Chest-supported row, bench about 30\u00b0",
       "name": "Dumbbell Laying Incline Row",
       "source": "MuscleWiki",
       "sourceUrl": "https://musclewiki.com/exercise/dumbbell-laying-incline-row",
@@ -382,10 +382,10 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Back"
       },
-      "matchNote": "User confirmed dumbbells. MuscleWiki specifies an incline of 30–45 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
+      "matchNote": "User confirmed dumbbells. MuscleWiki specifies an incline of 30\u201345 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
       "proposedSlug": "dumbbell-incline-chest-supported-row",
       "instructions": [
-        "Support your chest on an inclined bench set within the source’s 30–45 degree range.",
+        "Support your chest on an inclined bench set within the source\u2019s 30\u201345 degree range.",
         "Begin with the weights hanging below you, then draw your elbows backward and upward."
       ],
       "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
@@ -400,7 +400,7 @@
       }
     },
     {
-      "originalName": "Chest-supported row, bench about 60°",
+      "originalName": "Chest-supported row, bench about 60\u00b0",
       "name": null,
       "source": "MuscleWiki",
       "sourceUrl": null,
@@ -635,7 +635,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Legs"
       },
-      "matchNote": "High-bar match inferred from the library’s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
+      "matchNote": "High-bar match inferred from the library\u2019s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
       "proposedSlug": "barbell-high-bar-back-squat",
       "instructions": [
         "Position the bar across the upper trapezius and brace your trunk.",
@@ -733,7 +733,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Legs"
       },
-      "matchNote": "Machine version agrees with the library’s setup.",
+      "matchNote": "Machine version agrees with the library\u2019s setup.",
       "proposedSlug": "machine-leg-extension",
       "instructions": [
         "Sit with your back supported and adjust the station so your knees begin bent approximately to a right angle.",
@@ -1051,7 +1051,7 @@
         "level": "INTERMEDIATE",
         "muscleGroup": "Shoulders"
       },
-      "matchNote": "High opposing-side cable setup matches the library’s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
+      "matchNote": "High opposing-side cable setup matches the library\u2019s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
       "proposedSlug": "cable-high-reverse-fly",
       "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
       "instructions": [
@@ -1481,7 +1481,7 @@
       }
     },
     {
-      "originalName": "Incline push-up — hands at chest height",
+      "originalName": "Incline push-up \u2014 hands at chest height",
       "name": "Incline Push Up",
       "source": "MuscleWiki",
       "sourceUrl": "https://musclewiki.com/exercise/incline-push-up",
@@ -1522,7 +1522,7 @@
       ]
     },
     {
-      "originalName": "Negative push-up — return on knees",
+      "originalName": "Negative push-up \u2014 return on knees",
       "name": null,
       "source": "MuscleWiki",
       "sourceUrl": null,
@@ -1839,7 +1839,7 @@
       ]
     },
     {
-      "originalName": "Inverted row — steep",
+      "originalName": "Inverted row \u2014 steep",
       "name": null,
       "source": "MuscleWiki",
       "sourceUrl": null,
@@ -1871,7 +1871,7 @@
       ]
     },
     {
-      "originalName": "Inverted row — horizontal",
+      "originalName": "Inverted row \u2014 horizontal",
       "name": "Inverted Row",
       "source": "MuscleWiki",
       "sourceUrl": "https://musclewiki.com/exercise/inverted-row",
@@ -1937,6 +1937,837 @@
           "status": "NOT_ACCEPTED_AS_EXACT_MATCH"
         }
       ]
+    },
+    {
+      "originalName": "Chair squat",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "RELATED_SOURCE_REVIEW_REQUIRED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": null,
+      "matchNote": "Related only: source sits onto the box and pauses; library chair squat uses a touch. Keep chair-touch setup.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-01"
+      ],
+      "candidates": [
+        {
+          "name": "Bodyweight Box Squat",
+          "sourceUrl": "https://musclewiki.com/exercise/bodyweight-box-squat",
+          "reason": "Related only: source sits onto the box and pauses; library chair squat uses a touch. Keep chair-touch setup.",
+          "status": "POSSIBLE_MATCH"
+        }
+      ]
+    },
+    {
+      "originalName": "Bodyweight squat",
+      "name": "Bodyweight Squat",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-squat",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": "bodyweight-squat",
+      "matchNote": "Written source matches the library movement.",
+      "instructions": [
+        "Start with feet about shoulder width apart",
+        "Bend at the knees and hips to sit down into the squat",
+        "Return to standing"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bodyweight-squat",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-02"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bodyweight-squat"
+      }
+    },
+    {
+      "originalName": "Pause squat",
+      "name": "Bodyweight Squat",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-squat",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": "bodyweight-squat",
+      "matchNote": "Library adds a two-second bottom pause to the same squat; the source does not prescribe this pause.",
+      "instructions": [
+        "Start with feet about shoulder width apart",
+        "Bend at the knees and hips to sit down into the squat",
+        "Return to standing"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bodyweight-squat",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-03"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bodyweight-squat"
+      },
+      "setupNotes": [
+        "Library adds a two-second bottom pause to the same squat; the source does not prescribe this pause."
+      ]
+    },
+    {
+      "originalName": "Split squat",
+      "name": "Split Squat",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/split-squat",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": "bodyweight-split-squat",
+      "matchNote": "Written source matches the library movement.",
+      "instructions": [
+        "Take a staggered stance and keep your chest upright",
+        "Lower the rear knee toward the floor",
+        "Push back to the starting stance"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/split-squat",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-04"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/split-squat"
+      }
+    },
+    {
+      "originalName": "Bulgarian split squat",
+      "name": "Bulgarian Split Squat",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bulgarian-split-squat",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": "bodyweight-bulgarian-split-squat",
+      "matchNote": "Library uses a chair as the rear-foot support.",
+      "instructions": [
+        "Rest the rear foot on a raised support",
+        "Bend the front leg until the thigh is around parallel",
+        "Stand up and switch legs after the set"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bulgarian-split-squat",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-05"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bulgarian-split-squat"
+      }
+    },
+    {
+      "originalName": "Box pistol squat",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact single-leg box squat verified. Bodyweight Box Squat uses both legs; Bodyweight Single Leg Squat does not use a box.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-06"
+      ]
+    },
+    {
+      "originalName": "Pistol squat",
+      "name": "Bodyweight Single Leg Squat",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-single-leg-squat",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Squat"
+      },
+      "proposedSlug": "bodyweight-pistol-squat",
+      "matchNote": "Source matches the forward-leg pattern but does not specify full pistol depth; keep depth as a library coaching detail.",
+      "instructions": [
+        "Stand on one leg with the free leg extended forward",
+        "Lower into a squat with your chest upright",
+        "Press back to standing"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bodyweight-single-leg-squat",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-07"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bodyweight-single-leg-squat"
+      }
+    },
+    {
+      "originalName": "Glute bridge",
+      "name": "Glute Bridge",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/glute-bridge",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-glute-bridge",
+      "matchNote": "Library cues alignment of knees, hips and shoulders.",
+      "instructions": [
+        "Lie on your back with knees bent and feet planted",
+        "Squeeze your glutes and lift your hips while keeping your back aligned"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/glute-bridge",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-08"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/glute-bridge"
+      }
+    },
+    {
+      "originalName": "Glute bridge \u2014 pause at top",
+      "name": "Glute Bridge",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/glute-bridge",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-glute-bridge",
+      "matchNote": "Library adds a two-second top squeeze per repetition. Use the same movement reference; do not substitute a continuous isometric hold.",
+      "instructions": [
+        "Lie on your back with knees bent and feet planted",
+        "Squeeze your glutes and lift your hips while keeping your back aligned"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/glute-bridge",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-09"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/glute-bridge"
+      },
+      "setupNotes": [
+        "Library adds a two-second top squeeze per repetition. Use the same movement reference; do not substitute a continuous isometric hold."
+      ]
+    },
+    {
+      "originalName": "Single-leg glute bridge",
+      "name": "Single Leg Glute Bridge",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/single-leg-glute-bridge",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-single-leg-glute-bridge",
+      "matchNote": "Library uses one grounded foot. Source title specifies single leg; written steps omit supporting-foot setup, so review that cue before publishing.",
+      "instructions": [
+        "Squeeze the glutes to lift the hips",
+        "Pause at the top and lower gradually"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/single-leg-glute-bridge",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-10"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/single-leg-glute-bridge"
+      }
+    },
+    {
+      "originalName": "Calf raise \u2014 both legs",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact bilateral flat-floor standing source verified. Calf Raises uses an elevated platform and belongs to the step-edge progression.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-11"
+      ]
+    },
+    {
+      "originalName": "Calf raise \u2014 single leg",
+      "name": "Bodyweight Single Leg Calf Raise",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-single-leg-calf-raise",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-standing-single-leg-calf-raise",
+      "matchNote": "Written source matches the library movement.",
+      "instructions": [
+        "Use a support for balance and lift one foot",
+        "Raise the standing heel without bending the knee",
+        "Pause at the top and lower slowly"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bodyweight-single-leg-calf-raise",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "08-12"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bodyweight-single-leg-calf-raise"
+      }
+    },
+    {
+      "originalName": "Calf raise \u2014 step edge",
+      "name": "Calf Raises",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/calf-raises",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-03",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "matchNote": "Same elevated setup as the two gym calf placements; reuse their proposed identity.",
+      "proposedSlug": "bodyweight-standing-calf-raise-on-step",
+      "instructions": [
+        "Place the fronts of your feet on a stable raised surface and use a wall for balance.",
+        "Let your heels descend, pause briefly, then rise onto your toes.",
+        "Pause near the top and repeat with a controlled pace."
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/calf-raises",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "confirmedEquipment": "Elevated step/platform; no calf machine",
+      "matchConfirmedBy": "USER",
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-03",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/calf-raises"
+      },
+      "setupNotes": [
+        "Same elevated setup as the two gym calf placements; reuse their proposed identity."
+      ],
+      "sourceTaskRefs": [
+        "08-13"
+      ]
+    },
+    {
+      "originalName": "Knee plank",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Plank"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact knee-supported forearm plank verified. Forearm Plank uses the toes for support.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-01"
+      ]
+    },
+    {
+      "originalName": "Full forearm plank",
+      "name": "Forearm Plank",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/forearm-plank",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Plank"
+      },
+      "proposedSlug": "bodyweight-forearm-plank",
+      "matchNote": "Library hold times are progression targets.",
+      "instructions": [
+        "Set your elbows under your shoulders with forearms on the floor",
+        "Support your lower body on your toes",
+        "Lift your trunk into a straight line and hold"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/forearm-plank",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-02"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/forearm-plank"
+      }
+    },
+    {
+      "originalName": "Long-lever plank",
+      "name": "Long Lever Forearm Plank",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/long-lever-forearm-plank",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Plank"
+      },
+      "proposedSlug": "bodyweight-long-lever-forearm-plank",
+      "matchNote": "Source opening calls it a hand plank but then refers to moving the elbows forward; review starting transition before publishing.",
+      "instructions": [
+        "Reach your elbows farther forward than in a regular forearm plank",
+        "Hold the position with your back flat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/long-lever-forearm-plank",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-03"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/long-lever-forearm-plank"
+      }
+    },
+    {
+      "originalName": "Rocking plank",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Plank"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact forearm rocking plank verified; static plank and equipment-based knee tucks do not match the movement.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-04"
+      ]
+    },
+    {
+      "originalName": "Side plank \u2014 knees",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact knee-supported elbow side plank verified; keep knee support as the original regression.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-05"
+      ]
+    },
+    {
+      "originalName": "Side plank \u2014 full",
+      "name": "Elbow Side Plank",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/elbow-side-plank",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-elbow-side-plank",
+      "matchNote": "Library uses the full side plank position with the elbow under the shoulder.",
+      "instructions": [
+        "Press the supporting elbow into the floor",
+        "Lift the hips and hold",
+        "Keep your chest from rotating in either direction"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/elbow-side-plank",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-06"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/elbow-side-plank"
+      }
+    },
+    {
+      "originalName": "Side plank \u2014 top-leg lift",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact floor elbow side plank with a top-leg lift verified. The BOSU hand-supported hip-abduction variant changes both support and equipment.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-07"
+      ]
+    },
+    {
+      "originalName": "Superman \u2014 hold",
+      "name": "Supermans",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/supermans",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-superman",
+      "matchNote": "Source lifts and lowers per repetition; use as base movement reference. Library prescribes a timed hold separately.",
+      "instructions": [
+        "Lie face down and reach your arms forward",
+        "Lift your arms, chest and legs together and hold",
+        "Lower under control"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/supermans",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-08"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/supermans"
+      }
+    },
+    {
+      "originalName": "Superman \u2014 repetitions",
+      "name": "Supermans",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/supermans",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": "bodyweight-superman",
+      "matchNote": "Repetition prescription uses the same bilateral movement. Keep rep counting distinct from timed hold.",
+      "instructions": [
+        "Lie face down and reach your arms forward",
+        "Lift your arms, chest and legs together and hold",
+        "Lower under control"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/supermans",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-09"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/supermans"
+      },
+      "setupNotes": [
+        "Repetition prescription uses the same bilateral movement. Keep rep counting distinct from timed hold."
+      ]
+    },
+    {
+      "originalName": "Superman \u2014 alternating arm/leg",
+      "name": null,
+      "source": "MuscleWiki",
+      "sourceUrl": null,
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "FLAGGED_NO_EXACT_MATCH",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## Support exercises"
+      },
+      "proposedSlug": null,
+      "matchNote": "No exact prone opposite-arm-and-leg Superman verified. Bilateral Supermans lifts all limbs together.",
+      "instructions": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "instructionSourceUrl": null,
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "09-10"
+      ]
+    },
+    {
+      "originalName": "Pike push-up",
+      "name": "Bodyweight Pike Press",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/bodyweight-pike-press",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## The list"
+      },
+      "proposedSlug": "bodyweight-pike-push-up",
+      "matchNote": "Optional later.",
+      "instructions": [
+        "From a plank, lift your hips into a pike",
+        "Bend your elbows to bring your head toward the floor",
+        "Press back to the pike"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/bodyweight-pike-press",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "10-01"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/bodyweight-pike-press"
+      }
+    },
+    {
+      "originalName": "Single-leg glute bridge (optional-list reference)",
+      "name": "Single Leg Glute Bridge",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/single-leg-glute-bridge",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## The list"
+      },
+      "proposedSlug": "bodyweight-single-leg-glute-bridge",
+      "matchNote": "Optional repeat of the same support exercise; reuse its identity.",
+      "instructions": [
+        "Squeeze the glutes to lift the hips",
+        "Pause at the top and lower gradually"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/single-leg-glute-bridge",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "10-02"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/single-leg-glute-bridge"
+      },
+      "setupNotes": [
+        "Optional repeat of the same support exercise; reuse its identity."
+      ]
+    },
+    {
+      "originalName": "Dead bug",
+      "name": "Dead Bug",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/dead-bug",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## The list"
+      },
+      "proposedSlug": "bodyweight-dead-bug",
+      "matchNote": "Optional later.",
+      "instructions": [
+        "Lie on your back with arms up and knees bent above you",
+        "Lower the opposite arm and leg while keeping your back against the floor",
+        "Return and switch sides"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/dead-bug",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "10-03"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/dead-bug"
+      }
+    },
+    {
+      "originalName": "Hollow hold",
+      "name": "Hollow Hold",
+      "source": "MuscleWiki",
+      "sourceUrl": "https://musclewiki.com/exercise/hollow-hold",
+      "sourceExerciseId": null,
+      "sourceCheckedOn": "2026-11-04",
+      "matchStatus": "MATCHED",
+      "approvalStatus": "DRAFT",
+      "libraryPlacement": {
+        "part": "A",
+        "muscleGroup": "## The list"
+      },
+      "proposedSlug": "bodyweight-hollow-hold",
+      "matchNote": "Optional later.",
+      "instructions": [
+        "Lie on your back with your arms overhead",
+        "Lift your upper back and legs into a shallow curve",
+        "Hold the position"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW",
+      "instructionSourceUrl": "https://musclewiki.com/exercise/hollow-hold",
+      "contentReuseStatus": "TO_CONFIRM_FOR_APP_USE",
+      "sourceTaskRefs": [
+        "10-04"
+      ],
+      "instructionFormat": "Concise paraphrase of matched MuscleWiki page, not verbatim text.",
+      "instructionCheckedOn": "2026-11-04",
+      "attribution": {
+        "name": "MuscleWiki",
+        "url": "https://musclewiki.com/exercise/hollow-hold"
+      }
     }
   ]
 }

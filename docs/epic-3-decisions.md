@@ -153,18 +153,18 @@ Accepted on proceeding to the next discussion:
 ## Exercise naming — November 1, 2026
 
 - Agreed: UUID primary identity; stable unique slug; editable display name. Each table should have its own UUID ID; composite-key tables still need schema alignment.
-- Collect names before approving canonical slugs. Draft inventory: 876 external entries in exercise-inventory.json, readable names in exercise-names.md; 199 need equipment clarification. Not an exhaustive or approved Phase 1 list.
-- Proposed convention and lifecycle: exercise-slug-design.md. Separate identity-changing variants; aliases for equivalent names; explicit load meaning; frozen slugs; persistent UUID seed manifest.
+- Collect names before approving canonical slugs. Draft inventory: 876 external entries in data-mapping/exercise-inventory.json, readable names in data-mapping/exercise-names.md; 199 need equipment clarification. Not an exhaustive or approved Phase 1 list.
+- Proposed convention and lifecycle: data-mapping/exercise-slug-design.md. Separate identity-changing variants; aliases for equivalent names; explicit load meaning; frozen slugs; persistent UUID seed manifest.
 - Canonical slugs and library scope remain under review. No exercise records seeded or schema changes made in this naming task.
 
 ## Exercise media — November 1, 2026
 
 - Required: quick exercise demo (GIF/video/photos) plus separately curated YouTube explanation.
-- Research: exercise-media-sources.md. ExerciseDB/AscendAPI free GIF API is a testing candidate; provider not selected. Keep our UUID/slug and map external IDs explicitly.
+- Research: data-mapping/exercise-media-sources.md. ExerciseDB/AscendAPI free GIF API is a testing candidate; provider not selected. Keep our UUID/slug and map external IDs explicitly.
 - Offline logging must work without media; offline media caching depends on provider permission. MuscleWiki streaming terms prohibit permanent video storage.
 - Proposed schema follow-up: ExerciseMedia child records instead of one mediaUrl, with source/licence attribution. Not implemented yet.
 
-- Media scope clarified: collect demos only for unique exercises used by approved Phase 1 four-/five-day plans, not the full inventory. Public MuscleWiki website has separate conditional non-profit/academic sharing permission; see exercise-media-sources.md. Provider licence for our intended use remains unresolved.
+- Media scope clarified: collect demos only for unique exercises used by approved Phase 1 four-/five-day plans, not the full inventory. Public MuscleWiki website has separate conditional non-profit/academic sharing permission; see data-mapping/exercise-media-sources.md. Provider licence for our intended use remains unresolved.
 
 ## Exercise names — single-source decision
 
@@ -177,14 +177,14 @@ Accepted on proceeding to the next discussion:
 
 ## Exercise name matching — first batch
 
-- Preserved supplied v1 library as exercise-library-final-v1.md. Its older progression guidance does not supersede current product decisions.
-- exercise-name-mapping.json records three source-verified beginner chest matches: Machine Chest Press, Dumbbell Bench Press, Machine Pec Fly. UUIDs and proposed slugs included; draft, not seeded.
+- Preserved supplied v1 library as data-mapping/exercise-library-final-v1.md. Its older progression guidance does not supersede current product decisions.
+- data-mapping/exercise-name-mapping.json records three source-verified beginner chest matches: Machine Chest Press, Dumbbell Bench Press, Machine Pec Fly. UUIDs and proposed slugs included; draft, not seeded.
 - Machine Pec Fly selected from the document’s handle-grip cues; elbow-pad Machine Bent Arm Pec Fly remains a distinct variant. Source difficulty does not override our library placement.
 - Next naming group: beginner back. Other groups remain unmatched.
 
 ## Full-library mapping workflow
 
-- Follow exercise-mapping-plan.md: 10 ordered batches covering gym groups, bodyweight ladders/support and optional-later references; machine-readable coverage in exercise-mapping-queue.json.
+- Follow data-mapping/exercise-mapping-plan.md: 10 ordered batches covering gym groups, bodyweight ladders/support and optional-later references; machine-readable coverage in data-mapping/exercise-mapping-queue.json.
 - Preserve first three draft UUIDs. Chest batch now has five source-verified matches; seated cable fly remains pending exact-match research. Batch not closed.
 - Every source mention gets a disposition; alternatives split only after review, repeats share canonical identity. No silent substitutions or automatic phase-scope changes.
 
@@ -203,13 +203,13 @@ Accepted on proceeding to the next discussion:
 ## Chest naming batch review
 
 - Batch 01 researched: five name matches with short attributed instruction paraphrases; seated cable fly remains unresolved with Cable Bench Chest Fly as a candidate.
-- See exercise-mapping-batch-01-review.md. Names/steps remain draft; source wording issues flagged, reuse permission not marked resolved. No UUIDs, media downloads or seed import.
+- See data-mapping/exercise-mapping-batch-01-review.md. Names/steps remain draft; source wording issues flagged, reuse permission not marked resolved. No UUIDs, media downloads or seed import.
 
 ## Mapping batches 01–02 update
 
 - User confirmed Seated cable fly → Cable Bench Chest Fly; chest mapping now 6/6. Summarized instructions remain draft.
 - Back reviewed: 4/7 matched with source links and summaries; beginner close/neutral grip and both angle-specific supported rows need clarification.
-- Keep all human-readable results in the existing exercise-mapping-batch-01-review.md (now cumulative), with the same JSON mapping/queue. No UUID assignment.
+- Keep all human-readable results in the existing data-mapping/exercise-mapping-batch-01-review.md (now cumulative), with the same JSON mapping/queue. No UUID assignment.
 
 ## Back batch choices confirmed
 

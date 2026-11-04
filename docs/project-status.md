@@ -46,4 +46,15 @@ Document instructions are retained as project reference material. They were not 
 - Decisions saved in `epic-3-decisions.md`; initial database schema in `backend/prisma/schema.prisma`. App implementation, migrations and deployment remain pending. Earlier October 31 open items above are historical; consult the decision log for resolved choices.
 - Exercise library received and mapping batches 01–06 reviewed; mapping JSON has 45 placement/variant records, not 45 unique seeded exercises. Remaining source mismatches and cue reviews stay flagged. No UUIDs generated.
 - Mapping paused by user. Resume at Batch 07 bodyweight push/pull when requested.
-- Cumulative results: `exercise-mapping-batch-01-review.md`; structured results: `exercise-name-mapping.json`; progress: `exercise-mapping-plan.md` and `exercise-mapping-queue.json`.
+- Cumulative results: `data-mapping/exercise-mapping-batch-01-review.md`; structured results: `data-mapping/exercise-name-mapping.json`; progress: `data-mapping/exercise-mapping-plan.md` and `data-mapping/exercise-mapping-queue.json`.
+
+## Mapping checkpoint — November 4, 2026
+
+- Batches 01–10 reviewed: 66 of 85 source tasks matched; 19 exceptions recorded. No rows remain pending research. See the cumulative mapping review for setup differences, related references and deferred items.
+- Next: review exceptions and draft instructions before assigning IDs or seeding.
+
+## Epic 3 schema handoff
+
+The Prisma draft is in [backend/prisma/schema.prisma](../backend/prisma/schema.prisma). Resume at story 3.1 by tracing the approved screens and behavior to entities, relationships, and constraints. Then validate the draft with the playbook's 10–15 application queries before creating the first migration.
+
+[Exercise mapping](data-mapping/exercise-mapping-batch-01-review.md) is reference material for the later seed step. All 85 source entries were reviewed. Resolve an exception if an approved first-release plan requires that exercise. Release scope continues to follow the product spec and recorded decisions.

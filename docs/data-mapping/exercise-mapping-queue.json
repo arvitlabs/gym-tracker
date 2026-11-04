@@ -4,53 +4,53 @@
   "batches": [
     {
       "id": "01",
-      "title": "Gym — Chest (beginner + intermediate)",
+      "title": "Gym \u2014 Chest (beginner + intermediate)",
       "status": "MAPPING_COMPLETE_INSTRUCTIONS_DRAFT"
     },
     {
       "id": "02",
-      "title": "Gym — Back (beginner + intermediate)",
+      "title": "Gym \u2014 Back (beginner + intermediate)",
       "status": "MAPPING_COMPLETE_WITH_FLAG"
     },
     {
       "id": "03",
-      "title": "Gym — Legs (beginner + intermediate)",
+      "title": "Gym \u2014 Legs (beginner + intermediate)",
       "status": "RELATED_SOURCE_REVIEW_PLUS_FLAG"
     },
     {
       "id": "04",
-      "title": "Gym — Shoulders (beginner + intermediate)",
+      "title": "Gym \u2014 Shoulders (beginner + intermediate)",
       "status": "MAPPING_COMPLETE_INSTRUCTIONS_DRAFT"
     },
     {
       "id": "05",
-      "title": "Gym — Arms (beginner + intermediate)",
+      "title": "Gym \u2014 Arms (beginner + intermediate)",
       "status": "MATCHED"
     },
     {
       "id": "06",
-      "title": "Gym — Abs (beginner + intermediate)",
+      "title": "Gym \u2014 Abs (beginner + intermediate)",
       "status": "REVIEW_REQUIRED"
     },
     {
       "id": "07",
-      "title": "Bodyweight — push and pull ladders",
+      "title": "Bodyweight \u2014 push and pull ladders",
       "status": "REVIEW_REQUIRED"
     },
     {
       "id": "08",
-      "title": "Bodyweight — squat, glute bridge and calf variants",
-      "status": "PENDING"
+      "title": "Bodyweight \u2014 squat, glute bridge and calf variants",
+      "status": "RESEARCH_COMPLETE_WITH_FLAGS"
     },
     {
       "id": "09",
-      "title": "Bodyweight — plank and core support",
-      "status": "PENDING"
+      "title": "Bodyweight \u2014 plank and core support",
+      "status": "RESEARCH_COMPLETE_WITH_FLAGS"
     },
     {
       "id": "10",
       "title": "Optional later exercises and coverage reconciliation",
-      "status": "PENDING"
+      "status": "RESEARCH_COMPLETE_INSTRUCTIONS_DRAFT"
     }
   ],
   "tasks": [
@@ -385,7 +385,7 @@
       "sourceLine": 349,
       "originalName": "Neutral-grip pulldown, leaning back",
       "status": "MATCHED",
-      "note": "Neutral-grip movement matches. Original 10–15 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
+      "note": "Neutral-grip movement matches. Original 10\u201315 degree lean remains a library setup note, not a separate source name. Distinct from the user-selected straight-bar Narrow Pulldown.",
       "taskRef": "02-04",
       "matchedSourceUrls": [
         "https://musclewiki.com/exercise/neutral-pulldown"
@@ -411,9 +411,9 @@
       "sourcePart": "B2",
       "sourceSection": "Back",
       "sourceLine": 351,
-      "originalName": "Chest-supported row, bench about 30°",
+      "originalName": "Chest-supported row, bench about 30\u00b0",
       "status": "MATCHED",
-      "note": "User confirmed dumbbells. MuscleWiki specifies an incline of 30–45 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
+      "note": "User confirmed dumbbells. MuscleWiki specifies an incline of 30\u201345 degrees, covering the intended 30-degree setup. Original elbow-path cues stay separate.",
       "taskRef": "02-06",
       "matchedSourceUrls": [
         "https://musclewiki.com/exercise/dumbbell-laying-incline-row"
@@ -425,7 +425,7 @@
       "sourcePart": "B2",
       "sourceSection": "Back",
       "sourceLine": 352,
-      "originalName": "Chest-supported row, bench about 60°",
+      "originalName": "Chest-supported row, bench about 60\u00b0",
       "status": "FLAGGED_NO_EXACT_MATCH",
       "note": "User confirmed dumbbells and chose to keep this entry flagged. No verified exact source match for the 60-degree flared-elbow/shrug execution. Do not replace or merge it with the 30-degree row. Name, slug and instructions remain unassigned.",
       "taskRef": "02-07",
@@ -470,7 +470,7 @@
       "sourceLine": 359,
       "originalName": "Reverse cable fly",
       "status": "MATCHED",
-      "note": "High opposing-side cable setup matches the library’s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
+      "note": "High opposing-side cable setup matches the library\u2019s crossed-cable rear-delt movement; original bilateral execution and exact pulley height remain setup notes.",
       "taskRef": "04-06",
       "matchedSourceUrls": [
         "https://musclewiki.com/exercise/cable-high-reverse-fly"
@@ -527,7 +527,7 @@
       "sourceLine": 371,
       "originalName": "Barbell squat",
       "status": "MATCHED",
-      "note": "High-bar match inferred from the library’s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
+      "note": "High-bar match inferred from the library\u2019s bar-on-upper-back cue. If low-bar was intended, this match needs revision.",
       "taskRef": "03-06",
       "matchedSourceUrls": [
         "https://musclewiki.com/exercise/barbell-high-bar-squat"
@@ -569,7 +569,7 @@
       "sourceLine": 374,
       "originalName": "Leg extension",
       "status": "MATCHED",
-      "note": "Machine version agrees with the library’s setup.",
+      "note": "Machine version agrees with the library\u2019s setup.",
       "taskRef": "03-09",
       "matchedSourceUrls": [
         "https://musclewiki.com/exercise/machine-leg-extension"
@@ -680,7 +680,7 @@
       "sourcePart": "A",
       "sourceSection": "## Push-up",
       "sourceLine": 87,
-      "originalName": "Incline push-up — hands at chest height",
+      "originalName": "Incline push-up \u2014 hands at chest height",
       "status": "MATCHED",
       "note": "Elevated-hand push-up matches. Chest-height and hip-height supports are library setup prescriptions, not heights specified by the source. Share one proposed canonical identity.",
       "taskRef": "07-02",
@@ -694,7 +694,7 @@
       "sourcePart": "A",
       "sourceSection": "## Push-up",
       "sourceLine": 87,
-      "originalName": "Incline push-up — hands at hip height",
+      "originalName": "Incline push-up \u2014 hands at hip height",
       "status": "MATCHED",
       "note": "Elevated-hand push-up matches. Chest-height and hip-height supports are library setup prescriptions, not heights specified by the source. Share one proposed canonical identity.",
       "taskRef": "07-03",
@@ -708,7 +708,7 @@
       "sourcePart": "A",
       "sourceSection": "## Push-up",
       "sourceLine": 87,
-      "originalName": "Negative push-up — return on knees",
+      "originalName": "Negative push-up \u2014 return on knees",
       "status": "DEFERRED_BY_USER",
       "note": "User requested leaving negative push-up for now on November 3, 2026. Retain original library movement; no source substitution or instructions. Deferred, not removed from the original library.",
       "taskRef": "07-04",
@@ -830,7 +830,7 @@
       "sourcePart": "A",
       "sourceSection": "## Pull-up",
       "sourceLine": 114,
-      "originalName": "Inverted row — steep",
+      "originalName": "Inverted row \u2014 steep",
       "status": "NEEDS_CLARIFICATION",
       "note": "Generic Inverted Row supports bar rowing but does not establish the steep setup. Standing Inverted Row uses a door frame/rack with neutral grip; do not substitute it for a steeper bar row. Keep bar height/body angle as a proposed setup variation pending review.",
       "taskRef": "07-13",
@@ -842,7 +842,7 @@
       "sourcePart": "A",
       "sourceSection": "## Pull-up",
       "sourceLine": 114,
-      "originalName": "Inverted row — horizontal",
+      "originalName": "Inverted row \u2014 horizontal",
       "status": "MATCHED",
       "note": "Fixed horizontal bar and overhand rowing match the horizontal row pattern. Page text does not quantify torso angle; horizontal setup comes from the library.",
       "taskRef": "07-14",
@@ -869,10 +869,14 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Chair squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "RELATED_SOURCE_REVIEW_REQUIRED",
+      "note": "Related only: source sits onto the box and pauses; library chair squat uses a touch. Keep chair-touch setup.",
       "taskRef": "08-01",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH",
+      "candidateSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-box-squat"
+      ]
     },
     {
       "batchId": "08",
@@ -880,10 +884,13 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Bodyweight squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Written source matches the library movement.",
       "taskRef": "08-02",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
@@ -891,10 +898,13 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Pause squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Library adds a two-second bottom pause to the same squat; the source does not prescribe this pause.",
       "taskRef": "08-03",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
@@ -902,10 +912,13 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Split squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Written source matches the library movement.",
       "taskRef": "08-04",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/split-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
@@ -913,10 +926,13 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Bulgarian split squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Library uses a chair as the rear-foot support.",
       "taskRef": "08-05",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/bulgarian-split-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
@@ -924,10 +940,11 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Box pistol squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact single-leg box squat verified. Bodyweight Box Squat uses both legs; Bodyweight Single Leg Squat does not use a box.",
       "taskRef": "08-06",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "08",
@@ -935,10 +952,13 @@
       "sourceSection": "## Squat",
       "sourceLine": 140,
       "originalName": "Pistol squat",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Source matches the forward-leg pattern but does not specify full pistol depth; keep depth as a library coaching detail.",
       "taskRef": "08-07",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-single-leg-squat"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
@@ -946,21 +966,27 @@
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
       "originalName": "Glute bridge",
-      "status": "PENDING",
-      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "status": "MATCHED",
+      "note": "Library cues alignment of knees, hips and shoulders.",
       "taskRef": "08-08",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/glute-bridge"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Glute bridge — pause at top",
-      "status": "PENDING",
-      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "originalName": "Glute bridge \u2014 pause at top",
+      "status": "MATCHED",
+      "note": "Library adds a two-second top squeeze per repetition. Use the same movement reference; do not substitute a continuous isometric hold.",
       "taskRef": "08-09",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/glute-bridge"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
@@ -968,43 +994,53 @@
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
       "originalName": "Single-leg glute bridge",
-      "status": "PENDING",
-      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "status": "MATCHED",
+      "note": "Library uses one grounded foot. Source title specifies single leg; written steps omit supporting-foot setup, so review that cue before publishing.",
       "taskRef": "08-10",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/single-leg-glute-bridge"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Calf raise — both legs",
-      "status": "PENDING",
-      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "originalName": "Calf raise \u2014 both legs",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact bilateral flat-floor standing source verified. Calf Raises uses an elevated platform and belongs to the step-edge progression.",
       "taskRef": "08-11",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "08",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Calf raise — single leg",
-      "status": "PENDING",
-      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "originalName": "Calf raise \u2014 single leg",
+      "status": "MATCHED",
+      "note": "Written source matches the library movement.",
       "taskRef": "08-12",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-single-leg-calf-raise"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "08",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Calf raise — step edge",
-      "status": "PENDING",
-      "note": "Determine distinct movement versus prescription/setup note before splitting identity.",
+      "originalName": "Calf raise \u2014 step edge",
+      "status": "MATCHED",
+      "note": "Same elevated setup as the two gym calf placements; reuse their proposed identity.",
       "taskRef": "08-13",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/calf-raises"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "09",
@@ -1012,10 +1048,11 @@
       "sourceSection": "## Plank",
       "sourceLine": 164,
       "originalName": "Knee plank",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact knee-supported forearm plank verified. Forearm Plank uses the toes for support.",
       "taskRef": "09-01",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "09",
@@ -1023,10 +1060,13 @@
       "sourceSection": "## Plank",
       "sourceLine": 164,
       "originalName": "Full forearm plank",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Library hold times are progression targets.",
       "taskRef": "09-02",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/forearm-plank"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "09",
@@ -1034,10 +1074,13 @@
       "sourceSection": "## Plank",
       "sourceLine": 164,
       "originalName": "Long-lever plank",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Source opening calls it a hand plank but then refers to moving the elbows forward; review starting transition before publishing.",
       "taskRef": "09-03",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/long-lever-forearm-plank"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "09",
@@ -1045,76 +1088,89 @@
       "sourceSection": "## Plank",
       "sourceLine": 164,
       "originalName": "Rocking plank",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact forearm rocking plank verified; static plank and equipment-based knee tucks do not match the movement.",
       "taskRef": "09-04",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "09",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Side plank — knees",
-      "status": "PENDING",
-      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "originalName": "Side plank \u2014 knees",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact knee-supported elbow side plank verified; keep knee support as the original regression.",
       "taskRef": "09-05",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "09",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Side plank — full",
-      "status": "PENDING",
-      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "originalName": "Side plank \u2014 full",
+      "status": "MATCHED",
+      "note": "Library uses the full side plank position with the elbow under the shoulder.",
       "taskRef": "09-06",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/elbow-side-plank"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "09",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Side plank — top-leg lift",
-      "status": "PENDING",
-      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "originalName": "Side plank \u2014 top-leg lift",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact floor elbow side plank with a top-leg lift verified. The BOSU hand-supported hip-abduction variant changes both support and equipment.",
       "taskRef": "09-07",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "09",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Superman — hold",
-      "status": "PENDING",
-      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "originalName": "Superman \u2014 hold",
+      "status": "MATCHED",
+      "note": "Source lifts and lowers per repetition; use as base movement reference. Library prescribes a timed hold separately.",
       "taskRef": "09-08",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/supermans"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "09",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Superman — repetitions",
-      "status": "PENDING",
-      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "originalName": "Superman \u2014 repetitions",
+      "status": "MATCHED",
+      "note": "Repetition prescription uses the same bilateral movement. Keep rep counting distinct from timed hold.",
       "taskRef": "09-09",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/supermans"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "09",
       "sourcePart": "A",
       "sourceSection": "## Support exercises",
       "sourceLine": 175,
-      "originalName": "Superman — alternating arm/leg",
-      "status": "PENDING",
-      "note": "Duration changes do not make new exercise identities; logging/Phase 1 eligibility reviewed separately.",
+      "originalName": "Superman \u2014 alternating arm/leg",
+      "status": "FLAGGED_NO_EXACT_MATCH",
+      "note": "No exact prone opposite-arm-and-leg Superman verified. Bilateral Supermans lifts all limbs together.",
       "taskRef": "09-10",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [],
+      "instructionStatus": "AWAITING_EXACT_MATCH"
     },
     {
       "batchId": "10",
@@ -1122,10 +1178,13 @@
       "sourceSection": "## The list",
       "sourceLine": 45,
       "originalName": "Pike push-up",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Optional later.",
       "taskRef": "10-01",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/bodyweight-pike-press"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "10",
@@ -1133,10 +1192,13 @@
       "sourceSection": "## The list",
       "sourceLine": 45,
       "originalName": "Single-leg glute bridge (optional-list reference)",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Optional repeat of the same support exercise; reuse its identity.",
       "taskRef": "10-02",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/single-leg-glute-bridge"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "10",
@@ -1144,10 +1206,13 @@
       "sourceSection": "## The list",
       "sourceLine": 45,
       "originalName": "Dead bug",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Optional later.",
       "taskRef": "10-03",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/dead-bug"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     },
     {
       "batchId": "10",
@@ -1155,12 +1220,15 @@
       "sourceSection": "## The list",
       "sourceLine": 45,
       "originalName": "Hollow hold",
-      "status": "PENDING",
-      "note": "Source mention/variant candidate; deduplicate across tables, ladder stages and optional list.",
+      "status": "MATCHED",
+      "note": "Optional later.",
       "taskRef": "10-04",
-      "matchedSourceUrls": []
+      "matchedSourceUrls": [
+        "https://musclewiki.com/exercise/hollow-hold"
+      ],
+      "instructionStatus": "SUMMARIZED_NEEDS_REVIEW"
     }
   ],
-  "workflowStatus": "PAUSED_BY_USER",
-  "currentWork": "Paused by user after Batch 06 on November 3, 2026. Abs: 2 names matched; 2 reverse-crunch variants retained and flagged by agreement. Cable crunch source cue needs editorial review. Resume at Batch 07 bodyweight push/pull only when requested."
+  "workflowStatus": "RESEARCH_COMPLETE_REVIEW_REQUIRED",
+  "currentWork": "All 85 source tasks reviewed through Batch 10 on November 4, 2026. No pending research rows. Review flagged/deferred/related sources and draft instructions before seeding."
 }

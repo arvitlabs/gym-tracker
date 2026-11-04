@@ -118,45 +118,45 @@ Status: REVIEW_REQUIRED - 15 researched; 9 matched (8 canonical proposals), 1 us
 
 ### 08. Bodyweight — squat, glute bridge and calf variants — 13 source tasks
 
-Status: PENDING
+Status: RESEARCH_COMPLETE_WITH_FLAGS
 
 - [ ] Chair squat (A; source line 140)
-- [ ] Bodyweight squat (A; source line 140)
-- [ ] Pause squat (A; source line 140)
-- [ ] Split squat (A; source line 140)
-- [ ] Bulgarian split squat (A; source line 140)
+- [x] Bodyweight squat (A; source line 140)
+- [x] Pause squat (A; source line 140)
+- [x] Split squat (A; source line 140)
+- [x] Bulgarian split squat (A; source line 140)
 - [ ] Box pistol squat (A; source line 140)
-- [ ] Pistol squat (A; source line 140)
-- [ ] Glute bridge (A; source line 175)
-- [ ] Glute bridge — pause at top (A; source line 175)
-- [ ] Single-leg glute bridge (A; source line 175)
+- [x] Pistol squat (A; source line 140)
+- [x] Glute bridge (A; source line 175)
+- [x] Glute bridge — pause at top (A; source line 175)
+- [x] Single-leg glute bridge (A; source line 175)
 - [ ] Calf raise — both legs (A; source line 175)
-- [ ] Calf raise — single leg (A; source line 175)
-- [ ] Calf raise — step edge (A; source line 175)
+- [x] Calf raise — single leg (A; source line 175)
+- [x] Calf raise — step edge (A; source line 175)
 
 ### 09. Bodyweight — plank and core support — 10 source tasks
 
-Status: PENDING
+Status: RESEARCH_COMPLETE_WITH_FLAGS
 
 - [ ] Knee plank (A; source line 164)
-- [ ] Full forearm plank (A; source line 164)
-- [ ] Long-lever plank (A; source line 164)
+- [x] Full forearm plank (A; source line 164)
+- [x] Long-lever plank (A; source line 164)
 - [ ] Rocking plank (A; source line 164)
 - [ ] Side plank — knees (A; source line 175)
-- [ ] Side plank — full (A; source line 175)
+- [x] Side plank — full (A; source line 175)
 - [ ] Side plank — top-leg lift (A; source line 175)
-- [ ] Superman — hold (A; source line 175)
-- [ ] Superman — repetitions (A; source line 175)
+- [x] Superman — hold (A; source line 175)
+- [x] Superman — repetitions (A; source line 175)
 - [ ] Superman — alternating arm/leg (A; source line 175)
 
 ### 10. Optional later exercises and coverage reconciliation — 4 source tasks
 
-Status: PENDING
+Status: RESEARCH_COMPLETE_INSTRUCTIONS_DRAFT
 
-- [ ] Pike push-up (A; source line 45)
-- [ ] Single-leg glute bridge (optional-list reference) (A; source line 45)
-- [ ] Dead bug (A; source line 45)
-- [ ] Hollow hold (A; source line 45)
+- [x] Pike push-up (A; source line 45)
+- [x] Single-leg glute bridge (optional-list reference) (A; source line 45)
+- [x] Dead bug (A; source line 45)
+- [x] Hollow hold (A; source line 45)
 
 ## Decisions and exceptions to track
 
@@ -191,3 +191,5 @@ Batch 05: do not split cable versus rope into different exercises automatically;
 Mapping paused by user on November 3, 2026 after Batch 06 disposition. Resume at Batch 07 only when requested.
 
 November 3, 2026: resumed Batch 07. All 15 tasks researched; 9 matched, wall source user-selected pending page verification, ring archer accepted as related source, negative push-up deferred by user, 2 no exact match, steep inverted row needs setup clarification. Two incline heights share one canonical proposal with separate library setup notes. Other exceptions remain open. Next research batch: 08. See cumulative review for sources and draft instructions.
+
+November 4, 2026: Batches 08–10 researched. All 85 source tasks have dispositions. Unchecked entries with exceptions are recorded in the cumulative review and queue; seeding remains pending.
