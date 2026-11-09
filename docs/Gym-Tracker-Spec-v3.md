@@ -25,7 +25,7 @@ A gym app that asks about your body, goal and schedule, then gives you a weekly 
 | 3 | Add-on Engine | Warm-up & stretch sections (generic in P1; personalized from pain/posture in P2) |
 | 4 | Daily Workout & Logging | Today, sectioned workout, log weight+reps+done, offline-first with sync |
 | 5 | Exercise Library | Exercises + warm-ups + stretches, with instructions & media |
-| 6 | Progress & Consistency | Streaks, history, past-workout detail — the engagement layer |
+| 6 | Progress & Consistency | Workout-day goals, history, past-workout detail — the engagement layer |
 
 ## Non-goals (v1)
 
@@ -34,8 +34,8 @@ Nutrition / diet · social features · wearable sync · AI chat coach · payment
 ## North star: consistency
 
 1. **Zero-friction start** — Today surfaces today's workout; a **central Play button** in the nav starts or swaps today's session from anywhere.
-2. **Streaks with forgiveness** — track workouts hit per week; rest days + a streak freeze mean one missed day doesn't nuke a run.
-3. **Visible progress** — streak, weekly ring, body-map of what you trained.
+2. **Workout-day goals** — a 4-day plan targets 4 days per week and 16 per month. A 5-day plan targets 5 per week and 20 per month. The selected plan sets the targets.
+3. **Visible progress** — weekly and monthly workout-day progress, body-map of what you trained.
 4. **Motivation-first home** — the Today screen leads with your own progress, not a menu.
 
 ## Success criteria
@@ -87,14 +87,16 @@ Bottom nav on every tab screen: **Today · Plan · ▶ · Progress · Profile** 
 | 08 | Plan Result | the generated 4- or 5-day week; Looks good → Today, Reorder → Plan |
 | 09 | Plan · Week | move days between weekdays; reorder exercises within a section; Reset to recommended |
 | 10 | Exercise Stages | an exercise's stages (sets × reps × weight + sessions to stay); edit, "move to next stage" (manual); weight+reps type only |
-| 11 | Today | motivation hero (streak + weekly ring + message), small today card, tomorrow; Start / Resume |
+| 11 | Today | motivation hero (weekly workout-day goal progress, previous-week feedback, and next-step message), small today card, tomorrow; Start / Resume |
 | 12 | Active Workout | one workout timer; sections (warm-up / main / stretch); main = log weight + reps + done, warm-up / stretch = done-check; media space per exercise |
 | 13 | Workout list | all exercises by section with status; tap to jump |
-| 14 | Workout Complete | body-map of muscles trained, honest count, streak, volume, PR (none on #1) |
+| 14 | Workout Complete | body-map of muscles trained, honest count, updated workout-day goal progress and next-step feedback, volume, PR (none on #1) |
 | 15 | Exercise Detail | media, how-to, mistakes, progression chain; Back returns to origin |
-| 16 | Progress | **streak + streak freeze, workouts this month, history list** (day-1 empty state) |
+| 16 | Progress | **weekly and monthly workout-day goal progress, previous-period feedback, history list** (day-1 empty state) |
 | 17 | Past-workout detail | read-only: each set's actual vs target, per section |
 | 18 | Profile | stats, goal, experience, current plan, reminder on/off + time, **Sign out** |
+
+Workout-day progress counts distinct qualifying local dates in Monday–Sunday weeks and calendar months. Multiple workouts on one date count once. Late offline sync updates the original period. Past periods use the target from the plan active at period end. Partial workout eligibility is open.
 
 ### Trimmed from Progress for Phase 1
 - Body-weight chart + logging → Phase 2

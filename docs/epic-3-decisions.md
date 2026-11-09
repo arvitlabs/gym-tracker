@@ -61,7 +61,7 @@ Status: In progress.
 - Exercise progression belongs to the user + exercise, independently of plans; reuse it when the exercise appears in a later plan.
 - Before reset/replacement, archive the current plan and its edits; create a new active plan. Resetting a plan must not reset exercise progression.
 - Each workout preserves its targets as used at the time; later plan edits or resets do not change workout history.
-- Any actual logged progress counts toward the streak, including auto-closed partial workouts; merely starting a workout does not count. No main-section requirement.
+- Workout-day progress comes from qualifying logged workouts. Whether partial or auto-closed workouts qualify is open.
 - Proposed data model: exercise library entry; user-exercise progression (stages/current stage/session count); plan references to exercises; immutable workout target snapshots.
 - Archived plans may include a read-only progression snapshot for context; live progression remains independent.
 - Logged progress means a set marked done or a done-only exercise checked complete; target edits alone do not qualify. Distinct exercise variants have distinct progressions.
@@ -83,12 +83,12 @@ Agreed logging rules:
 - Planning: versioned PlanTemplate seed; user Plan → PlanDay → PlanSection → PlanExercise. Plans hold arrangement, not progression. One active plan per user.
 - Progression: UserExerciseProgress → ExerciseStage. Unique user/exercise pair; current stage and session credit independent of plans. Recommended sets/reps; starting weight entered by user.
 - History: Workout → WorkoutExercise → WorkoutSet, with original targets, actuals, completion/activity timestamps and source plan/day. Completed records immutable.
-- Consistency: workout-derived daily credit plus weekly freeze usage; rest days and schedule swaps must be evaluated against dated schedule history.
-- Sync: client-generated IDs, duplicate-safe upload, acknowledged queue removal; versioned schedule-swap operations. Queue and mutable active workout stored locally in IndexedDB.
+- Consistency: workout-day goals derived from qualifying local dates and the plan active at the end of each past period.
+- Sync: client-generated IDs, duplicate-safe upload, acknowledged queue removal; offline weekday swaps with retry and conflict handling to be decided. Queue and mutable active workout stored locally in IndexedDB.
 
 Constraints: nonnegative weights; positive reps/sets; stage stays positive; account ownership enforced; stage-session credit granted once per exercise per workout. Done-only entries do not require weight/reps. Distinguish unset starting weight from an explicit 0 kg.
 
-To resolve during schema implementation: whether to represent unfinished workouts on the backend, and how schedule snapshots preserve historical streak calculations after swaps. SMS integration remains unselected; the provider choice does not change workout ownership.
+Active drafts stay on the device. Review current weekday storage and historical plan selection during schema follow-up. SMS integration remains unselected; the provider choice does not change workout ownership.
 
 ## Batch 4 — Runnable database foundation
 
@@ -106,11 +106,11 @@ Schema runs from scratch through migrations; risks triaged; stack and architectu
 
 - Reordering exercises or editing progression requires internet. Apply changes to the active workout immediately; preserve completed sets and their original targets.
 - Offline: workout logging/resume and swaps between existing downloaded workout days are allowed.
-- Swapping days updates the weekly schedule too (e.g. Legs today, Chest on the previous Legs day); queue the schedule change for sync.
+- Swapping days updates the personal plan’s current weekday assignments and keeps the same PlanDay IDs. Queue offline changes for sync. Current assignments live on PlanDay.weekday, unique within a plan. ScheduleRevision was removed from the draft.
 - Swapping during an active workout resets that unfinished session to the selected workout. Do not create a second partial session. Show a discard-progress confirmation; reset only after confirmation.
-- Reset clears the discarded draft’s logs and derived credit; retain separately completed workout history and existing exercise progression. Workout-derived streak/session credit is based on retained logs.
+- Reset clears the discarded draft’s logs and derived credit; retain separately completed workout history and existing exercise progression. Workout-day progress and exercise-session credit are based on retained logs.
 - Other plan edits, generation and plan reset require internet.
-- Streak activity belongs to the date logged, not the auto-close date. Stage-session credit requires completing the exercise’s target sets; partial effort can still earn streak credit. Stage advancement stays manual.
+- Qualifying activity belongs to its recorded local date. Stage-session credit requires completing the exercise’s target sets. Stage advancement stays manual.
 
 ## Account and database baseline
 
@@ -120,23 +120,26 @@ Accepted on proceeding to the next discussion:
 - Generate from Beginner/Intermediate × Gym/Home × 4/5-day templates; give each user an editable copy.
 - One progression per user + exercise, reused across plan appearances.
 - Shared exercise library maintained by us; no custom user-created exercises in Phase 1.
-- One active workout at a time; multiple completed workouts per day allowed, with streak credit once per day.
+- One active workout at a time; multiple completed workouts per day allowed, with at most one workout day counted per local date.
 
-## Streaks and starting progression
+## Workout-day goals and starting progression
 
-- Streak follows planned training days; any logged progress qualifies. Rest days do not break it; extra workouts can earn that day’s credit.
-- One automatic freeze per Monday–Sunday calendar week: first missed training day forgiven; second missed training day breaks the streak. Unused freezes do not accumulate. A frozen day is not a completed workout.
+- The selected plan sets the workout-day targets: 4 days/week and 16/month for a 4-day plan, or 5 days/week and 20/month for a 5-day plan. Users do not edit these targets separately.
+- Count distinct qualifying local workout dates per Monday–Sunday week and calendar month. Two workouts on one date count once. Late offline logs update the original period. Derive progress from logs without a stored counter or separate goal-history table.
+- Use the plan active at the end of each past period to determine its target. Keep plan activation and archive timing available for that lookup.
+- Show progress and previous-period feedback. For example, “You trained 3 of 4 days last week.” When the current week is also at 3 of 4, add “One more workout this week gets you to your goal.”
+- Open: which partial workouts qualify, and how to handle conflicting or retried offline swaps.
 - Starting progression: recommend sets/reps; user enters starting weight. Reuse existing exercise progression when available.
 
 ## Schema v1 — initial implementation
 
 - File: backend/prisma/schema.prisma. Formatted and validated using Prisma 7.10.1; database execution not yet tested.
-- Confirmed: active drafts stay on the device; upload only finalized/auto-closed workouts. Preserve dated schedule revisions for past streak calculations.
-- Models cover accounts/profile/refresh tokens, exercise library, versioned templates, user plans/sections/order, independent exercise stages, completed workout snapshots, session credits and weekly freezes.
-- Sync uses immutable client IDs and payload hashes; duplicate upload must not repeat session credit. Schedule revisions retain full assignments with effective dates.
+- Confirmed: active drafts stay on the device; upload only finalized/auto-closed workouts.
+- Models cover accounts/profile/refresh tokens, exercise library, versioned templates, user plans/sections/order, independent exercise stages, completed workout snapshots, session credits, and StreakFreeze. StreakFreeze still needs schema follow-up under the new workout-day goal design.
+- Sync uses immutable client IDs and payload hashes; duplicate upload must not repeat session credit.
 - Prisma schema alone does not enforce all rules. First migration must add one-active-plan partial uniqueness, numeric/check constraints and cross-record ownership/consistency checks. API transactions must enforce immutable history, template validation, valid current-stage selection and atomic credit/schedule updates.
-- Before migration: define stale offline schedule replay behavior; stage edits must not retroactively alter previous session credits; freeze calculations must reconcile delayed offline activity.
-- Next: Batch 4 migration/configuration, seeds and representative database queries; then Batch 5 risk review. Epic 3 remains open.
+- Before migration: resolve conflicting and retried offline swaps and partial workout eligibility. Preserve previous session credits when stages change and count late logs in their original periods.
+- Next in the schema review: Batch 5, exercise progression. Migration, seeds and representative database queries follow the schema review.
 
 ## Authentication alignment — November 1, 2026
 

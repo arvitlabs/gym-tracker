@@ -17,6 +17,16 @@ enum PlanStatus {
   ARCHIVED
 }
 
+enum Weekday {
+  MONDAY
+  TUESDAY
+  WEDNESDAY
+  THURSDAY
+  FRIDAY
+  SATURDAY
+  SUNDAY
+}
+
 enum Experience {
   BEGINNER
   INTERMEDIATE
@@ -134,7 +144,6 @@ model Plan {
   archivedAt DateTime?          @db.Timestamptz(3)
   days       PlanDay[]
   workouts   Workout[]
-  schedules  ScheduleRevision[]
 
   @@index([userId, status])
 }
@@ -143,13 +152,14 @@ model PlanDay {
   id       String        @id @default(uuid()) @db.Uuid
   planId   String        @db.Uuid
   plan     Plan          @relation(fields: [planId], references: [id], onDelete: Restrict)
-  // Stable day identity; weekday assignments live in dated ScheduleRevision snapshots.
   position Int
   focus    String
+  weekday  Weekday?
   sections PlanSection[]
   workouts Workout[]
 
   @@unique([planId, position])
+  @@unique([planId, weekday])
 }
 
 model PlanSection {
@@ -172,22 +182,6 @@ model PlanExercise {
   position   Int
 
   @@unique([sectionId, position])
-}
-
-// Immutable full schedule snapshot; operation ID makes offline retries duplicate-safe.
-model ScheduleRevision {
-  id            String   @id @db.Uuid
-  planId        String   @db.Uuid
-  plan          Plan     @relation(fields: [planId], references: [id], onDelete: Restrict)
-  version       Int
-  effectiveDate DateTime @db.Date
-  timeZone      String
-  assignments   Json
-  createdAt     DateTime @db.Timestamptz(3)
-  receivedAt    DateTime @default(now()) @db.Timestamptz(3)
-
-  @@unique([planId, version])
-  @@index([planId, effectiveDate])
 }
 
 model UserExerciseProgress {
