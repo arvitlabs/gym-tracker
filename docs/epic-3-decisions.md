@@ -24,7 +24,8 @@ Keep decisions concise. Work through one batch at a time. Product scope and scre
 
 ### Open
 
-- Confirm Render and Neon; choose regions and environments.
+- Deploy exactly two environments: testing and production. Local development is a developer workflow. Use separate databases, credentials and signing keys for testing and production.
+- Confirm Render and Neon and choose hosting regions.
 - Package versions, package manager, styling, routing and PWA tooling.
 - Testing, CI and media sources.
 
@@ -50,7 +51,8 @@ Status: In progress.
 
 ### Open
 - SMS provider: compare MSG91 and Firebase Phone Authentication; not selected. Firebase requires billing for real SMS; published India rate is $0.07/SMS after the first 10 free SMS/day. Firebase handles phone OTP, while phone + password needs custom backend handling. Sources: https://firebase.google.com/pricing and https://cloud.google.com/identity-platform/pricing (checked October 31, 2026).
-- Provider-specific session implementation and account-isolated local storage details.
+- Use a free test-only OTP flow with allowlisted test numbers and no real SMS. Keep it disabled in production. Before the first release, compare provider pricing and India delivery and choose a production SMS provider.
+- Account-isolated local storage details remain open.
 
 ### Workout and plan rules
 
@@ -84,7 +86,7 @@ Agreed logging rules:
 - Progression: UserExerciseProgress → ExerciseStage. Unique user/exercise pair; current stage and session credit independent of plans. Recommended sets/reps; starting weight entered by user.
 - History: Workout → WorkoutExercise → WorkoutSet, with original targets, actuals, completion/activity timestamps and source plan/day. Completed records immutable.
 - Consistency: workout-day goals derived from qualifying local dates and the plan active at the end of each past period.
-- Sync: client-generated IDs, duplicate-safe upload, acknowledged queue removal; offline weekday swaps with retry and conflict handling to be decided. Queue and mutable active workout stored locally in IndexedDB.
+- Sync: client-generated IDs, duplicate-safe upload, acknowledged queue removal; offline weekday swaps with recorded request IDs. Queue and mutable active workout stored locally in IndexedDB.
 
 Constraints: nonnegative weights; positive reps/sets; stage stays positive; account ownership enforced; stage-session credit granted once per exercise per workout. Done-only entries do not require weight/reps. Distinguish unset starting weight from an explicit 0 kg.
 
@@ -96,7 +98,7 @@ Not started. Create and verify the first migration, seeds, required queries, CI 
 
 ## Batch 5 — Risk review and sign-off
 
-Not started. Triage risks, settle remaining architecture choices and verify the Epic 3 gate before sprint planning.
+Story 3.3 design review and triage are recorded in [Epic 3 risk review](epic-3-risk-review.md). Launch blockers have sprint story drafts. Keep the risk stories queued for development. Draw the one-page architecture diagram after the remaining hosting, domain and phone verification decisions are settled. Runtime verification remains open.
 
 ## Completion gate
 
@@ -128,17 +130,20 @@ Accepted on proceeding to the next discussion:
 - Count distinct qualifying local workout dates per Monday–Sunday week and calendar month. Two workouts on one date count once. Late offline logs update the original period. Derive progress from logs without a stored counter or separate goal-history table.
 - Use the plan active at the end of each past period to determine its target. Keep plan activation and archive timing available for that lookup.
 - Show progress and previous-period feedback. For example, “You trained 3 of 4 days last week.” When the current week is also at 3 of 4, add “One more workout this week gets you to your goal.”
-- Open: which partial workouts qualify, and how to handle conflicting or retried offline swaps.
+- Workout-day eligibility and offline swap retry behavior are defined in Story 3.1 below.
 - Starting progression: recommend sets/reps; user enters starting weight. Reuse existing exercise progression when available.
 
 ## Schema v1 — initial implementation
 
 - File: backend/prisma/schema.prisma. Formatted and validated using Prisma 7.10.1; database execution not yet tested.
 - Confirmed: active drafts stay on the device; upload only finalized/auto-closed workouts.
-- Models cover accounts/profile/refresh tokens, exercise library, versioned templates, user plans/sections/order, independent exercise stages, completed workout snapshots, session credits, and StreakFreeze. StreakFreeze still needs schema follow-up under the new workout-day goal design.
-- Sync uses immutable client IDs and payload hashes; duplicate upload must not repeat session credit.
-- Prisma schema alone does not enforce all rules. First migration must add one-active-plan partial uniqueness, numeric/check constraints and cross-record ownership/consistency checks. API transactions must enforce immutable history, template validation, valid current-stage selection and atomic credit/schedule updates.
-- Before migration: resolve conflicting and retried offline swaps and partial workout eligibility. Preserve previous session credits when stages change and count late logs in their original periods.
+- Templates are versioned by key and version. Days, sections and exercise entries are ordered relational rows. Published versions are immutable. Personal plans own their weekday assignments.
+- A user can have at most one active plan. Archive the old plan and activate its replacement at the same instant in one transaction. Preserve each activation timestamp. For historical goals, use the plan active just before the next period begins in the user's time zone. Enforce uniqueness and valid activation windows when migrations are implemented.
+- Workout snapshots and session credits use stable stage IDs. Position controls display order. Save shown targets and actual weights independently. Credit each progression once per workout when its target sets are completed, regardless of actual weight. Late logs can credit the recorded stage. Advancement remains manual.
+- Verify plan ownership, then check the client-generated swap request ID before checking current assignments. An identical retry succeeds without changing the schedule. A reused ID with a different payload is rejected. A new request with stale expected assignments returns a conflict. Save the request and both weekday changes in one transaction.
+- A saved workout qualifies on a local date if at least half of its saved exercise entries have activity that date. Count each entry once if it has a done-only check or at least one completed set. Require at least one saved entry and count each user and local date once. Three of five qualifies even when the actual weights differ from the targets. Two of five does not qualify. StreakFreeze is removed.
+- Finalized workouts use immutable client IDs and payload hashes. Identical retries return the prior result. Reject changed payloads for the same ID. Save workout history and stage credit atomically. Validate stage ownership and exercise identity when ingesting snapshots and credits.
+- Database execution is deferred. The verification cases include the three-of-five workout and the identical Thursday/Sunday swap retry, which must leave both assignments swapped exactly once.
 - Next in the schema review: Batch 5, exercise progression. Migration, seeds and representative database queries follow the schema review.
 
 ## Authentication alignment — November 1, 2026
@@ -147,9 +152,9 @@ Accepted on proceeding to the next discussion:
 - User adds isActive and securityStamp. RefreshToken stores hash, issuance stamp, creation/activity/expiry, revocation and used state. Access JWTs are not persisted.
 - Every protected API request validates JWT signature/expiry/issuer/audience, then current user activity and stamp through a minimal lookup. Derive ownership from authenticated identity.
 - Refresh validates current auth state; consume the old token and issue its replacement atomically. Concurrent refreshes share one frontend operation.
-- Password change/reset or forced full revocation rotates the user stamp and revokes all refresh tokens atomically. Normal sign-out revokes its refresh token; already-issued access-token revocation semantics must be settled before implementation.
-- Keep 30-day online-inactivity rule; backend manages activity/expiry. Offline network failures preserve local workouts and do not imply invalid credentials.
-- No tenant/branch/permission tables added. Browser credential storage remains open; do not inherit sessionStorage automatically.
+- Password change/reset or forced full revocation rotates the user stamp and revokes all refresh tokens atomically. Normal sign-out clears browser credentials, revokes the current refresh-token session and invalidates its outstanding access tokens on the server. Other signed-in devices keep their sessions. The session revocation mechanism is an implementation decision. If the server cannot be reached, clear browser credentials immediately and treat server revocation as unconfirmed.
+- Keep 30-day online-inactivity rule; backend manages activity/expiry. Offline network failures preserve local workouts and do not imply invalid credentials. On sign-out, hide account data and warn about unsynced workouts. Keep the queue account-scoped and accessible only after the same account signs in.
+- Keep access tokens in memory and refresh tokens in Secure, HttpOnly cookies. Finalize SameSite, CORS and CSRF handling once frontend and API domains are chosen. No tenant/branch/permission tables added.
 - Firebase remains only a candidate for phone verification; if used, NestJS verifies Firebase proof before issuing this app’s tokens.
 - Revised schema formatted and validated with Prisma 7.10.1. No migration or auth runtime implemented yet.
 

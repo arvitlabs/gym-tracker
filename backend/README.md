@@ -1,7 +1,8 @@
 # Backend
 
-NestJS + PostgreSQL + Prisma. Current deliverable: initial database schema only.
+Story 3.1 defines the schema and data behavior for Gym Tracker.
 
-`prisma/schema.prisma` was formatted and validated with Prisma 7.10.1. No database connection, migration, seed execution or backend implementation has been performed yet.
+- [Schema draft](prisma/schema.prisma)
+- [Epic 3 decisions](../docs/epic-3-decisions.md)
 
-Next: configure Prisma’s database connection, add SQL constraints, generate the first migration, run against an empty test database, and validate the application queries. No live infrastructure has been provisioned.
+Database setup, migrations, and execution checks are deferred.

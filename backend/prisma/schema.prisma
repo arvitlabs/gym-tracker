@@ -57,7 +57,6 @@ model User {
   plans           Plan[]
   progressions    UserExerciseProgress[]
   workouts        Workout[]
-  freezes         StreakFreeze[]
 }
 
 model Profile {
@@ -113,12 +112,13 @@ model Exercise {
   recommendedSets  Int?
   recommendedReps  Int?
   isActive         Boolean                @default(true)
+  templateExercises PlanTemplateExercise[]
   planExercises    PlanExercise[]
   progressions     UserExerciseProgress[]
   workoutExercises WorkoutExercise[]
 }
 
-// Versioned template content is validated seed data: ordered days/sections/exercise IDs.
+// Publish a new version when template content changes.
 model PlanTemplate {
   id           String     @id @default(uuid()) @db.Uuid
   key          String
@@ -126,10 +126,45 @@ model PlanTemplate {
   experience   Experience
   location     Location
   trainingDays Int
-  content      Json
+  days         PlanTemplateDay[]
   plans        Plan[]
 
   @@unique([key, version])
+}
+
+model PlanTemplateDay {
+  id         String                @id @default(uuid()) @db.Uuid
+  templateId String                @db.Uuid
+  template   PlanTemplate          @relation(fields: [templateId], references: [id], onDelete: Restrict)
+  position   Int
+  focus      String
+  weekday    Weekday?
+  sections   PlanTemplateSection[]
+
+  @@unique([templateId, position])
+  @@unique([templateId, weekday])
+}
+
+model PlanTemplateSection {
+  id        String                 @id @default(uuid()) @db.Uuid
+  dayId     String                 @db.Uuid
+  day       PlanTemplateDay        @relation(fields: [dayId], references: [id], onDelete: Restrict)
+  name      String
+  position  Int
+  exercises PlanTemplateExercise[]
+
+  @@unique([dayId, position])
+}
+
+model PlanTemplateExercise {
+  id         String              @id @default(uuid()) @db.Uuid
+  sectionId  String              @db.Uuid
+  section    PlanTemplateSection @relation(fields: [sectionId], references: [id], onDelete: Restrict)
+  exerciseId String              @db.Uuid
+  exercise   Exercise            @relation(fields: [exerciseId], references: [id], onDelete: Restrict)
+  position   Int
+
+  @@unique([sectionId, position])
 }
 
 model Plan {
@@ -141,11 +176,26 @@ model Plan {
   status     PlanStatus         @default(ACTIVE)
   version    Int                @default(1)
   createdAt  DateTime           @default(now()) @db.Timestamptz(3)
+  activatedAt DateTime          @default(now()) @db.Timestamptz(3)
   archivedAt DateTime?          @db.Timestamptz(3)
   days       PlanDay[]
   workouts   Workout[]
 
-  @@index([userId, status])
+  swapRequests PlanDaySwapRequest[]
+
+  @@unique([id, userId])
+  @@index([userId, activatedAt])
+}
+
+model PlanDaySwapRequest {
+  // Client-generated request ID. A successful request and its swap commit together.
+  id          String   @id @db.Uuid
+  planId      String   @db.Uuid
+  plan        Plan     @relation(fields: [planId], references: [id], onDelete: Restrict)
+  payload     Json
+  appliedAt   DateTime @default(now()) @db.Timestamptz(3)
+
+  @@index([planId])
 }
 
 model PlanDay {
@@ -158,6 +208,7 @@ model PlanDay {
   sections PlanSection[]
   workouts Workout[]
 
+  @@unique([id, planId])
   @@unique([planId, position])
   @@unique([planId, weekday])
 }
@@ -190,10 +241,10 @@ model UserExerciseProgress {
   user                 User                    @relation(fields: [userId], references: [id], onDelete: Restrict)
   exerciseId           String                  @db.Uuid
   exercise             Exercise                @relation(fields: [exerciseId], references: [id], onDelete: Restrict)
-  currentStagePosition Int                     @default(0)
+  currentStageId       String?                 @db.Uuid
+  currentStage         ExerciseStage?          @relation("CurrentStage", fields: [currentStageId, id], references: [id, progressId], onDelete: Restrict)
   version              Int                     @default(1)
-  stages               ExerciseStage[]
-  credits              ExerciseSessionCredit[]
+  stages               ExerciseStage[]         @relation("ProgressStages")
   updatedAt            DateTime                @updatedAt @db.Timestamptz(3)
 
   @@unique([userId, exerciseId])
@@ -202,7 +253,7 @@ model UserExerciseProgress {
 model ExerciseStage {
   id             String               @id @default(uuid()) @db.Uuid
   progressId     String               @db.Uuid
-  progress       UserExerciseProgress @relation(fields: [progressId], references: [id], onDelete: Restrict)
+  progress       UserExerciseProgress @relation("ProgressStages", fields: [progressId], references: [id], onDelete: Restrict)
   position       Int
   targetSets     Int
   targetReps     Int
@@ -210,6 +261,11 @@ model ExerciseStage {
   targetWeightKg Decimal?             @db.Decimal(7, 2)
   sessionsToStay Int
 
+  currentFor     UserExerciseProgress[] @relation("CurrentStage")
+  workoutExercises WorkoutExercise[]
+  credits        ExerciseSessionCredit[]
+
+  @@unique([id, progressId])
   @@unique([progressId, position])
 }
 
@@ -219,9 +275,9 @@ model Workout {
   userId          String                  @db.Uuid
   user            User                    @relation(fields: [userId], references: [id], onDelete: Restrict)
   planId          String                  @db.Uuid
-  plan            Plan                    @relation(fields: [planId], references: [id], onDelete: Restrict)
+  plan            Plan                    @relation(fields: [planId, userId], references: [id, userId], onDelete: Restrict)
   sourceDayId     String                  @db.Uuid
-  sourceDay       PlanDay                 @relation(fields: [sourceDayId], references: [id], onDelete: Restrict)
+  sourceDay       PlanDay                 @relation(fields: [sourceDayId, planId], references: [id, planId], onDelete: Restrict)
   startedAt       DateTime                @db.Timestamptz(3)
   endedAt         DateTime                @db.Timestamptz(3)
   durationSeconds Int
@@ -248,7 +304,10 @@ model WorkoutExercise {
   sectionPosition Int
   position        Int
   loggingMethod   LoggingMethod
-  // Includes stage identity and initial targets; sets retain targets applicable when logged.
+  // Stage IDs survive reordering. Target values are frozen separately for history.
+  stageId         String?       @db.Uuid
+  stage           ExerciseStage? @relation(fields: [stageId], references: [id], onDelete: Restrict)
+  // Initial targets; sets retain the targets applicable when logged.
   targetSnapshot  Json
   doneAt          DateTime?     @db.Timestamptz(3)
   activityDate    DateTime?     @db.Date
@@ -274,22 +333,14 @@ model WorkoutSet {
 
 // Award once in the same transaction as workout ingestion, not on each upload retry.
 model ExerciseSessionCredit {
-  workoutId     String               @db.Uuid
-  workout       Workout              @relation(fields: [workoutId], references: [id], onDelete: Restrict)
-  progressId    String               @db.Uuid
-  progress      UserExerciseProgress @relation(fields: [progressId], references: [id], onDelete: Restrict)
-  stagePosition Int
-  creditedAt    DateTime             @db.Timestamptz(3)
+  id            String        @id @default(uuid()) @db.Uuid
+  workoutId     String        @db.Uuid
+  workout       Workout       @relation(fields: [workoutId], references: [id], onDelete: Restrict)
+  progressId    String        @db.Uuid
+  stageId       String        @db.Uuid
+  stage         ExerciseStage @relation(fields: [stageId, progressId], references: [id, progressId], onDelete: Restrict)
+  creditedAt    DateTime      @db.Timestamptz(3)
 
-  @@id([workoutId, progressId])
-}
-
-model StreakFreeze {
-  userId     String   @db.Uuid
-  user       User     @relation(fields: [userId], references: [id], onDelete: Restrict)
-  weekStart  DateTime @db.Date
-  missedDate DateTime @db.Date
-  timeZone   String
-
-  @@id([userId, weekStart])
+  @@unique([workoutId, progressId])
+  @@index([stageId])
 }
