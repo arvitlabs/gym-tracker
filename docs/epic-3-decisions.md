@@ -94,11 +94,11 @@ Active drafts stay on the device. Review current weekday storage and historical 
 
 ## Batch 4 — Runnable database foundation
 
-Not started. Create and verify the first migration, seeds, required queries, CI migration check and generated schema diagram.
+Queued for the other laptop. Create and verify the first migration, seeds, required queries, CI migration check and generated schema diagram there.
 
 ## Batch 5 — Risk review and sign-off
 
-Story 3.3 design review and triage are recorded in [Epic 3 risk review](epic-3-risk-review.md). Launch blockers have sprint story drafts. Keep the risk stories queued for development. Draw the one-page architecture diagram after the remaining hosting, domain and phone verification decisions are settled. Runtime verification remains open.
+Story 3.3 design review and triage are recorded in [Epic 3 risk review](epic-3-risk-review.md). Launch blockers have sprint story drafts. Schema-specific findings and verification steps are recorded in the risk review. Run database checks after migration and verify the remaining stories as the relevant features are built. Draw the one-page architecture diagram after the remaining hosting, domain and phone verification decisions are settled. Runtime verification remains open.
 
 ## Completion gate
 

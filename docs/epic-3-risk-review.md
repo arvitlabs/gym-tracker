@@ -15,6 +15,16 @@ Reviewed against the Phase 1 spec, Epic 3 decisions and schema draft. The Epic 3
 | R7 — Protect historical references | Resetting a plan or retiring catalog data makes old logs unreadable or prevents an offline workout from syncing. | Archive replaced plans and retire exercises without deleting referenced rows. A late upload from an archived plan can still sync when ownership and references match. An attempt to delete a referenced stage, exercise or plan is rejected. |
 | R8 — Guard account recovery and token rotation | Replayed OTPs or concurrent refreshes grant duplicate access, and old credentials survive a password reset. | Apply expiry, purpose binding, one-time use and attempt limits to phone verification. A concurrent refresh consumes the old token once. Password reset invalidates old refresh tokens and old access tokens via the security stamp. Set browser credential storage and normal sign-out semantics before implementing auth. |
 
+## Findings from the schema review
+
+| Priority | Gap | Implementation and verification |
+| --- | --- | --- |
+| First migration (R3) | The Prisma draft has no unique rule for active plans. The unique weekday rule can also reject the first update in a direct two-step swap. | Add a partial unique index for active plans and check it using two database connections. In the swap transaction, serialize schedule mutations for the same plan and use a temporary null assignment to avoid an intermediate duplicate weekday. Test rollback and ensure a rejected swap leaves neither changed assignments nor a success receipt. |
+| Workout sync (R1, R2, R4) | The workout foreign keys tie the plan and day to the account. The snapshot stage and credit relations still allow a valid stage from the wrong account or exercise. | Derive credits server-side from validated snapshot entries. Reject a stage from another user and a same-user stage for another exercise, even if the IDs exist. Check the stored payload digest on retry and commit the workout and credits together. |
+| Workout-day calculation (R5) | The schema stores activity dates and saved exercise rows. Qualification depends on how the query groups them. | Test a five-entry workout split 2/3 across midnight. Only the date with three completed entries qualifies. A second qualifying workout on that date still yields one workout day. |
+| Auth implementation (R8) | The security stamp covers account-wide invalidation. The draft lacks a stable per-session reference that survives refresh rotation and lets the API reject outstanding access tokens on normal sign-out. | Design session-scoped revocation before wiring auth. Verify that an access token issued before rotation fails after sign-out and a second device remains signed in. Keep the agreed in-memory access token and HttpOnly refresh cookie. |
+
+Run database-only checks after Story 3.2 on the other laptop. These cover uniqueness, transaction rollback, foreign keys and deletion restrictions. Exercise API replays, offline account switching and token revocation when those entry points exist.
 ## Handle later
 
 - Live multi-device draft coordination and automatic reconciliation of conflicting schedule edits. Phase 1 uses stale-write conflicts and preserves finalized history.

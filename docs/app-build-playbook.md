@@ -164,7 +164,7 @@ Mockups show the visible path but hide some things. While reviewing the screens,
 - [ ] Have it generate user stories with acceptance criteria written as Given/When/Then
 - [ ] Review and edit them. Remove anything outside the one-page spec's scope.
 **4.2 Task breakdown**
-- [ ] Break each story into tasks
+- [ ] Use the [work item hierarchy](work-item-hierarchy.md) to group stories under L3s and break each L3 into sprint-sized L4 tasks or bugs
 - [ ] Make sure the setup work is included: repo, CI pipeline, environments, migration tooling
 **4.3 Sprint sizing and loading**
 - [ ] Estimate using your existing sprint system
