@@ -17,14 +17,14 @@ Use these levels when turning the playbook's inputs into a backlog.
 
 ## Board fields and assignment
 
-- **Parent** links each L4 to one L3 and each L3 to one L2. Use the native GitHub parent relationship when publishing.
-- **Status** starts at Backlog. Move it to In Progress when work starts and to Done when the acceptance criteria pass. Use the board's review status when review is required.
-- **Sprint** stays blank until the L4 is selected for a sprint. Estimate the L4 before committing to it.
+- **Parent and type.** Publish each L3 as a GitHub Epic under its L2. Publish each L4 as a Task or Bug using GitHub's native sub-issue relationship under its L3 Epic.
+- **Status** starts at Proposed on the Gym Tracker board. Move it to In progress when work starts and to Done when the acceptance criteria pass. Use In review when review is required.
+- **Iteration** stays blank until the L4 is selected for a sprint. Estimate the L4 before committing to it.
 - **Assignee** stays blank until someone commits to or starts the L4. Assign one accountable owner.
 - **Priority** is High for work blocking the sprint goal, Medium for normal planned work, and Low for work that can wait.
 - **Dependencies** list what must be available before work can start. Link blocking GitHub issues once they exist.
 
-Draft each work item in the matching L1, L2, L3, or L4 folder under [Epic 4 planning](epic-4/planning/). Use the [sample backlog](epic-4-backlog.md) as a reference before publishing to GitHub.
+Keep initiatives and milestones in `l1/` and `l2/` under [Epic 4 planning](epic-4/planning/). Give each L3 Epic its own folder under `l3/`. Name its overview `l3-<epic>.md` and keep its `l4-<task>.md` files alongside it. Use the [sample backlog](epic-4-backlog.md) as a reference before publishing to GitHub.
 
 
 ## Gym Tracker examples

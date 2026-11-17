@@ -265,3 +265,16 @@ Record the answer and bump the version below.
 | Version | Date | Notes |
 |---|---|---|
 | v1 | 2026-10-12 | Initial structure: six epics, mockup-first design, migration-first data |
+
+## gym-tracker-app-flow
+
+### Epic 4 planning decisions
+
+- **Start with the screen flow.** Walk the approved screens in user order and group them around outcomes. The first three L3s are Account access (screens 1–3), Onboarding and first plan (4–8), and Weekly plan and exercise stages (9–10).
+- **Use L3 for the outcome and L4 for the work.** Each L3 describes what the user can do and how we know it works. Each L4 delivers one verifiable change, names its dependencies, and links to the screen, schema decision, or risk that justifies it. Use Given/When/Then for behavior. Split a task when its parts can be delivered independently or exceed a sprint.
+- **Include the rules behind the screens.** For Account access, the screen flow gives us Welcome, sign-up, and log-in. The decision and risk logs add phone verification, recovery, and session handling. The latest recorded decisions govern where earlier mockups or notes differ.
+- **Draft in the repo, then publish.** Review L3 outcomes first. Give each approved L3 its own folder under [planning/l3](epic-4/planning/l3/). Keep its `l3-<epic>.md` overview and `l4-<task>.md` drafts in the same folder. After review, publish each L3 as a GitHub board Epic and each L4 Task as its native sub-issue. Use a Bug sub-issue when tracking a defect. Estimate tasks before assigning selected L4s to the board's Iteration.
+- **Show the parent in each task ID.** Use `GT-NN` for the L3 and append a two-digit sequence for its L4s. For example, `GT-02.01` belongs to `GT-02`. Keep the ID near the top of each draft.
+- **Track dependencies during a pause.** Epic 3 is paused while the first L3s and L4s are planned. Record open architecture and database work on the tasks that need it. For Account access, the proposed first slice is Welcome through verified test sign-up to Body & Goal. Real SMS delivery depends on the provider decision.
+
+[Account access](epic-4/planning/l3/account-access/l3-account-access.md) · [Onboarding and first plan](epic-4/planning/l3/onboarding-and-first-plan/l3-onboarding-and-first-plan.md) · [Weekly plan and exercise stages](epic-4/planning/l3/weekly-plan-and-exercise-stages/l3-weekly-plan-and-exercise-stages.md) · [Work item hierarchy](work-item-hierarchy.md)
