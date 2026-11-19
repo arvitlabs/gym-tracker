@@ -10,3 +10,7 @@ Database setup, migrations, and execution checks are deferred.
 ## Local API
 
 Install dependencies from the repository root. Run `npm run dev:backend` to start the API at `http://localhost:3000`; `GET /api/health` returns `{"status":"ok"}`. Set `PORT` to change the port and `FRONTEND_ORIGIN` to change the allowed browser origin. The API loads local environment files through Nest configuration. Database setup and database-backed health checks are later tasks.
+
+## Local PostgreSQL connection
+
+Copy `.env.example` to `.env` in `backend/` and replace the placeholder with your local PostgreSQL password. Keep that real file private; `.env` files are ignored by Git. The database is `gymTracker_dev`. Verify the connection with `npm run db:migrate --workspace @gym-tracker/backend` after the first migration is ready. Prisma CLI reads `DATABASE_URL` through `prisma.config.ts`.
