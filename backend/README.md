@@ -9,7 +9,7 @@ Database setup, migrations, and execution checks are deferred.
 
 ## Local API
 
-Install dependencies from the repository root. Run `npm run dev:backend` to start the API at `http://localhost:3000`; `GET /api/health` returns `{"status":"ok"}`. Set `PORT` to change the port and `FRONTEND_ORIGIN` to change the allowed browser origin. The API loads local environment files through Nest configuration. Database setup and database-backed health checks are later tasks.
+Install dependencies from the repository root. Run `npm run dev:backend` to start the API at `http://localhost:3000`; `GET /api/health` checks PostgreSQL and returns connected or HTTP 503 when unavailable. Set `PORT` to change the port and `FRONTEND_ORIGIN` to change the allowed browser origin. The API loads local environment files through Nest configuration. 
 
 ## Local PostgreSQL connection
 
