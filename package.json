@@ -1,0 +1,33 @@
+{
+  "name": "gym-tracker",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "engines": {
+    "node": "24.x",
+    "npm": "11.x"
+  },
+  "packageManager": "npm@11.11.0",
+  "scripts": {
+    "dev:frontend": "npm run dev --workspace @gym-tracker/frontend",
+    "dev:backend": "npm run dev --workspace @gym-tracker/backend",
+    "build": "npm run build --workspaces",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:database": "node --test backend/test/database.test.cjs",
+    "test": "npm run build && node scripts/verify-foundation.cjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@playwright/test": "1.65.1",
+    "eslint": "10.15.0",
+    "globals": "16.5.0",
+    "prettier": "3.10.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.73.0"
+  }
+}
