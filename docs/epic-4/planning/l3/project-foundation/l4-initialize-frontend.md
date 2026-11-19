@@ -1,0 +1,19 @@
+# L4 — Initialize the React frontend
+
+**ID** GT-05.02
+
+**Parent** [L3 — Project foundation](l3-project-foundation.md)
+
+**Board issue type** Task
+
+**Iteration** Sprint 1
+
+**Scope** Scaffold React, Vite, and TypeScript in frontend/. Add the app entry point and configuration for the backend URL.
+
+**Depends on** [Monorepo setup](l4-configure-monorepo.md).
+
+## Acceptance criteria
+
+- Given dependencies are installed, when the frontend development command runs, then the app opens locally. The production build also succeeds.
+
+[Stack decisions](../../../../epic-3-decisions.md#batch-1--technology-and-hosting)
