@@ -7,6 +7,8 @@ export default defineConfig({
   server: {
     port: 5173,
     strictPort: true,
-    proxy: { '/api': 'http://127.0.0.1:3000' },
+    proxy: {
+      '/api': `http://127.0.0.1:${process.env.VITE_TEST_API_PORT || '3000'}`,
+    },
   },
 });

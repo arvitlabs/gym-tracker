@@ -51,3 +51,9 @@ The GitHub default branch is `dev`; `main` is the existing bootstrap branch and 
 Copy `frontend/.env.example` to `frontend/.env.local` to select a local API URL, then restart Vite. `frontend/src/config.ts` exports `apiBaseUrl` for the later API integration task. Without an override it uses `/api`, allowing hosting proxies to route one frontend build to each environment's API. A custom `VITE_API_BASE_URL` is embedded at build time; changing it requires rebuilding. All `VITE_` settings are public browser values and must contain no secrets.
 
 The current preview does not call an API. API connectivity is delivered in GT-05.06. To preview the production build locally, run `npm run preview --workspace @gym-tracker/frontend` after building.
+
+## Foundation checks
+
+Run `npx playwright install chromium` once, then `npm test`. The checks build both apps, create a uniquely named temporary PostgreSQL test database, apply migrations, check database constraints and run browser checks. The database is dropped after the checks. The local PostgreSQL user in `backend/.env` needs permission to create databases. Browser failure behavior is simulated with a 503 response; backend/database failure must also be checked separately until an integration test is added.
+
+Add each feature's acceptance and risk checks alongside that feature.
