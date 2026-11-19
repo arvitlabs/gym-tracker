@@ -57,3 +57,7 @@ The current preview does not call an API. API connectivity is delivered in GT-05
 Run `npx playwright install chromium` once, then `npm test`. The checks build both apps, create a uniquely named temporary PostgreSQL test database, apply migrations, check database constraints and run browser checks. The database is dropped after the checks. The local PostgreSQL user in `backend/.env` needs permission to create databases. Browser failure behavior is simulated with a 503 response; backend/database failure must also be checked separately until an integration test is added.
 
 Add each feature's acceptance and risk checks alongside that feature.
+
+## Pull request checks
+
+GitHub Actions runs formatting, lint, builds, migrations, and foundation tests on pull requests and pushes to `dev`, `test`, and `prod`. It uses a temporary PostgreSQL service and disposable test database. Check the **Build and test** result on the pull request before merging. Required-check protection must be configured on GitHub after the workflow is published and has run; until then, treat a passing result as a manual merge requirement.
