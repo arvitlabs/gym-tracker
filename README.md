@@ -2,13 +2,13 @@
 
 Project folders:
 
-- `frontend/` — reserved for the React + Vite + TypeScript PWA.
+- `frontend/` — React + Vite + TypeScript app scaffold.
 - `backend/` — reserved for NestJS + PostgreSQL + Prisma.
 - `docs/` — specification, screen descriptions, development playbook and prototype.
 
 Start with [project status](docs/project-status.md), [specification](docs/Gym-Tracker-Spec-v3.md), [screen build notes](docs/phase1-build-notes.md), and [playbook](docs/app-build-playbook.md).
 
-Open `docs/prototype/phase1-prototype.html` in a browser to view the supplied prototype. This is a design reference; frontend and backend implementation have not been scaffolded.
+Open `docs/prototype/phase1-prototype.html` in a browser to view the supplied prototype. This is a design reference; the frontend scaffold is available; backend implementation is pending.
 
 Track ongoing architecture choices in the [Epic 3 decision log](docs/epic-3-decisions.md).
 
@@ -22,11 +22,11 @@ Run `npm ci` from the repository root. The root lockfile covers both workspaces;
 
 - `npm run lint` checks code in both apps.
 - `npm run format:check` checks formatting; `npm run format` fixes it.
-- `npm run dev:frontend` starts the frontend after GT-05.02 adds its app and dev script.
+- `npm run dev:frontend` starts the frontend at http://127.0.0.1:5173.
 - `npm run dev:backend` starts the backend after GT-05.03 adds its app and dev script.
-- `npm run build` builds both workspaces after those scaffolding tasks. Until then, missing scripts deliberately fail rather than report a successful app build.
+- `npm run build --workspace @gym-tracker/frontend` type-checks and builds the frontend into `frontend/dist/`. `npm run build` will build both apps once GT-05.03 supplies the backend build script.
 
-App scaffolding, database setup, and test commands are subsequent GT-05 tasks. GT-05.01 remains in progress until the app commands can be verified with those scaffolds.
+Backend scaffolding, database setup, and test commands are subsequent GT-05 tasks. GT-05.01 remains in progress until the backend commands can also be verified.
 
 ## Environments and branches
 
@@ -45,3 +45,9 @@ Promote a ready batch using a PR from `dev` to `test`. Deploy and verify the res
 Model changes must include a migration in the same PR. Changes to approved UI behavior must update the corresponding mockup. Feature acceptance criteria and relevant risks become automated tests as features are implemented.
 
 The GitHub default branch is `dev`; `main` is the existing bootstrap branch and has no role in the new delivery flow. Branch protection and hosted deployments still need configuration. A branch name alone does not deploy an environment. Merging into dev never deploys to prod.
+
+## Frontend API configuration
+
+Copy `frontend/.env.example` to `frontend/.env.local` to select a local API URL, then restart Vite. `frontend/src/config.ts` exports `apiBaseUrl` for the later API integration task. Without an override it uses `/api`, allowing hosting proxies to route one frontend build to each environment's API. A custom `VITE_API_BASE_URL` is embedded at build time; changing it requires rebuilding. All `VITE_` settings are public browser values and must contain no secrets.
+
+The current preview does not call an API. API connectivity is delivered in GT-05.06. To preview the production build locally, run `npm run preview --workspace @gym-tracker/frontend` after building.
