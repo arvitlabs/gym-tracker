@@ -54,7 +54,7 @@ The current preview does not call an API. API connectivity is delivered in GT-05
 
 ## Foundation checks
 
-Run `npx playwright install chromium` once, then `npm test`. The checks build both apps, create a uniquely named temporary PostgreSQL test database, apply migrations, check database constraints and run browser checks. The database is dropped after the checks. The local PostgreSQL user in `backend/.env` needs permission to create databases. Browser failure behavior is simulated with a 503 response; backend/database failure must also be checked separately until an integration test is added.
+Run `npx playwright install chromium` once, then `npm test`. The checks build both apps, create a uniquely named temporary PostgreSQL test database, apply migrations, check database constraints and run browser checks. The database is dropped after the checks. The local PostgreSQL user in `backend/.env` needs permission to create databases. Browser failure behavior is simulated with a 503 response; a separate API test checks a real unavailable database connection.
 
 Add each feature's acceptance and risk checks alongside that feature.
 

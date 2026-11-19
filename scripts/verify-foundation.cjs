@@ -31,9 +31,17 @@ async function main() {
       cwd: 'backend',
       env,
     });
-    run('node', ['--test', 'backend/test/database.test.cjs'], {
-      env: { ...env, DATABASE_URL: original },
-    });
+    run(
+      'node',
+      [
+        '--test',
+        'backend/test/database.test.cjs',
+        'backend/test/health.test.cjs',
+      ],
+      {
+        env: { ...env, DATABASE_URL: original },
+      },
+    );
     run('node_modules/.bin/playwright', ['test'], { env });
   } finally {
     if (created) await admin.query(`DROP DATABASE "${name}"`);
