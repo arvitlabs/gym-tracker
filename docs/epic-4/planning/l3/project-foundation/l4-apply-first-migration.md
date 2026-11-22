@@ -6,6 +6,8 @@
 
 **Board issue type** Task
 
+**Status** Complete
+
 **Iteration** Sprint 1
 
 **Scope** Connect Prisma to PostgreSQL, validate the schema with representative application queries, and create the first versioned migration. Include the active-plan uniqueness rule and verify weekday swap rollback and historical reference restrictions. Capture any schema changes with the migration.

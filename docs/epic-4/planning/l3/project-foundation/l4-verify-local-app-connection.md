@@ -6,6 +6,8 @@
 
 **Board issue type** Task
 
+**Status** Complete
+
 **Iteration** Sprint 1
 
 **Scope** Wire the frontend to the local API, configure the local development origin, and verify a database-backed connection check. Document how to start the complete local app.

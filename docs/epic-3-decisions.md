@@ -24,7 +24,7 @@ Keep decisions concise. Work through one batch at a time. Product scope and scre
 
 ### Open
 
-- Deploy exactly two environments: testing and production. Local development is a developer workflow. Use separate databases, credentials and signing keys for testing and production.
+- Superseded November 19, 2026: use three environments — dev (local development), test (shared hosted testing/staging), and prod (final live application). Each uses separate databases, credentials, and signing keys. A separately hosted dev environment is optional and is not provisioned by this decision.
 - Confirm Render and Neon and choose hosting regions.
 - Package versions, package manager, styling, routing and PWA tooling.
 - Testing, CI and media sources.
@@ -268,3 +268,12 @@ Accepted on proceeding to the next discussion:
 
 - Kneeling rope cable crunch confirmed; source hip-motion cue kept flagged against original fixed-hip cue. Both original reverse-crunch variations retained with no exact source match.
 - User paused mapping after Batch 06. Next on request: Batch 07 bodyweight push/pull. No UUIDs generated.
+
+## Development foundation — November 19, 2026
+
+- Node 24 LTS, pinned to 24.22.3; npm 11.11.0 with npm workspaces and a single root lockfile. React and NestJS remain separate workspaces in the existing folders.
+- Shared ESLint, TypeScript lint rules, Prettier, and EditorConfig. Preserve historical documents and prototype formatting outside the formatter scope.
+- Three environments: local dev, shared test/staging, and prod. Use APP_ENV for this distinction; NODE_ENV describes runtime optimization (both hosted test and prod use production builds).
+- Superseding the earlier main-based proposal: use feature branch → dev → test → prod. Dev is the integration/default branch; feature PRs target dev. Promotion PRs move a ready batch to test, then an approved tested release to prod. Main is the bootstrap branch only; dev is now the GitHub default; branch protection still needs configuration.
+- A feature branch may contain multiple related L4 tasks or one large L4. PRs list all included tasks and validate their acceptance criteria individually. Split unrelated or unreviewably large changes; one branch per L4 is not required.
+- Promotion PRs preserve ancestry (no squash/rebase), freeze the release candidate during approval, and release the tested artifact. If promoted code differs, repeat validation. Fixes flow through feature branches and dev. Branches alone do not deploy environments; production remains an explicit release. CI enforcement comes in GT-05.08 and testing hosting in GT-05.09.
