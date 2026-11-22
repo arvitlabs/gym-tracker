@@ -1,0 +1,134 @@
+{
+  "version": 1,
+  "markdownHash": "9c1a216bd91d1f9811cd2a65ffcda00e6fe8efd96317e20ff2d3ad70195e8e9d",
+  "blocks": [
+    {
+      "id": "3e5e9ce8-fa80-4f42-8d23-7dc20625c344",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "From the project root, run these in ",
+          "styles": {}
+        },
+        {
+          "type": "text",
+          "text": "two separate terminals",
+          "styles": { "bold": true }
+        },
+        { "type": "text", "text": ":", "styles": {} }
+      ],
+      "children": []
+    },
+    {
+      "id": "a9e500fa-f814-4b04-b262-dd2b18c40a4f",
+      "type": "codeBlock",
+      "props": { "language": "text" },
+      "content": [
+        { "type": "text", "text": "npm run dev:backend", "styles": {} }
+      ],
+      "children": []
+    },
+    {
+      "id": "604b81ea-6f20-4e82-9f79-61a17beceda4",
+      "type": "codeBlock",
+      "props": { "language": "text" },
+      "content": [
+        { "type": "text", "text": "npm run dev:frontend", "styles": {} }
+      ],
+      "children": []
+    },
+    {
+      "id": "320535f2-daef-4a88-a3b3-740924b29a8a",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        { "type": "text", "text": "Then open ", "styles": {} },
+        {
+          "type": "link",
+          "href": "http://127.0.0.1:5173",
+          "content": [
+            { "type": "text", "text": "http://127.0.0.1:5173", "styles": {} }
+          ]
+        },
+        {
+          "type": "text",
+          "text": ". The backend health check is at ",
+          "styles": {}
+        },
+        {
+          "type": "link",
+          "href": "http://localhost:3000/api/health",
+          "content": [
+            {
+              "type": "text",
+              "text": "http://localhost:3000/api/health",
+              "styles": {}
+            }
+          ]
+        },
+        { "type": "text", "text": ".", "styles": {} }
+      ],
+      "children": []
+    },
+    {
+      "id": "e950327d-16ec-4eef-872a-d83a63013278",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [{ "type": "text", "text": "11:17", "styles": {} }],
+      "children": []
+    },
+    {
+      "id": "bcc095fa-e814-42e7-9dff-e76bf0c0a48d",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    },
+    {
+      "id": "78d405fc-1b6f-4521-9b59-ea8b75d793be",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [
+        {
+          "type": "text",
+          "text": "kill $(lsof -ti tcp:5173 -sTCP:LISTEN)",
+          "styles": {}
+        }
+      ],
+      "children": []
+    },
+    {
+      "id": "12612156-ef08-4e5a-94e5-9f7908f95275",
+      "type": "paragraph",
+      "props": {
+        "backgroundColor": "default",
+        "textColor": "default",
+        "textAlignment": "left"
+      },
+      "content": [],
+      "children": []
+    }
+  ]
+}
