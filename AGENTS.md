@@ -24,6 +24,14 @@ The rule files include generic recommendations and open choices. Before implemen
 - If it affects product behavior, security, data ownership or persistence, API compatibility, or a hard-to-reverse architecture choice and remains undecided, ask the user about that specific choice in chat before making a dependent change. Briefly state the options and consequences. Continue independent work that does not depend on the answer.
 - Call out conflicts, assumptions, and unresolved choices in chat; do not silently treat draft rules as approved application decisions.
 
+## Mobile-first interface and typography
+
+- Treat a 320 CSS-pixel-wide phone as the baseline, then scale layouts up at larger breakpoints.
+- Use shared Tailwind typography tokens by text role (such as `text-body`, `text-title`, and `text-display`); keep phone defaults in the theme and centralize wider-screen size changes there instead of adding per-screen arbitrary sizes.
+- Use fluid display sizes with a deliberate small-screen minimum; check that headings and labels wrap without clipping or horizontal scrolling. Keep ordinary body copy at 16px or larger on phones unless the design reference clearly requires otherwise.
+- Avoid fixed-height content that can cut off text or controls. Keep touch controls comfortably tappable and keyboard focus visible.
+- Before finishing a screen, inspect it at 320px and a common phone width such as 390px, then confirm it still scales at desktop width.
+
 ## Finish each coding task
 
 In the response, briefly summarize the applicable rule areas consulted, the implementation, and checks actually performed. Do not claim a check was run unless it was run. Mention any unresolved application decision that affects the next step.

@@ -9,6 +9,7 @@ Keep decisions concise. Work through one batch at a time. Product scope and scre
 ### Agreed
 
 - Frontend: React + TypeScript + Vite; React revision.
+- Routing: React Router 8.5.2 in Declarative mode for client-side navigation; feature code owns data loading.
 - Backend: Node.js + NestJS + TypeScript; NestJS learning and practice.
 - Database: PostgreSQL + Prisma.
 - Offline storage: IndexedDB through Dexie; sync designed in Batch 2.
@@ -26,7 +27,7 @@ Keep decisions concise. Work through one batch at a time. Product scope and scre
 
 - Superseded November 19, 2026: use three environments — dev (local development), test (shared hosted testing/staging), and prod (final live application). Each uses separate databases, credentials, and signing keys. A separately hosted dev environment is optional and is not provisioned by this decision.
 - Confirm Render and Neon and choose hosting regions.
-- Package versions, package manager, styling, routing and PWA tooling.
+- PWA tooling and service-worker/update policy.
 - Testing, CI and media sources.
 
 Hosting references: [Vercel](https://vercel.com/docs/plans/hobby), [Render](https://render.com/docs/free), [Neon](https://neon.com/pricing). Checked October 31, 2026.
