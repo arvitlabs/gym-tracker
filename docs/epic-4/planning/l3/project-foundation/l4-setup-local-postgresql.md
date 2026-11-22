@@ -6,6 +6,8 @@
 
 **Board issue type** Task
 
+**Status** Complete
+
 **Iteration** Sprint 1
 
 **Scope** Provide a repeatable local PostgreSQL setup, an example environment file, and connection instructions. Keep real credentials outside version control.

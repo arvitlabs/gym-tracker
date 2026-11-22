@@ -6,7 +6,7 @@
 
 **Board issue type** Task
 
-**Status** In progress
+**Status** Complete
 
 **Iteration** Sprint 1
 
@@ -22,3 +22,7 @@
 - Given a behavior check fails, when the test command completes, then it returns a failing exit code. The README explains how each future story's acceptance criteria and relevant risks become tests.
 
 [Build quality gates](../../../../app-build-playbook.md#epic-5-build) · [Database risks](../../../../epic-3-risk-review.md#findings-from-the-schema-review)
+
+## Implementation progress
+
+- Added isolated PostgreSQL migration/integrity checks, backend health checks including database-unavailable behavior, and a browser connection check. The test workflow passed in GitHub Actions on PR #40.

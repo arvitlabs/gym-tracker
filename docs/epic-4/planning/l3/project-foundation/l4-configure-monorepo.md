@@ -6,6 +6,8 @@
 
 **Board issue type** Task
 
+**Status** Complete
+
 **Iteration** Sprint 1
 
 **Scope** Choose and record the Node version and package manager, commit the lockfile, and add repeatable install, development, build, lint, and format-check commands for the existing frontend and backend folders. Configure shared linting and formatting rules. Document the feature → dev → test → prod workflow, using `codex/` for agent-created feature branches from dev and PRs back to dev. Set dev as the intended default/integration branch. Allow multiple related L4s in one feature branch or a single large L4, list included tasks in the PR, and verify each separately. Keep real credentials outside version control.
@@ -25,4 +27,4 @@
 - Shared npm workspaces, lockfile, Node 24.22.3 pin, npm 11.11.0 selection, ESLint, Prettier, and EditorConfig are configured.
 - GitHub default branch is dev. The current foundation branch is codex/gt-05-foundation. Branch protection is tracked in GT-05.08.
 - Verified clean dependency installation under Node 24.22.3, lint, formatting, and rejection of invalid frontend/backend TypeScript and unformatted input.
-- Still In progress: development/build commands are wired at the root, but app scripts and runtime verification require GT-05.02 and GT-05.03. No app build is claimed yet.
+- Frontend/backend scripts and the complete foundation workflow are now verified by the passing GitHub Actions check on PR #40.

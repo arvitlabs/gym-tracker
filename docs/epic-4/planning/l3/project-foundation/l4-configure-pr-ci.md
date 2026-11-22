@@ -6,7 +6,7 @@
 
 **Board issue type** Task
 
-**Status** In progress
+**Status** Complete
 
 **Iteration** Sprint 1
 
@@ -22,3 +22,8 @@
 - Given a passing foundation PR, when checks finish, then the PR has a successful result for every required check; CI does not require production credentials.
 
 [Project foundation and quality gates](../../../../app-build-playbook.md#epic-5-build) · [Migration rules](../../../../app-build-playbook.md#schema-change-rules-apply-from-here-onward)
+
+## Implementation progress
+
+- The pull request workflow runs formatting, lint, app builds, tests, and migrations against isolated PostgreSQL. The `Build and test` check passed on PR #40.
+- An active GitHub ruleset protects `dev`: changes must arrive through a pull request, the passing `Build and test` check is required on the current base, and force pushes are blocked. No bypass actors are configured. Test/prod branch checks will apply when those branches are created.

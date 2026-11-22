@@ -16,7 +16,7 @@
 
 **Build order** Complete the local foundation, test tooling, and PR checks before starting the main application feature tasks. Make the shared testing environment available before the first sprint demo. Confirm hosting access early so environment work can proceed alongside local setup.
 
-**Sprint readiness** All nine L4 tasks are selected for Sprint 1 and marked In progress at the user’s request. Implementation follows dependency order. Estimates and accountable owners remain unset; sprint sizing remains Epic 4 planning work.
+**Progress** GT-05.01–GT-05.08 are complete. GT-05.09, the shared testing environment, is paused at the user's request. The L3 remains in progress until the shared environment is available. Estimates and accountable owners remain unset; sprint sizing remains Epic 4 planning work.
 
 ## L4 tasks in dependency order
 

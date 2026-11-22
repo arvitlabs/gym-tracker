@@ -6,7 +6,7 @@
 
 **Board issue type** Task
 
-**Status** In progress
+**Status** Paused
 
 **Iteration** Sprint 1
 

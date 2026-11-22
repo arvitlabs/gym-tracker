@@ -6,6 +6,8 @@
 
 **Board issue type** Task
 
+**Status** Complete
+
 **Iteration** Sprint 1
 
 **Scope** Scaffold NestJS and TypeScript in backend/, preserve the existing Prisma draft, and add configuration and a health endpoint.
@@ -20,4 +22,4 @@
 
 ## Implementation note
 
-NestJS API scaffold, environment config, CORS origin/port settings, global request validation, and `/api/health` are in place. NestJS 11 is paired with the shared TypeScript 5.9 pin. Backend build succeeds. Database connectivity is deferred to GT-05.04–GT-05.06. Changes are uncommitted.
+NestJS API scaffold, environment config, CORS origin/port settings, global request validation, and `/api/health` are in place. NestJS 11 is paired with the shared TypeScript 5.9 pin. Backend build succeeds. Database connectivity is verified separately in GT-05.04–GT-05.06.
