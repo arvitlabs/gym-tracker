@@ -1,8 +1,12 @@
+import { accept, authOptions, setDraft } from './session';
+import { toast } from 'sonner';
+import { Eye, EyeOff } from 'lucide-react';
+import { Input } from '@/components/ui/input';
 import { isPossiblePhoneNumber } from 'react-phone-number-input';
 import PhoneNumberField from './PhoneNumberField';
 import { apiBaseUrl } from '../../config';
 import { useState, type FormEvent } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
 type Props = Readonly<{ title: 'Sign up' | 'Log in' }>;
 const field =
@@ -11,6 +15,7 @@ export default function AccountEntryPage({ title }: Props) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState('');
   const [pending, setPending] = useState(false);
   const navigate = useNavigate();
@@ -30,17 +35,15 @@ export default function AccountEntryPage({ title }: Props) {
         setMessage('Enter your name.');
         return;
       }
-      navigate('/verify-phone', {
-        state: { name: name.trim(), phone, password },
-      });
+      setDraft({ name: name.trim(), phone, password });
+      navigate('/verify-phone');
       return;
     }
     setPending(true);
     setMessage('');
     try {
       const response = await fetch(`${apiBaseUrl}/dev/accounts/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        ...authOptions,
         body: JSON.stringify({ phone, password }),
       });
       if (!response.ok)
@@ -49,9 +52,10 @@ export default function AccountEntryPage({ title }: Props) {
             ? 'Invalid phone or password.'
             : 'Login is unavailable. Check the backend and try again.',
         );
-      const data: { name: string } = await response.json();
+      const data = await accept(response);
       setPassword('');
-      setMessage(`Welcome, ${data.name}. Login details are correct.`);
+      toast.success('Signed in');
+      navigate(data.destination, { replace: true });
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Unable to connect.');
     } finally {
@@ -59,15 +63,8 @@ export default function AccountEntryPage({ title }: Props) {
     }
   }
   return (
-    <main className="flex min-h-dvh flex-col bg-[#131411] px-5 py-8 text-[#F3F1EA] sm:px-8">
-      <Link
-        to="/"
-        className="font-display text-brand w-fit uppercase text-[#A3A197]"
-      >
-        Gym Tracker
-      </Link>
+    <main className="flex flex-1 flex-col bg-[#131411] px-5 py-8 text-[#F3F1EA] sm:px-8">
       <section className="mx-auto flex w-full max-w-[390px] flex-1 flex-col justify-center gap-5">
-        <h1 className="font-display text-title uppercase">{title}</h1>
         {!import.meta.env.DEV ? (
           <p className="text-body">Account access is not available yet.</p>
         ) : (
@@ -91,19 +88,35 @@ export default function AccountEntryPage({ title }: Props) {
               </label>
               <PhoneNumberField value={phone} onChange={setPhone} />
             </div>
-            <label className="text-label flex flex-col gap-2">
-              Password
-              <input
-                className={field}
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                autoComplete={signup ? 'new-password' : 'current-password'}
-                minLength={8}
-                maxLength={128}
-                required
-              />
-            </label>
+            <div className="text-label flex flex-col gap-2">
+              <label htmlFor="account-password">Password</label>
+              <span className="relative block">
+                <Input
+                  id="account-password"
+                  className={`${field} pr-14 md:text-body`}
+                  type={showPassword ? 'text' : 'password'}
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  autoComplete={signup ? 'new-password' : 'current-password'}
+                  minLength={8}
+                  maxLength={128}
+                  required
+                />
+                <button
+                  type="button"
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
+                  aria-pressed={showPassword}
+                  onClick={() => setShowPassword(!showPassword)}
+                  className="absolute right-1 top-1/2 flex size-12 -translate-y-1/2 items-center justify-center rounded-xl text-[#A3A197] focus-visible:outline-2 focus-visible:outline-[#C8F25A]"
+                >
+                  {showPassword ? (
+                    <EyeOff size={20} aria-hidden="true" />
+                  ) : (
+                    <Eye size={20} aria-hidden="true" />
+                  )}
+                </button>
+              </span>
+            </div>
             {message && (
               <p role="status" className="text-body">
                 {message}

@@ -3,7 +3,6 @@ import {
   ConflictException,
   ForbiddenException,
   Injectable,
-  OnModuleDestroy,
   UnauthorizedException,
 } from '@nestjs/common';
 import {
@@ -13,56 +12,48 @@ import {
   randomUUID,
 } from 'node:crypto';
 import { promisify } from 'node:util';
-import { Pool } from 'pg';
+import {
+  AccountRepository,
+  PhoneAlreadyRegistered,
+} from './persistence/account.repository';
 import { LoginRequestDto } from './dto/login-request.dto';
 import { SignupRequestDto } from './dto/signup-request.dto';
-import {
-  LoginResponseDto,
-  SignupResponseDto,
-} from './dto/account-response.dto';
-
+import { digest, fresh, issue, verifyAccess } from './account-session';
 const scrypt = promisify(scryptCallback);
 @Injectable()
-export class DevAccountService implements OnModuleDestroy {
-  private readonly pool = new Pool({
-    connectionString: process.env.DATABASE_URL,
-  });
+export class DevAccountService {
+  constructor(private readonly accounts: AccountRepository) {}
   private ensureDevelopment() {
     if (process.env.NODE_ENV !== 'development') throw new ForbiddenException();
   }
-  async signup(input: SignupRequestDto): Promise<SignupResponseDto> {
+  async signup(input: SignupRequestDto) {
     this.ensureDevelopment();
     const name = input.name.trim();
     if (!name) throw new BadRequestException('Name is required');
     const salt = randomBytes(16).toString('hex');
     const hash = (await scrypt(input.password, salt, 64)) as Buffer;
+    const refresh = fresh();
     try {
-      await this.pool.query(
-        'INSERT INTO "User" (id, phone, name, "securityStamp", "passwordHash", "phoneVerifiedAt") VALUES ($1,$2,$3,$4,$5,NOW())',
-        [
-          randomUUID(),
+      return issue(
+        await this.accounts.register(
           input.phone,
           name,
-          randomUUID(),
           `scrypt:${salt}:${hash.toString('hex')}`,
-        ],
+          digest(refresh),
+        ),
+        refresh,
       );
     } catch (error) {
-      if ((error as { code?: string }).code === '23505')
+      if (error instanceof PhoneAlreadyRegistered)
         throw new ConflictException(
           'An account with this phone already exists',
         );
       throw error;
     }
-    return { message: 'Account created. Please log in.' };
   }
-  async login(input: LoginRequestDto): Promise<LoginResponseDto> {
+  async login(input: LoginRequestDto) {
     this.ensureDevelopment();
-    const result = await this.pool.query(
-      'SELECT name, "passwordHash", "isActive" FROM "User" WHERE phone = $1',
-      [input.phone],
-    );
-    const user = result.rows[0];
+    const user = await this.accounts.credentials(input.phone);
     const parts = (user?.passwordHash ?? '').split(':');
     if (
       !user?.isActive ||
@@ -74,9 +65,31 @@ export class DevAccountService implements OnModuleDestroy {
     const hash = (await scrypt(input.password, parts[1], 64)) as Buffer;
     if (!timingSafeEqual(hash, Buffer.from(parts[2], 'hex')))
       throw new UnauthorizedException('Invalid phone or password');
-    return { name: user.name };
+    const refresh = fresh();
+    return issue(
+      await this.accounts.start(
+        randomUUID(),
+        user.id,
+        user.securityStamp,
+        digest(refresh),
+      ),
+      refresh,
+    );
   }
-  async onModuleDestroy() {
-    await this.pool.end();
+  async refresh(token: string) {
+    this.ensureDevelopment();
+    const next = fresh();
+    return issue(await this.accounts.rotate(digest(token), digest(next)), next);
+  }
+  async me(token: string) {
+    this.ensureDevelopment();
+    const { grant, userId, stamp } = verifyAccess(token);
+    const account = await this.accounts.current(grant, userId, stamp);
+    if (!account) throw new UnauthorizedException();
+    return account;
+  }
+  async logout(token: string) {
+    this.ensureDevelopment();
+    await this.accounts.revoke(digest(token));
   }
 }

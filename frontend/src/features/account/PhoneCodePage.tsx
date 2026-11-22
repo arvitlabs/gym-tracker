@@ -1,12 +1,12 @@
+import { accept, authOptions, draft, setDraft } from './session';
+import { toast } from 'sonner';
 import { apiBaseUrl } from '../../config';
 import { useState, type FormEvent } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 
-type Draft = { name: string; phone: string; password: string };
 export default function PhoneCodePage() {
-  const location = useLocation();
   const navigate = useNavigate();
-  const draft = location.state as Draft | null;
+
   const [code, setCode] = useState('');
   const [message, setMessage] = useState('');
   const [pending, setPending] = useState(false);
@@ -24,8 +24,7 @@ export default function PhoneCodePage() {
     setMessage('');
     try {
       const response = await fetch(`${apiBaseUrl}/dev/accounts/signup`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        ...authOptions,
         body: JSON.stringify({ ...draft, code }),
       });
       if (!response.ok)
@@ -34,7 +33,10 @@ export default function PhoneCodePage() {
             ? 'An account with this phone already exists.'
             : 'Could not create your account. Check the backend and try again.',
         );
-      navigate('/log-in', { replace: true });
+      const account = await accept(response);
+      setDraft(null);
+      toast.success('Account created and signed in');
+      navigate(account.destination, { replace: true });
     } catch (error) {
       setMessage(error instanceof Error ? error.message : 'Unable to connect.');
     } finally {
@@ -42,12 +44,8 @@ export default function PhoneCodePage() {
     }
   }
   return (
-    <main className="flex min-h-dvh flex-col bg-[#131411] px-5 py-8 text-[#F3F1EA] sm:px-8">
-      <Link to="/sign-up" className="text-body w-fit text-[#A3A197]">
-        ← Back to sign up
-      </Link>
+    <main className="flex flex-1 flex-col bg-[#131411] px-5 py-8 text-[#F3F1EA] sm:px-8">
       <section className="mx-auto flex w-full max-w-[390px] flex-1 flex-col justify-center gap-5">
-        <h1 className="font-display text-title uppercase">Verify your phone</h1>
         <p className="text-body text-[#A3A197]">Development code: 000000</p>
         <form onSubmit={submit} className="flex flex-col gap-4">
           <label className="text-label flex flex-col gap-2">

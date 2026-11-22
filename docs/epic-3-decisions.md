@@ -4,6 +4,8 @@ Updated: November 1, 2026 · Status: In progress
 
 Keep decisions concise. Work through one batch at a time. Product scope and screens remain in the spec and Phase 1 build notes.
 
+See [Gym Tracker decisions on shared AI rules](ai-rule-decisions.md) for local adaptations and candidates for the central rules.
+
 ## Batch 1 — Technology and hosting
 
 ### Agreed
@@ -50,6 +52,8 @@ Status: In progress.
 - Sync saved logs automatically when online; expired login preserves local logs until reauthentication.
 - Warn before sign-out if workouts are unsynced.
 - Signup, login, OTP and password recovery require internet.
+- After sign-up and phone verification, create a signed-in session, show an account-created confirmation, and take the user directly to onboarding.
+- After login, resume incomplete onboarding; otherwise open the home page.
 
 ### Open
 - SMS provider: compare MSG91 and Firebase Phone Authentication; not selected. Firebase requires billing for real SMS; published India rate is $0.07/SMS after the first 10 free SMS/day. Firebase handles phone OTP, while phone + password needs custom backend handling. Sources: https://firebase.google.com/pricing and https://cloud.google.com/identity-platform/pricing (checked October 31, 2026).

@@ -1,2 +1,5 @@
-export type SignupResponseDto = { message: string };
-export type LoginResponseDto = { name: string };
+export type AccountView = {
+  name: string;
+  destination: '/onboarding' | '/onboarding/plan' | '/home';
+};
+export type SessionResponseDto = AccountView & { accessToken: string };

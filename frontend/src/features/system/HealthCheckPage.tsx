@@ -30,9 +30,7 @@ export default function HealthCheckPage() {
   }, [check]);
 
   return (
-    <main className="min-h-dvh bg-[#f4f6f1] px-6 pt-[20vh] text-[#14251e]">
-      <p className="text-label">GYM TRACKER</p>
-      <h1 className="mt-4 text-title font-semibold">Connection check</h1>
+    <main className="flex-1 bg-[#f4f6f1] px-6 pt-[20vh] text-[#14251e]">
       <div className="mt-12 text-[#526259]">
         <p className="text-body" role="status">
           {status}

@@ -6,3 +6,5 @@ package-lock.json
 docs/
 backend/prisma/
 .vscode/
+
+backend/src/generated/prisma/
