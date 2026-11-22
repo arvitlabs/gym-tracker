@@ -12,7 +12,7 @@
 
 ## Daily entries
 
-Add each session using the [daily entry format](../README.md#daily-entry).
+- November 22, 2026 · 3–5 PM IST · 2 hours · GT-01 — completed GT-01.01 welcome routes and progressed GT-01.02 phone verification, development account access, and component setup.
 
 ## Weekend totals
 

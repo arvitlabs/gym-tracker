@@ -9,6 +9,7 @@ Keep decisions concise. Work through one batch at a time. Product scope and scre
 ### Agreed
 
 - Frontend: React + TypeScript + Vite; React revision.
+- UI components: shadcn/ui with Tailwind CSS; add components as needed and retain the shared responsive typography tokens.
 - Routing: React Router 8.5.2 in Declarative mode for client-side navigation; feature code owns data loading.
 - Backend: Node.js + NestJS + TypeScript; NestJS learning and practice.
 - Database: PostgreSQL + Prisma.

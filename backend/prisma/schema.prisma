@@ -42,6 +42,26 @@ enum Goal {
   GENERAL_FITNESS
 }
 
+enum PhoneCodePurpose {
+  SIGN_UP
+  LOGIN
+  RECOVERY
+}
+
+// A challenge can exist before an account has been created.
+model PhoneCodeChallenge {
+  id         String           @id @default(uuid()) @db.Uuid
+  phone      String           @db.VarChar(16)
+  purpose    PhoneCodePurpose
+  verifier   String
+  attempts   Int              @default(0)
+  createdAt  DateTime         @default(now()) @db.Timestamptz(3)
+  expiresAt  DateTime         @db.Timestamptz(3)
+  consumedAt DateTime?        @db.Timestamptz(3)
+
+  @@index([phone, purpose, createdAt])
+}
+
 model User {
   id              String                 @id @default(uuid()) @db.Uuid
   phone           String                 @unique @db.VarChar(16)
