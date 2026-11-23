@@ -32,16 +32,13 @@ export async function accept(response: Response): Promise<Account> {
 }
 async function restore(): Promise<Account | null> {
   if (access) {
-    const response = await fetch(apiBaseUrl + '/dev/accounts/me', {
+    const response = await fetch(apiBaseUrl + '/accounts/me', {
       headers: { Authorization: 'Bearer ' + access },
     });
     if (response.ok) return (await readAccount(response)).account;
     if (response.status !== 401) throw new Error('Session unavailable');
   }
-  const response = await fetch(
-    apiBaseUrl + '/dev/accounts/refresh',
-    authOptions,
-  );
+  const response = await fetch(apiBaseUrl + '/accounts/refresh', authOptions);
   if (response.status === 401) {
     access = '';
     return null;
@@ -57,10 +54,7 @@ export function current() {
 export async function signOut() {
   await pending?.catch(() => {});
   access = '';
-  const response = await fetch(
-    apiBaseUrl + '/dev/accounts/logout',
-    authOptions,
-  );
+  const response = await fetch(apiBaseUrl + '/accounts/logout', authOptions);
   if (!response.ok) throw new Error('Sign out failed. Please retry.');
 }
 export type SignupDraft = { name: string; phone: string; password: string };

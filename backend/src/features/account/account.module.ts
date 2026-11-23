@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { DatabaseModule } from '../../infrastructure/database/database.module';
-import { DevAccountController } from './dev-account.controller';
-import { DevAccountService } from './dev-account.service';
+import { AccountController } from './account.controller';
+import { AccountService } from './account.service';
 import { AccountRepository } from './persistence/account.repository';
 
 @Module({
@@ -10,7 +10,7 @@ import { AccountRepository } from './persistence/account.repository';
     DatabaseModule,
     ThrottlerModule.forRoot([{ ttl: 60000, limit: 30 }]),
   ],
-  controllers: [DevAccountController],
-  providers: [DevAccountService, AccountRepository],
+  controllers: [AccountController],
+  providers: [AccountService, AccountRepository],
 })
 export class AccountModule {}

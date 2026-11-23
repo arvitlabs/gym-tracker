@@ -14,8 +14,13 @@ export default function HealthCheckPage() {
       if (
         !result ||
         typeof result !== 'object' ||
-        !('database' in result) ||
-        result.database !== 'connected'
+        !('success' in result) ||
+        result.success !== true ||
+        !('data' in result) ||
+        !result.data ||
+        typeof result.data !== 'object' ||
+        !('database' in result.data) ||
+        result.data.database !== 'connected'
       ) {
         throw new Error('Unexpected response');
       }

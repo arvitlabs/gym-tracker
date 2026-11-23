@@ -1,37 +1,10 @@
+import { PhoneAlreadyRegisteredError } from '../errors/phone-already-registered.error';
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from '../../../infrastructure/database/database.module';
 import { Prisma } from '../../../generated/prisma/client';
-import type { AccountView } from '../dto/account-response.dto';
-
-export interface Grant {
-  securityStamp: string;
-  id: string;
-  userId: string;
-}
-export class PhoneAlreadyRegistered extends Error {}
-const viewSelect = {
-  name: true,
-  profile: { select: { userId: true } },
-  plans: { where: { status: 'ACTIVE' }, select: { id: true }, take: 1 },
-} satisfies Prisma.UserSelect;
-
-function toView(
-  user: Prisma.UserGetPayload<{ select: typeof viewSelect }>,
-): AccountView {
-  const destination = user.plans.length
-    ? '/home'
-    : user.profile
-      ? '/onboarding/plan'
-      : '/onboarding';
-  return { name: user.name, destination };
-}
-
-const expiry = () => new Date(Date.now() + 30 * 86400000);
-const usable = () => ({
-  revokedAt: null,
-  isUsed: false,
-  expiresAt: { gt: new Date() },
-});
+import { toAccountView } from '../helpers/account-view';
+import { refreshTokenExpiry } from '../helpers/refresh-token-expiry';
+import { accountViewSelect, usableRefreshTokenWhere } from './account-queries';
 
 @Injectable()
 export class AccountRepository {
@@ -57,21 +30,21 @@ export class AccountRepository {
       return await this.db.$transaction(async (tx) => {
         const user = await tx.user.create({
           data: { phone, name, passwordHash, phoneVerifiedAt: new Date() },
-          select: { id: true, securityStamp: true, ...viewSelect },
+          select: { id: true, securityStamp: true, ...accountViewSelect },
         });
         const grant = await tx.refreshToken.create({
           data: {
             userId: user.id,
             securityStamp: user.securityStamp,
             tokenHash,
-            expiresAt: expiry(),
+            expiresAt: refreshTokenExpiry(),
           },
           select: { id: true, userId: true },
         });
         return {
           ...grant,
           securityStamp: user.securityStamp,
-          account: toView(user),
+          account: toAccountView(user),
         };
       });
     } catch (error) {
@@ -80,7 +53,7 @@ export class AccountRepository {
         error.code === 'P2002' &&
         JSON.stringify(error.meta).includes('phone')
       )
-        throw new PhoneAlreadyRegistered();
+        throw new PhoneAlreadyRegisteredError(error);
       throw error;
     }
   }
@@ -94,13 +67,13 @@ export class AccountRepository {
               id,
               securityStamp: stamp,
               tokenHash,
-              expiresAt: expiry(),
+              expiresAt: refreshTokenExpiry(),
             },
           },
         },
-        select: viewSelect,
+        select: accountViewSelect,
       });
-      return { id, userId, securityStamp: stamp, account: toView(user) };
+      return { id, userId, securityStamp: stamp, account: toAccountView(user) };
     } catch (error) {
       if (
         error instanceof Prisma.PrismaClientKnownRequestError &&
@@ -123,21 +96,21 @@ export class AccountRepository {
         where: {
           id: grant.id,
           tokenHash: oldHash,
-          ...usable(),
+          ...usableRefreshTokenWhere(),
           user: { isActive: true, securityStamp: grant.securityStamp },
         },
         data: {
           tokenHash: newHash,
           lastSeenAt: new Date(),
-          expiresAt: expiry(),
+          expiresAt: refreshTokenExpiry(),
         },
       });
       if (!updated.count) return null;
       const user = await tx.user.findUniqueOrThrow({
         where: { id: grant.userId },
-        select: viewSelect,
+        select: accountViewSelect,
       });
-      return { ...grant, account: toView(user) };
+      return { ...grant, account: toAccountView(user) };
     });
   }
 
@@ -147,16 +120,16 @@ export class AccountRepository {
         id,
         userId,
         securityStamp,
-        ...usable(),
+        ...usableRefreshTokenWhere(),
         user: { isActive: true },
       },
       select: {
         securityStamp: true,
-        user: { select: { ...viewSelect, securityStamp: true } },
+        user: { select: { ...accountViewSelect, securityStamp: true } },
       },
     });
     return grant && grant.securityStamp === grant.user.securityStamp
-      ? toView(grant.user)
+      ? toAccountView(grant.user)
       : null;
   }
   revoke(tokenHash: string) {

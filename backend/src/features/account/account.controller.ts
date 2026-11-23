@@ -1,6 +1,5 @@
 import { BrowserRequestGuard } from './guards/browser-request.guard';
 import { ThrottlerGuard } from '@nestjs/throttler';
-import { AccountResponseInterceptor, AccountErrorFilter } from './account-http';
 import {
   Body,
   Controller,
@@ -12,21 +11,19 @@ import {
   HttpCode,
   HttpStatus,
   UseGuards,
-  UseInterceptors,
-  UseFilters,
 } from '@nestjs/common';
 import type { Response } from 'express';
-import { DevAccountService } from './dev-account.service';
+import { AccountService } from './account.service';
 import { LoginRequestDto } from './dto/login-request.dto';
 import { SignupRequestDto } from './dto/signup-request.dto';
-import type { Issued } from './account-session';
+import type { Issued } from './helpers/account-session';
 
 const cookie = 'gt_refresh';
 const options = {
   httpOnly: true,
   secure: true,
   sameSite: 'strict' as const,
-  path: '/api/dev/accounts',
+  path: '/api/accounts',
 };
 const readCookie = (header = '') =>
   header
@@ -38,12 +35,10 @@ function deliver(session: Issued, res: Response) {
   res.cookie(cookie, session.refresh, { ...options, maxAge: 30 * 86400000 });
   return session.body;
 }
-@Controller('dev/accounts')
+@Controller('accounts')
 @UseGuards(BrowserRequestGuard)
-@UseFilters(AccountErrorFilter)
-@UseInterceptors(AccountResponseInterceptor)
-export class DevAccountController {
-  constructor(private readonly accounts: DevAccountService) {}
+export class AccountController {
+  constructor(private readonly accounts: AccountService) {}
   @Post('signup')
   @UseGuards(ThrottlerGuard)
   @Header('Cache-Control', 'no-store')

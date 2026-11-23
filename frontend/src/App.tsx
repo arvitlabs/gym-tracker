@@ -4,7 +4,6 @@ import { Toaster } from './components/ui/sonner';
 import { Navigate, Route, Routes } from 'react-router';
 import AccountEntryPage from './features/account/AccountEntryPage';
 import PhoneCodePage from './features/account/PhoneCodePage';
-import WelcomePage from './features/account/WelcomePage';
 import HealthCheckPage from './features/system/HealthCheckPage';
 
 export default function App() {
@@ -13,21 +12,17 @@ export default function App() {
       <Toaster position="top-center" />
       <Routes>
         <Route element={<PageLayout title="Gym Tracker" />}>
-          <Route
-            path="/"
-            element={import.meta.env.DEV ? <SessionPage /> : <WelcomePage />}
-          />
+          <Route path="/" element={<SessionPage />} />
         </Route>
-        {import.meta.env.DEV &&
-          [
-            ['/home', 'Today'],
-            ['/onboarding', 'Body & Goal'],
-            ['/onboarding/plan', 'Your first plan'],
-          ].map(([path, title]) => (
-            <Route key={path} element={<PageLayout title={title} />}>
-              <Route path={path} element={<SessionPage />} />
-            </Route>
-          ))}
+        {[
+          ['/home', 'Today'],
+          ['/onboarding', 'Body & Goal'],
+          ['/onboarding/plan', 'Your first plan'],
+        ].map(([path, title]) => (
+          <Route key={path} element={<PageLayout title={title} />}>
+            <Route path={path} element={<SessionPage />} />
+          </Route>
+        ))}
         {(['Sign up', 'Log in'] as const).map((title) => (
           <Route key={title} element={<PageLayout title={title} backTo="/" />}>
             <Route

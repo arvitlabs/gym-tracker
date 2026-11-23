@@ -1,7 +1,7 @@
+import { AuthenticationRequiredError } from '../../shared/errors/authentication-required.error';
 import {
   BadRequestException,
-  ConflictException,
-  ForbiddenException,
+  ServiceUnavailableException,
   Injectable,
   UnauthorizedException,
 } from '@nestjs/common';
@@ -12,47 +12,40 @@ import {
   randomUUID,
 } from 'node:crypto';
 import { promisify } from 'node:util';
-import {
-  AccountRepository,
-  PhoneAlreadyRegistered,
-} from './persistence/account.repository';
+import { AccountRepository } from './persistence/account.repository';
 import { LoginRequestDto } from './dto/login-request.dto';
 import { SignupRequestDto } from './dto/signup-request.dto';
-import { digest, fresh, issue, verifyAccess } from './account-session';
+import { digest, fresh, issue, verifyAccess } from './helpers/account-session';
 const scrypt = promisify(scryptCallback);
 @Injectable()
-export class DevAccountService {
+export class AccountService {
   constructor(private readonly accounts: AccountRepository) {}
-  private ensureDevelopment() {
-    if (process.env.NODE_ENV !== 'development') throw new ForbiddenException();
+  private verifySignupCode(code: string) {
+    if (process.env.NODE_ENV !== 'development')
+      throw new ServiceUnavailableException(
+        'Phone verification is unavailable.',
+      );
+    if (code !== '000000')
+      throw new BadRequestException('Invalid verification code');
   }
   async signup(input: SignupRequestDto) {
-    this.ensureDevelopment();
+    this.verifySignupCode(input.code);
     const name = input.name.trim();
     if (!name) throw new BadRequestException('Name is required');
     const salt = randomBytes(16).toString('hex');
     const hash = (await scrypt(input.password, salt, 64)) as Buffer;
     const refresh = fresh();
-    try {
-      return issue(
-        await this.accounts.register(
-          input.phone,
-          name,
-          `scrypt:${salt}:${hash.toString('hex')}`,
-          digest(refresh),
-        ),
-        refresh,
-      );
-    } catch (error) {
-      if (error instanceof PhoneAlreadyRegistered)
-        throw new ConflictException(
-          'An account with this phone already exists',
-        );
-      throw error;
-    }
+    return issue(
+      await this.accounts.register(
+        input.phone,
+        name,
+        `scrypt:${salt}:${hash.toString('hex')}`,
+        digest(refresh),
+      ),
+      refresh,
+    );
   }
   async login(input: LoginRequestDto) {
-    this.ensureDevelopment();
     const user = await this.accounts.credentials(input.phone);
     const parts = (user?.passwordHash ?? '').split(':');
     if (
@@ -77,19 +70,16 @@ export class DevAccountService {
     );
   }
   async refresh(token: string) {
-    this.ensureDevelopment();
     const next = fresh();
     return issue(await this.accounts.rotate(digest(token), digest(next)), next);
   }
   async me(token: string) {
-    this.ensureDevelopment();
     const { grant, userId, stamp } = verifyAccess(token);
     const account = await this.accounts.current(grant, userId, stamp);
-    if (!account) throw new UnauthorizedException();
+    if (!account) throw new AuthenticationRequiredError();
     return account;
   }
   async logout(token: string) {
-    this.ensureDevelopment();
     await this.accounts.revoke(digest(token));
   }
 }

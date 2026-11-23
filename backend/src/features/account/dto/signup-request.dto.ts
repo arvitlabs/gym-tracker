@@ -8,6 +8,6 @@ export class SignupRequestDto extends LoginRequestDto {
   name: string;
 
   @IsString()
-  @Matches(/^000000$/)
+  @Matches(/^\d{6}$/)
   code: string;
 }

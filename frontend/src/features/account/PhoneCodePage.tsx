@@ -16,14 +16,10 @@ export default function PhoneCodePage() {
       setMessage('Please start sign up again.');
       return;
     }
-    if (code !== '000000') {
-      setMessage('Enter the development code 000000.');
-      return;
-    }
     setPending(true);
     setMessage('');
     try {
-      const response = await fetch(`${apiBaseUrl}/dev/accounts/signup`, {
+      const response = await fetch(`${apiBaseUrl}/accounts/signup`, {
         ...authOptions,
         body: JSON.stringify({ ...draft, code }),
       });

@@ -42,7 +42,7 @@ export default function AccountEntryPage({ title }: Props) {
     setPending(true);
     setMessage('');
     try {
-      const response = await fetch(`${apiBaseUrl}/dev/accounts/login`, {
+      const response = await fetch(`${apiBaseUrl}/accounts/login`, {
         ...authOptions,
         body: JSON.stringify({ phone, password }),
       });
@@ -65,8 +65,10 @@ export default function AccountEntryPage({ title }: Props) {
   return (
     <main className="flex flex-1 flex-col bg-[#131411] px-5 py-8 text-[#F3F1EA] sm:px-8">
       <section className="mx-auto flex w-full max-w-[390px] flex-1 flex-col justify-center gap-5">
-        {!import.meta.env.DEV ? (
-          <p className="text-body">Account access is not available yet.</p>
+        {signup && !import.meta.env.DEV ? (
+          <p className="text-body">
+            Sign-up will open when phone verification is available.
+          </p>
         ) : (
           <form onSubmit={submit} className="flex flex-col gap-4">
             {signup && (
