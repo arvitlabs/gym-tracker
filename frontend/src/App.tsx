@@ -1,46 +1,48 @@
-import { useCallback, useEffect, useState } from 'react';
-import { apiBaseUrl } from './config';
+import PageLayout from './components/PageHeader';
+import SessionPage from './features/account/SessionPage';
+import { Toaster } from './components/ui/sonner';
+import { Navigate, Route, Routes } from 'react-router';
+import AccountEntryPage from './features/account/AccountEntryPage';
+import PhoneCodePage from './features/account/PhoneCodePage';
+import HealthCheckPage from './features/system/HealthCheckPage';
 
 export default function App() {
-  const [status, setStatus] = useState('Checking connection…');
-  const check = useCallback(async () => {
-    setStatus('Checking connection…');
-    try {
-      const response = await fetch(`${apiBaseUrl}/health`, {
-        signal: AbortSignal.timeout(5000),
-      });
-      if (!response.ok) throw new Error('Connection failed');
-      const result: unknown = await response.json();
-      if (
-        !result ||
-        typeof result !== 'object' ||
-        !('database' in result) ||
-        result.database !== 'connected'
-      )
-        throw new Error('Unexpected response');
-      setStatus('API and database connected');
-    } catch {
-      setStatus('Connection unavailable');
-    }
-  }, []);
-  useEffect(() => {
-    void check();
-  }, [check]);
   return (
-    <main className="mx-auto max-w-2xl px-6 pt-[20vh] text-[#14251e]">
-      <p className="text-xs font-bold tracking-[0.14em]">GYM TRACKER</p>
-      <h1 className="mt-4 text-5xl leading-tight font-semibold">
-        Build your consistency.
-      </h1>
-      <p className="mt-4 leading-relaxed">
-        Your training space is taking shape.
-      </p>
-      <div className="mt-12 text-sm text-[#526259]">
-        <p role="status">{status}</p>
-        <button className="mt-2 underline" onClick={() => void check()}>
-          Check again
-        </button>
-      </div>
-    </main>
+    <>
+      <Toaster position="top-center" />
+      <Routes>
+        <Route element={<PageLayout title="Gym Tracker" />}>
+          <Route path="/" element={<SessionPage />} />
+        </Route>
+        {[
+          ['/home', 'Today'],
+          ['/onboarding', 'Body & Goal'],
+          ['/onboarding/plan', 'Your first plan'],
+        ].map(([path, title]) => (
+          <Route key={path} element={<PageLayout title={title} />}>
+            <Route path={path} element={<SessionPage />} />
+          </Route>
+        ))}
+        {(['Sign up', 'Log in'] as const).map((title) => (
+          <Route key={title} element={<PageLayout title={title} backTo="/" />}>
+            <Route
+              path={title === 'Sign up' ? '/sign-up' : '/log-in'}
+              element={<AccountEntryPage title={title} />}
+            />
+          </Route>
+        ))}
+        {import.meta.env.DEV && (
+          <Route
+            element={<PageLayout title="Verify your phone" backTo="/sign-up" />}
+          >
+            <Route path="/verify-phone" element={<PhoneCodePage />} />
+          </Route>
+        )}
+        <Route element={<PageLayout title="Connection check" backTo="/" />}>
+          <Route path="/health-check" element={<HealthCheckPage />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </>
   );
 }
