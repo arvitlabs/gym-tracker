@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Navigate, useLocation } from 'react-router';
-import { current, signOut, type Account } from './session';
+import { current, signOut, type Account } from '../data/session';
 import WelcomePage from './WelcomePage';
 import { toast } from 'sonner';
 export default function SessionPage() {
@@ -51,12 +51,15 @@ export default function SessionPage() {
         <button
           className="min-h-12 rounded-xl border text-body"
           onClick={async () => {
+            const request = signOut();
+            setAccount(null);
             try {
-              await signOut();
-              setAccount(null);
+              await request;
               toast.success('Signed out');
             } catch {
-              toast.error('Could not sign out. Please retry.');
+              toast.error(
+                'Signed out on this device. Server sign-out could not be confirmed.',
+              );
             }
           }}
         >

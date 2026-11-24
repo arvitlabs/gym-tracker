@@ -1,29 +1,12 @@
 import { useCallback, useEffect, useState } from 'react';
-import { apiBaseUrl } from '../../config';
+import { checkConnection } from '../data/check-connection';
 
 export default function HealthCheckPage() {
   const [status, setStatus] = useState('Checking connection…');
   const check = useCallback(async () => {
     setStatus('Checking connection…');
     try {
-      const response = await fetch(`${apiBaseUrl}/health`, {
-        signal: AbortSignal.timeout(5000),
-      });
-      if (!response.ok) throw new Error('Connection failed');
-      const result: unknown = await response.json();
-      if (
-        !result ||
-        typeof result !== 'object' ||
-        !('success' in result) ||
-        result.success !== true ||
-        !('data' in result) ||
-        !result.data ||
-        typeof result.data !== 'object' ||
-        !('database' in result.data) ||
-        result.data.database !== 'connected'
-      ) {
-        throw new Error('Unexpected response');
-      }
+      await checkConnection();
       setStatus('API and database connected');
     } catch {
       setStatus('Connection unavailable');
