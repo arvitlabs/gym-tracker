@@ -7,7 +7,7 @@ module.exports = defineConfig({
       command: 'npm run start --workspace @gym-tracker/backend',
       url: 'http://127.0.0.1:3101/api/health',
       reuseExistingServer: false,
-      env: { PORT: '3101' },
+      env: { PORT: '3101', NODE_ENV: 'test' },
     },
     {
       command: 'npm run dev --workspace @gym-tracker/frontend -- --port 4174',

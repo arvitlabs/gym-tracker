@@ -21,3 +21,5 @@ Thumbs.db
 # Browser test output
 test-results/
 playwright-report/
+
+backend/src/generated/prisma/

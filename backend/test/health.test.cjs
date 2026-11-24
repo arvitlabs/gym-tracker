@@ -12,6 +12,7 @@ test('API returns unavailable when PostgreSQL cannot be reached', async () => {
     cwd: 'backend',
     env: {
       ...process.env,
+      NODE_ENV: 'test',
       PORT: String(port),
       DATABASE_URL:
         'postgresql://test:test@127.0.0.1:1/unavailable?connect_timeout=1',
@@ -31,8 +32,9 @@ test('API returns unavailable when PostgreSQL cannot be reached', async () => {
     assert.ok(response, 'API did not start');
     assert.equal(response.status, 503);
     assert.deepEqual(await response.json(), {
-      status: 'error',
-      database: 'unavailable',
+      success: false,
+      data: null,
+      error: { code: 'SERVICE_UNAVAILABLE', message: 'Request failed.' },
     });
   } finally {
     api.kill();

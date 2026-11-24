@@ -8,6 +8,10 @@
 
 **Depends on** Backend and database foundation. Real SMS delivery depends on provider configuration.
 
+## Current status
+
+Paused pending the SMS provider decision. The existing development-only code remains available for local signup.
+
 ## Acceptance criteria
 
 - Given an allowlisted test phone in the testing environment, when its valid code is submitted for the requested purpose, then verification succeeds.
