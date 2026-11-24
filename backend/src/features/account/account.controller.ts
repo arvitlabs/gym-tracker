@@ -15,6 +15,11 @@ import {
 import type { Response } from 'express';
 import { AccountService } from './account.service';
 import { LoginRequestDto } from './dto/login-request.dto';
+import {
+  RecoveryPhoneDto,
+  VerifyRecoveryDto,
+  ResetPasswordDto,
+} from './dto/recovery-request.dto';
 import { SignupRequestDto } from './dto/signup-request.dto';
 import type { Issued } from './helpers/account-session';
 
@@ -58,6 +63,27 @@ export class AccountController {
   ) {
     return deliver(await this.accounts.login(input), res);
   }
+  @Post('recovery/request')
+  @UseGuards(ThrottlerGuard)
+  @HttpCode(HttpStatus.OK)
+  requestRecovery(@Body() input: RecoveryPhoneDto) {
+    return this.accounts.requestRecovery(input.phone);
+  }
+
+  @Post('recovery/verify')
+  @UseGuards(ThrottlerGuard)
+  @HttpCode(HttpStatus.OK)
+  verifyRecovery(@Body() input: VerifyRecoveryDto) {
+    return this.accounts.verifyRecovery(input.phone, input.code);
+  }
+
+  @Post('recovery/reset')
+  @UseGuards(ThrottlerGuard)
+  @HttpCode(HttpStatus.OK)
+  resetPassword(@Body() input: ResetPasswordDto) {
+    return this.accounts.resetPassword(input.phone, input.code, input.password);
+  }
+
   @Post('refresh')
   @HttpCode(HttpStatus.OK)
   @Header('Cache-Control', 'no-store')

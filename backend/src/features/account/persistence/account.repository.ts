@@ -1,4 +1,5 @@
 import { PhoneAlreadyRegisteredError } from '../errors/phone-already-registered.error';
+import { randomUUID } from 'node:crypto';
 import { Injectable } from '@nestjs/common';
 import { DatabaseService } from '../../../infrastructure/database/database.module';
 import { Prisma } from '../../../generated/prisma/client';
@@ -131,6 +132,20 @@ export class AccountRepository {
     return grant && grant.securityStamp === grant.user.securityStamp
       ? toAccountView(grant.user)
       : null;
+  }
+  resetPassword(phone: string, passwordHash: string) {
+    return this.db.$transaction(async (tx) => {
+      const updated = await tx.user.updateMany({
+        where: { phone, isActive: true },
+        data: { passwordHash, securityStamp: randomUUID() },
+      });
+      if (!updated.count) return false;
+      await tx.refreshToken.updateMany({
+        where: { user: { phone }, revokedAt: null },
+        data: { revokedAt: new Date() },
+      });
+      return true;
+    });
   }
   revoke(tokenHash: string) {
     return this.db.refreshToken.updateMany({
